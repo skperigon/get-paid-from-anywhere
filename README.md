@@ -22,6 +22,9 @@ Live site: https://skperigon.github.io/get-paid-from-anywhere/
 - `scripts/check-style.mjs`: fails on em dashes.
 - `.github/workflows/nightly.yml`: nightly promote, build, link check, GitHub Pages deploy; also deploys on push to `main`. Gated on repo variable `PUBLISH_ENABLED=true`.
 - `deploy/cloudflare-pages-step.yml`: optional Cloudflare Pages deploy step.
+- `assets/icon.svg`, `assets/og.svg`: sources for the favicon and Open Graph image. Run `node scripts/make-images.mjs` after editing them; it writes the PNGs into `public/` (commit them).
+- `src/components/ProviderTable.astro`: filterable, sortable comparison table built from `providers.json`.
+- Affiliate links: set `affiliateUrl` to a real tracking link that differs from `website`. Only then is the link rendered with `rel="sponsored nofollow noopener"`, labeled, and listed on the disclosure page. Never set one before the program has approved us.
 
 ## Commands
 
@@ -31,7 +34,7 @@ Live site: https://skperigon.github.io/get-paid-from-anywhere/
     npm run check:style
     npm run promote:dry
 
-`SITE_URL` defaults to `https://skperigon.github.io/get-paid-from-anywhere`. Change it (env var, or repo variable in Actions) if the site moves to a custom domain. Internal links in pages and markdown are prefixed with the base path automatically.
+`SITE_URL` defaults to `https://skperigon.github.io/get-paid-from-anywhere`. Change it (env var, or repo variable in Actions) if the site moves to a custom domain. Internal links in pages and markdown are prefixed with the base path automatically. Moving to a custom domain: see `domain-switch.md` (kept outside the repo on the box) or just set `SITE_URL` to the new root URL and set the custom domain in Settings > Pages.
 
 ## Writing a draft
 

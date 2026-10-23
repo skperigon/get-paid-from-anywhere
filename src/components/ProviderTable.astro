@@ -1,0 +1,118 @@
+---
+// Filterable, sortable comparison table built only from fields in providers.json.
+import data from '../data/providers.json';
+import Status from './Status.astro';
+import Src from './Src.astro';
+import { GROUPS, groupOf, priceFact, providerChecked, STATUS_RANK, u } from '../site.js';
+import countries from '../data/countries.json';
+const { id = 'provider-table' } = Astro.props;
+const rows = data.providers.map((p) => ({ p, g: groupOf(p), fee: priceFact(p), checked: providerChecked(p) }));
+---
+<div class="cmp" id={id}>
+  <div class="cmp-tools">
+    <div class="chips" role="group" aria-label="Filter by type">
+      <button type="button" class="chip-btn on" data-group="all">All ({rows.length})</button>
+      {GROUPS.map((g) => <button type="button" class="chip-btn" data-group={g.key}>{g.title} ({rows.filter((r) => r.g?.key === g.key).length})</button>)}
+    </div>
+    <label class="cmp-country">Show status for
+      <select data-country>
+        <option value="">No country</option>
+        {countries.map((c) => <option value={c.slug}>{c.name}</option>)}
+      </select>
+    </label>
+  </div>
+  <div class="table-wrap"><table class="cmp-table">
+    <thead><tr>
+      <th><button type="button" data-sort="name">Provider</button></th>
+      <th><button type="button" data-sort="type">Type</button></th>
+      <th><button type="button" data-sort="mor">Merchant of record</button></th>
+      <th class="col-country" hidden><button type="button" data-sort="country">Status in <span data-country-name></span></button></th>
+      <th>Price or fee, as published</th>
+      <th><button type="button" data-sort="checked">Source and date</button></th>
+    </tr></thead>
+    <tbody>
+      {rows.map(({ p, g, fee, checked }) => (
+        <tr data-group={g?.key} data-name={p.name.toLowerCase()} data-type={p.category.toLowerCase()} data-mor={p.merchantOfRecord.value.startsWith('Yes') ? '0' : '1'} data-checked={checked}
+          {...Object.fromEntries(countries.map((c) => [`data-c-${c.slug}`, String(STATUS_RANK[p.sellerCountries?.[c.slug]?.status || 'unknown'])]))}>
+          <td><a href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong></a></td>
+          <td>{p.category}</td>
+          <td>{p.merchantOfRecord.value}</td>
+          {countries.map((c) => <td class={`col-country cc-${c.slug}`} hidden><Status status={p.sellerCountries?.[c.slug]?.status || 'unknown'} /></td>)}
+          <td>{fee ? (fee.value === 'unknown' ? <span class="badge unk">Unknown</span> : <><span class="fee-label">{fee.label}:</span> {fee.value}</>) : <span class="badge unk">Unknown</span>}</td>
+          <td>{fee ? <Src href={fee.source} /> : <Src href={p.merchantOfRecord.source} />}<br /><small class="nowrap">Checked {fee?.checkedOn || checked}</small></td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p><small>Click a column heading to sort. Fees are copied from each provider's pricing page and may depend on your plan, country or payment method. Open a provider for all facts and sources.</small></p>
+</div>
+<style>
+.cmp-tools { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin:14px 0 6px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chip-btn { font:inherit; font-size:14px; border:1px solid var(--line); background:#fff; color:var(--fg); border-radius:999px; padding:5px 12px; cursor:pointer; }
+.chip-btn:hover { border-color:var(--accent); }
+.chip-btn.on { background:var(--brand); border-color:var(--brand); color:#fff; }
+.cmp-country { font-size:14px; color:var(--muted); display:flex; gap:8px; align-items:center; }
+.cmp-country select { font-size:14px; padding:5px 10px; }
+.cmp-table th button { all:unset; cursor:pointer; }
+.cmp-table th button::after { content:" \2195"; opacity:.4; }
+.cmp-table th button[data-dir]::after { opacity:1; }
+.cmp-table th button[data-dir="asc"]::after { content:" \2191"; }
+.cmp-table th button[data-dir="desc"]::after { content:" \2193"; }
+.cmp-table td { font-size:14px; }
+.cmp-table td:nth-child(2) { min-width:110px; }
+.cmp-table td:nth-child(3) { min-width:90px; }
+.cmp-table td:first-child { font-size:15px; white-space:nowrap; }
+.fee-label { color:var(--muted); }
+.nowrap { white-space:nowrap; }
+</style>
+<script is:inline>
+(function () {
+  document.querySelectorAll('.cmp').forEach(function (root) {
+    var tbody = root.querySelector('tbody');
+    var rows = Array.prototype.slice.call(tbody.rows);
+    root.querySelectorAll('.chip-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        root.querySelectorAll('.chip-btn').forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on');
+        var g = b.getAttribute('data-group');
+        rows.forEach(function (r) { r.hidden = g !== 'all' && r.getAttribute('data-group') !== g; });
+      });
+    });
+    var sel = root.querySelector('[data-country]');
+    var current = '';
+    sel.addEventListener('change', function () {
+      current = sel.value;
+      root.querySelectorAll('.col-country').forEach(function (c) { c.hidden = true; });
+      if (current) {
+        root.querySelector('th.col-country').hidden = false;
+        root.querySelectorAll('.cc-' + current).forEach(function (c) { c.hidden = false; });
+        root.querySelector('[data-country-name]').textContent = sel.options[sel.selectedIndex].text;
+        sortBy('country', 'asc');
+      }
+    });
+    function key(r, k) {
+      if (k === 'country') return Number(r.getAttribute('data-c-' + current));
+      return r.getAttribute('data-' + k) || '';
+    }
+    function sortBy(k, dir) {
+      root.querySelectorAll('th button').forEach(function (x) { x.removeAttribute('data-dir'); });
+      var btn = root.querySelector('th button[data-sort="' + k + '"]');
+      if (btn) btn.setAttribute('data-dir', dir);
+      rows.sort(function (a, b) {
+        var x = key(a, k), y = key(b, k);
+        var c = typeof x === 'number' ? x - y : String(x).localeCompare(String(y));
+        if (c === 0) c = key(a, 'name').localeCompare(key(b, 'name'));
+        return dir === 'asc' ? c : -c;
+      });
+      rows.forEach(function (r) { tbody.appendChild(r); });
+    }
+    root.querySelectorAll('th button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var dir = b.getAttribute('data-dir') === 'asc' ? 'desc' : 'asc';
+        sortBy(b.getAttribute('data-sort'), dir);
+      });
+    });
+  });
+})();
+</script>

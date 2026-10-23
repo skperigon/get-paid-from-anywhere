@@ -2,4 +2,8 @@
 import { u } from '../site.js';
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Page not found" description="This page does not exist."><h1>Page not found</h1><p><a href={u("/")}>Go to the home page</a>.</p></Base>
+<Base title="Page not found" description="This page does not exist." noindex>
+  <h1>Page not found</h1>
+  <p>That page does not exist or has moved.</p>
+  <p><a class="btn" href={u("/")}>Go to the home page</a> <a class="btn btn-ghost" href={u("/countries/")}>Browse countries</a></p>
+</Base>

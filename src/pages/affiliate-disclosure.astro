@@ -1,9 +1,25 @@
 ---
 import Base from '../layouts/Base.astro';
+import { CHECKED_ON, u, affiliateProviders } from '../site.js';
+const aff = affiliateProviders();
 ---
-<Base title="Affiliate disclosure" description="How Get Paid From Anywhere may earn money from links, and how that does and does not affect what we publish.">
-  <h1>Affiliate disclosure</h1>
-  <p>Some links on this site may become affiliate or referral links. If you sign up through one, we may earn a commission or referral fee at no extra cost to you. Today, all provider links point to the providers' normal websites.</p>
-  <p>Affiliate relationships do not change the facts we publish. Country rules and fees come from the providers' own pages, and a provider without an affiliate program is listed the same way as one with a program. We do not accept payment to change a status label.</p>
-  <p>If a link on a page is an affiliate link, this page will say which providers it applies to.</p>
+<Base title="Affiliate disclosure" description="How Get Paid From Anywhere may earn money from links, which links are affiliate links today, and how that does and does not affect what we publish." crumb="Affiliate disclosure">
+  <div class="prose">
+    <h1>Affiliate disclosure</h1>
+    <p class="meta"><span class="chip">Last updated {CHECKED_ON}</span></p>
+    <h2>Which links are affiliate links</h2>
+    {aff.length === 0
+      ? <p><strong>None today.</strong> Every provider link on this site goes to the provider's normal website, and we earn nothing if you sign up.</p>
+      : <><p>These providers' "Visit" links are affiliate links. They are marked with <code>rel="sponsored"</code> and a label next to the link:</p><ul>{aff.map((p) => <li><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></li>)}</ul></>}
+    <h2>How it would work</h2>
+    <p>Some links on this site may become affiliate or referral links. If you sign up through one, we may earn a commission or referral fee at no extra cost to you. Affiliate links are labeled where they appear and listed on this page.</p>
+    <h2>What affiliate deals do not change</h2>
+    <ul>
+      <li>Country rules and fees come from the providers' own pages, whatever the deal.</li>
+      <li>A provider without an affiliate program is listed the same way as one with a program.</li>
+      <li>We do not accept payment to change a status label or the order of a table.</li>
+      <li>If a provider asks us to remove an accurate, sourced fact, we keep the fact and drop the link.</li>
+    </ul>
+    <p>Questions about this policy: see the <a href={u('/about/')}>About</a> page.</p>
+  </div>
 </Base>

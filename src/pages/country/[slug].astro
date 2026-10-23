@@ -5,7 +5,7 @@ import Src from '../../components/Src.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
 import { CHECKED_ON, u } from '../../site.js';
-import { allCountries } from '../../lib/countries.js';
+import { allCountries, countryStats, pagesLinkingTo } from '../../lib/countries.js';
 
 export function getStaticPaths() {
   return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -20,13 +20,20 @@ const groups = [
 ];
 const formation = data.providers.filter((p) => p.category === 'US company formation');
 const others = allCountries().filter((o) => o.slug !== c.slug);
+const stats = countryStats(c.slug);
+const guides = pagesLinkingTo(`/country/${c.slug}/`);
 const title = `Stripe alternatives in ${c.name} (checked ${CHECKED_ON})`;
 const description = `Is Stripe available in ${c.name}? Which merchants of record accept ${c.people}, the US LLC route, and banking options, with a source link for every fact.`;
 ---
 <Base title={title} description={description} faqs={c.faqs} dateModified={CHECKED_ON} crumb={`Stripe alternatives in ${c.name}`}>
   <h1>Stripe alternatives in {c.name}</h1>
-  <p class="muted">Last checked: {CHECKED_ON}. Every fact links to the provider's own page.</p>
-  <p>{c.intro}</p>
+  <p class="meta"><span class="chip">Last checked {CHECKED_ON}</span><span class="chip">Every fact links to its source</span></p>
+  <p class="lede">{c.intro}</p>
+  {stats && <div class="summary">
+    <div><span class="k">Stripe</span><Status status={stats.stripe} /></div>
+    <div><span class="k">Merchants of record</span><span><strong>{stats.open} of {stats.total}</strong> list {c.name} or do not exclude it</span></div>
+    <div><span class="k">Jump to</span><span><a href="#comparison">Comparison</a> · <a href="#llc">US LLC route</a> · <a href="#banking">Banking</a> · <a href="#faq">FAQ</a></span></div>
+  </div>}
   <div class="note"><strong>Verify with the provider.</strong> Country rules change, and approval is always up to the provider. Read the linked source and confirm with the provider before you build your business on it.</div>
 
   <h2>Is Stripe available in {c.name}?</h2>
@@ -35,7 +42,7 @@ const description = `Is Stripe available in ${c.name}? Which merchants of record
   <h2>Merchants of record that accept {c.people}</h2>
   <p>A merchant of record sells to your customer on your behalf and handles sales tax and VAT, then pays you out. {c.morAnswer}</p>
 
-  <h2>Quick comparison</h2>
+  <h2 id="comparison">Quick comparison</h2>
   {groups.map((g) => {
     const list = rows.filter(g.match);
     return list.length > 0 && (
@@ -59,7 +66,7 @@ const description = `Is Stripe available in ${c.name}? Which merchants of record
   })}
   <p><small>Status labels are explained on the <a href={u("/methodology/")}>methodology</a> page.</small></p>
 
-  <h2>The US LLC route</h2>
+  <h2 id="llc">The US LLC route</h2>
   <p>{c.llcAnswer}</p>
   <div class="table-wrap"><table>
     <thead><tr><th>Formation service</th><th>Price shown on its site</th><th>Source</th></tr></thead>
@@ -71,18 +78,29 @@ const description = `Is Stripe available in ${c.name}? Which merchants of record
   </table></div>
   <p><small>We have not verified whether each formation service accepts founders from {c.name} unless stated above.</small></p>
 
-  <h2>Banking and payout options</h2>
+  <h2 id="banking">Banking and payout options</h2>
   <p>{c.bankingAnswer}</p>
 
-  <h2>Frequently asked questions</h2>
+  <h2 id="faq">Frequently asked questions</h2>
   {c.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}
 
   <h2>Sources</h2>
   <ul>
     {[...new Set(rows.map((p) => p.sellerCountries[c.slug].source).concat(formation.map((p) => p.facts[0].source)))].map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}
   </ul>
-  <p class="muted">Last checked: {CHECKED_ON}. Spotted something out of date? See how corrections work on the <a href={u("/methodology/")}>methodology</a> page.</p>
+  <p class="muted">Last checked: {CHECKED_ON}. Spotted something out of date? See how to report a correction on the <a href={u("/about/")}>About</a> page.</p>
+
+  {guides.length > 0 && (<>
+    <h2>Related guides</h2>
+    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">Checked {g.checkedOn}</span></a></li>)}</ul>
+  </>)}
 
   <h2>Other countries</h2>
-  <ul>{others.map((o) => <li><a href={u(`/country/${o.slug}/`)}>Stripe alternatives in {o.name}</a></li>)}</ul>
+  <ul class="cards">{others.map((o) => <li><a class="card" href={u(`/country/${o.slug}/`)}><strong>{o.name}</strong><span class="sub">Stripe alternatives in {o.name}</span></a></li>)}</ul>
 </Base>
+<style>
+.summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:18px 0; }
+.summary > div { border:1px solid var(--line); border-radius:var(--radius); padding:10px 14px; display:flex; flex-direction:column; gap:4px; font-size:15px; }
+.summary .k { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+.summary .badge { align-self:flex-start; }
+</style>

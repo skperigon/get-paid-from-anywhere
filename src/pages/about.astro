@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/providers.json';
+import { CHECKED_ON, REPO_URL, SITE_NAME, u } from '../site.js';
+---
+<Base title="About Get Paid From Anywhere" description="Who runs Get Paid From Anywhere, how it is funded, and how to report a correction. An independent site with sourced payment provider facts by country." crumb="About">
+  <div class="prose">
+    <h1>About</h1>
+    <p class="meta"><span class="chip">Last updated {CHECKED_ON}</span></p>
+    <p class="lede">{SITE_NAME} is an independent publisher. It helps founders outside the US and EU find out which payment providers will actually accept them.</p>
+
+    <h2>Why this site exists</h2>
+    <p>Founders in many countries hit the same wall: Stripe is not available, or is invite-only, and the answers online are scattered, out of date or written to sell something. Provider rules are public, but they are spread across help centers, docs and legal pages. This site puts those rules in one place, by country, with a link to each source.</p>
+
+    <h2>What you will and will not find here</h2>
+    <ul>
+      <li>Facts copied from each provider's own pages, with a source link and a checked date. We track {data.providers.length} providers today.</li>
+      <li>"Unknown" where we could not confirm something. We do not guess.</li>
+      <li>No user reviews, star ratings, testimonials or rankings by payout.</li>
+      <li>No legal, tax or financial advice. Talk to a qualified accountant before forming a company or moving money across borders.</li>
+    </ul>
+
+    <h2>Who runs it</h2>
+    <p>The site is run independently. It is not owned by, sponsored by or affiliated with any provider listed here. Provider names and trademarks belong to their owners.</p>
+
+    <h2>How the site is funded</h2>
+    <p>The site may join provider affiliate programs in the future. If it does, links to those providers may earn a commission, and they will be marked. Payouts never change the facts or status labels we publish. Read the <a href={u('/affiliate-disclosure/')}>affiliate disclosure</a>.</p>
+
+    <h2>Corrections</h2>
+    <p>If a provider's page says something different from what we show, tell us and include the link. You can open an issue on the site's <a href={`${REPO_URL}/issues`} rel="nofollow noopener">public GitHub repository</a>. We recheck the source, fix the fact and update its checked date. See the <a href={u('/methodology/')}>methodology</a> for how facts are checked.</p>
+
+    <h2>Open data</h2>
+    <p>The full dataset, with every source URL and checked date, is free to download as <a href={u('/data/providers.json')}>JSON</a>.</p>
+  </div>
+</Base>

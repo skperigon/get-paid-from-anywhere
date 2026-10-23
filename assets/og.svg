@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f3d3e"/><stop offset="1" stop-color="#0a6c74"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.10" fill="none" stroke="#fff" stroke-width="3">
+    <circle cx="1010" cy="330" r="250"/><ellipse cx="1010" cy="330" rx="110" ry="250"/><ellipse cx="1010" cy="330" rx="200" ry="250"/>
+    <path d="M760 330h500M790 210h440M790 450h440"/>
+  </g>
+  <g transform="translate(80 80)">
+    <rect width="72" height="72" rx="16" fill="#fff"/>
+    <circle cx="36" cy="36" r="20" fill="none" stroke="#0f3d3e" stroke-width="4.5"/>
+    <ellipse cx="36" cy="36" rx="9" ry="20" fill="none" stroke="#0f3d3e" stroke-width="4"/>
+    <path d="M16 36h40" stroke="#0f3d3e" stroke-width="4"/>
+    <circle cx="54" cy="18" r="8" fill="#3fc1a5"/>
+    <text x="96" y="48" font-family="Inter, DejaVu Sans, sans-serif" font-size="30" font-weight="600" fill="#fff">Get Paid From Anywhere</text>
+  </g>
+  <text font-family="Inter, DejaVu Sans, sans-serif" font-weight="800" fill="#fff" font-size="72" letter-spacing="-1.5">
+    <tspan x="80" y="300">Stripe alternatives</tspan><tspan x="80" y="385">by country</tspan>
+  </text>
+  <text x="80" y="460" font-family="Inter, DejaVu Sans, sans-serif" font-size="30" fill="#cfeeea">Which payment providers accept founders where you live.</text>
+  <g font-family="Inter, DejaVu Sans, sans-serif" font-size="24" font-weight="600" fill="#0f3d3e">
+    <rect x="80" y="510" width="250" height="48" rx="24" fill="#3fc1a5"/><text x="205" y="542" text-anchor="middle">Every fact sourced</text>
+    <rect x="350" y="510" width="230" height="48" rx="24" fill="#fff"/><text x="465" y="542" text-anchor="middle">Dated and linked</text>
+  </g>
+</svg>

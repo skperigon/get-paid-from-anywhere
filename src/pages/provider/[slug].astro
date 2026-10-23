@@ -4,26 +4,39 @@ import Status from '../../components/Status.astro';
 import Src from '../../components/Src.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
-import { CHECKED_ON, u } from '../../site.js';
+import { groupOf, isAffiliate, outHref, outRel, providerChecked, host, u } from '../../site.js';
+import { pagesLinkingTo } from '../../lib/countries.js';
 export function getStaticPaths() {
   return data.providers.map((p) => ({ params: { slug: p.slug }, props: { p } }));
 }
 const { p } = Astro.props;
+const checked = providerChecked(p);
 const cs = countries.filter((c) => p.sellerCountries[c.slug]);
+const g = groupOf(p);
+const related = data.providers.filter((o) => o.slug !== p.slug && groupOf(o)?.key === g?.key);
+const guides = pagesLinkingTo(`/provider/${p.slug}/`);
+const aff = isAffiliate(p);
 const title = `${p.name}: countries, fees and merchant of record status`;
-const description = `${p.name} facts for founders outside the US and EU: ${p.category.toLowerCase()}, fees and country eligibility, each with a source link. Checked ${CHECKED_ON}.`;
+const description = `${p.name} facts for founders outside the US and EU: ${p.category.toLowerCase()}, fees and country eligibility, each with a source link. Checked ${checked}.`;
 ---
-<Base title={title} description={description} crumb={p.name}>
+<Base title={title} description={description} crumb={p.name} dateModified={checked}>
   <h1>{p.name}</h1>
-  <p class="muted">{p.category}. Last checked: {CHECKED_ON}.</p>
-  <p>{p.summary}</p>
+  <p class="meta"><span class="chip">{p.category}</span><span class="chip">Last checked {checked}</span></p>
+  <p class="lede">{p.summary}</p>
+  <p class="visit">
+    <a class="btn" href={outHref(p)} rel={outRel(p)} target="_blank">Visit {host(outHref(p))}</a>
+    <small>{aff ? <>Affiliate link. We may earn a commission. <a href={u('/affiliate-disclosure/')}>Disclosure</a></> : <>Not an affiliate link. <a href={u('/affiliate-disclosure/')}>Disclosure</a></>}</small>
+  </p>
+
+  <h2>Key facts</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th>Fact</th><th>Value</th><th>Source</th></tr></thead>
+    <thead><tr><th>Fact</th><th>What {p.name} says</th><th>Source</th><th>Checked</th></tr></thead>
     <tbody>
-      <tr><td>Merchant of record</td><td>{p.merchantOfRecord.value}{p.merchantOfRecord.note && <> <small>{p.merchantOfRecord.note}</small></>}</td><td><Src href={p.merchantOfRecord.source} /></td></tr>
-      {p.facts.map((f) => (<tr><td>{f.label}</td><td>{f.value === 'unknown' ? <span class="badge unk">Unknown</span> : f.value}</td><td><Src href={f.source} /></td></tr>))}
+      <tr><td><strong>Merchant of record</strong></td><td>{p.merchantOfRecord.value}{p.merchantOfRecord.note && <> <small>{p.merchantOfRecord.note}</small></>}</td><td><Src href={p.merchantOfRecord.source} /></td><td class="nowrap">{p.merchantOfRecord.checkedOn || checked}</td></tr>
+      {p.facts.map((f) => (<tr><td><strong>{f.label}</strong></td><td>{f.value === 'unknown' ? <span class="badge unk">Unknown</span> : f.value}</td><td><Src href={f.source} /></td><td class="nowrap">{f.checkedOn || checked}</td></tr>))}
     </tbody>
   </table></div>
+
   {cs.length > 0 && (
     <>
       <h2>Country status</h2>
@@ -33,9 +46,23 @@ const description = `${p.name} facts for founders outside the US and EU: ${p.cat
           {cs.map((c) => (<tr><td><a href={u(`/country/${c.slug}/`)}>{c.name}</a></td><td><Status status={p.sellerCountries[c.slug].status} /></td><td>{p.sellerCountries[c.slug].note}</td><td><Src href={p.sellerCountries[c.slug].source} /></td></tr>))}
         </tbody>
       </table></div>
+      <p><small>Labels are explained in the <a href={u('/methodology/')}>methodology</a>.</small></p>
     </>
   )}
   <div class="note"><strong>Verify with the provider.</strong> Fees and eligibility change. Check {p.name}'s own site before you sign up.</div>
-  <p><a href={p.affiliateUrl} rel="nofollow noopener" target="_blank">Visit {p.name}</a> <small>(<a href={u("/affiliate-disclosure/")}>disclosure</a>)</small></p>
-  <p><a href={u("/providers/")}>All providers</a></p>
+
+  {guides.length > 0 && (<>
+    <h2>Guides that cover {p.name}</h2>
+    <ul class="cards">{guides.map((gd) => <li><a class="card" href={u(`/${gd.path}/`)}><strong>{gd.h1 || gd.title}</strong><span class="sub">Checked {gd.checkedOn}</span></a></li>)}</ul>
+  </>)}
+
+  {related.length > 0 && (<>
+    <h2>Other {g.title.toLowerCase()}</h2>
+    <ul class="cards">{related.map((o) => <li><a class="card" href={u(`/provider/${o.slug}/`)}><strong>{o.name}</strong><span class="sub">{o.summary}</span></a></li>)}</ul>
+  </>)}
+  <p><a href={u('/providers/')}>All providers</a> · <a href={u('/countries/')}>All countries</a></p>
 </Base>
+<style>
+.visit { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.nowrap { white-space:nowrap; }
+</style>

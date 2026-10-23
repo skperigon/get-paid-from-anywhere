@@ -1,0 +1,22 @@
+---
+import Status from './Status.astro';
+import { allCountries, countryStats } from '../lib/countries.js';
+import { u } from '../site.js';
+const list = allCountries();
+---
+<ul class="cards">
+  {list.map((c) => {
+    const s = countryStats(c.slug);
+    return (
+      <li><a class="card" href={u(`/country/${c.slug}/`)}>
+        <strong>{c.name}</strong>
+        {s ? (
+          <>
+            <span class="sub">{s.open} of {s.total} merchants of record we track list {c.name} or do not exclude it.</span>
+            <span class="row"><span class="muted" style="font-size:13px">Stripe:</span> <Status status={s.stripe} /></span>
+          </>
+        ) : <span class="sub">Country guide with sourced provider options.</span>}
+      </a></li>
+    );
+  })}
+</ul>

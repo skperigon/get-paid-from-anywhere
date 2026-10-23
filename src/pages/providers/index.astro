@@ -1,20 +1,26 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ProviderTable from '../../components/ProviderTable.astro';
 import data from '../../data/providers.json';
-import { CHECKED_ON, u } from '../../site.js';
-const cats = [...new Set(data.providers.map((p) => p.category))];
+import { CHECKED_ON, GROUPS, priceFact, u } from '../../site.js';
 ---
-<Base title="Payment providers for founders outside the US and EU" description={`Index of ${data.providers.length} merchants of record, payment processors, business accounts and US formation services, with sourced facts. Checked ${CHECKED_ON}.`}>
+<Base title="Payment providers for founders outside the US and EU" description={`Compare ${data.providers.length} merchants of record, payment processors, business accounts and US formation services, with sourced fees and country rules. Checked ${CHECKED_ON}.`} crumb="Providers">
   <h1>Provider index</h1>
-  <p>Every provider we track, grouped by type. Each page lists fees and country rules with a link to the provider's own source. Last checked: {CHECKED_ON}. The full dataset is available as <a href={u("/data/providers.json")}>JSON</a>.</p>
-  {cats.map((cat) => (
-    <>
-      <h2>{cat}</h2>
-      <ul class="cards">
-        {data.providers.filter((p) => p.category === cat).map((p) => (
-          <li><a href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong></a><br /><small>{p.summary}</small></li>
-        ))}
-      </ul>
-    </>
-  ))}
+  <p class="meta"><span class="chip">Last checked {CHECKED_ON}</span><span class="chip">{data.providers.length} providers</span></p>
+  <p class="lede">Every provider we track. Each page lists fees and country rules with a link to the provider's own source. The full dataset is available as <a href={u('/data/providers.json')}>JSON</a>.</p>
+  <ProviderTable />
+  {GROUPS.map((g) => {
+    const list = data.providers.filter(g.match);
+    return list.length > 0 && (
+      <>
+        <h2>{g.title}</h2>
+        <ul class="cards">
+          {list.map((p) => {
+            const f = priceFact(p);
+            return <li><a class="card" href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong><span class="sub">{p.summary}</span>{f && f.value !== 'unknown' && <span class="sub"><b>{f.label}:</b> {f.value}</span>}</a></li>;
+          })}
+        </ul>
+      </>
+    );
+  })}
 </Base>
