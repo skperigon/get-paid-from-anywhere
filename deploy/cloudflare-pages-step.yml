@@ -1,0 +1,10 @@
+# Alternative to the GitHub Pages deploy job: Cloudflare Pages.
+# Replace the upload-pages-artifact step and the deploy job in nightly.yml with this step.
+# Needs repo secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID and a Pages project
+# named get-paid-from-anywhere (create it in the Cloudflare dashboard first).
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=get-paid-from-anywhere

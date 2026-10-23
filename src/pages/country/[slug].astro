@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+import Status from '../../components/Status.astro';
+import Src from '../../components/Src.astro';
+import data from '../../data/providers.json';
+import countries from '../../data/countries.json';
+import { CHECKED_ON, u } from '../../site.js';
+
+export function getStaticPaths() {
+  return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const rows = data.providers.filter((p) => p.sellerCountries && p.sellerCountries[c.slug]);
+const groups = [
+  { title: 'Merchants of record', match: (p) => p.category === 'Merchant of record' },
+  { title: 'Payment processors', match: (p) => p.category.startsWith('Payment processor') },
+  { title: 'Accounts, banking and payouts', match: (p) => !p.category.startsWith('Payment processor') && p.category !== 'Merchant of record' && p.category !== 'US company formation' },
+  { title: 'US company formation', match: (p) => p.category === 'US company formation' },
+];
+const formation = data.providers.filter((p) => p.category === 'US company formation');
+const others = countries.filter((o) => o.slug !== c.slug);
+const title = `Stripe alternatives in ${c.name} (checked ${CHECKED_ON})`;
+const description = `Is Stripe available in ${c.name}? Which merchants of record accept ${c.people}, the US LLC route, and banking options, with a source link for every fact.`;
+---
+<Base title={title} description={description} faqs={c.faqs}>
+  <h1>Stripe alternatives in {c.name}</h1>
+  <p class="muted">Last checked: {CHECKED_ON}. Every fact links to the provider's own page.</p>
+  <p>{c.intro}</p>
+  <div class="note"><strong>Verify with the provider.</strong> Country rules change, and approval is always up to the provider. Read the linked source and confirm with the provider before you build your business on it.</div>
+
+  <h2>Is Stripe available in {c.name}?</h2>
+  <p>{c.stripeAnswer}</p>
+
+  <h2>Merchants of record that accept {c.people}</h2>
+  <p>A merchant of record sells to your customer on your behalf and handles sales tax and VAT, then pays you out. {c.morAnswer}</p>
+
+  <h2>Quick comparison</h2>
+  {groups.map((g) => {
+    const list = rows.filter(g.match);
+    return list.length > 0 && (
+      <>
+        <h3>{g.title}</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Provider</th><th>{c.name}</th><th>What the provider says</th><th>Source</th></tr></thead>
+          <tbody>
+            {list.map((p) => (
+              <tr>
+                <td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td>
+                <td><Status status={p.sellerCountries[c.slug].status} /></td>
+                <td>{p.sellerCountries[c.slug].note}</td>
+                <td><Src href={p.sellerCountries[c.slug].source} /></td>
+              </tr>
+            ))}
+          </tbody>
+        </table></div>
+      </>
+    );
+  })}
+  <p><small>Status labels are explained on the <a href={u("/methodology/")}>methodology</a> page.</small></p>
+
+  <h2>The US LLC route</h2>
+  <p>{c.llcAnswer}</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Formation service</th><th>Price shown on its site</th><th>Source</th></tr></thead>
+    <tbody>
+      {formation.map((p) => (
+        <tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td><td>{p.facts[0].value}</td><td><Src href={p.facts[0].source} /></td></tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p><small>We have not verified whether each formation service accepts founders from {c.name} unless stated above.</small></p>
+
+  <h2>Banking and payout options</h2>
+  <p>{c.bankingAnswer}</p>
+
+  <h2>Frequently asked questions</h2>
+  {c.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}
+
+  <h2>Sources</h2>
+  <ul>
+    {[...new Set(rows.map((p) => p.sellerCountries[c.slug].source).concat(formation.map((p) => p.facts[0].source)))].map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}
+  </ul>
+  <p class="muted">Last checked: {CHECKED_ON}. Spotted something out of date? See how corrections work on the <a href={u("/methodology/")}>methodology</a> page.</p>
+
+  <h2>Other countries</h2>
+  <ul>{others.map((o) => <li><a href={u(`/country/${o.slug}/`)}>Stripe alternatives in {o.name}</a></li>)}</ul>
+</Base>

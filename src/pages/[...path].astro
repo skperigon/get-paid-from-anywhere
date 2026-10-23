@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { CHECKED_ON, u } from '../site.js';
+export function getStaticPaths() {
+  const mods = Object.values(import.meta.glob('../published/*.md', { eager: true }));
+  return mods.map((m) => ({ params: { path: m.frontmatter.path }, props: { m } }));
+}
+const { m } = Astro.props;
+const fm = m.frontmatter;
+const Content = m.Content;
+---
+<Base title={fm.title} description={fm.description} faqs={fm.faqs || []}>
+  <h1>{fm.h1 || fm.title}</h1>
+  <p class="muted">Last checked: {fm.checkedOn || CHECKED_ON}. Every fact links to the provider's own page.</p>
+  <article><Content /></article>
+  {fm.sources && fm.sources.length > 0 && (<><h2>Sources</h2><ul>{fm.sources.map((u) => <li><a href={u} rel="nofollow noopener" target="_blank">{u}</a></li>)}</ul></>)}
+  <div class="note"><strong>Verify with the provider.</strong> Rules and fees change. Confirm on the provider's site before you sign up.</div>
+  {fm.faqs && fm.faqs.length > 0 && (<><h2>Frequently asked questions</h2>{fm.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}</>)}
+  <p><a href={u("/providers/")}>All providers</a> · <a href={u("/")}>All countries</a></p>
+</Base>

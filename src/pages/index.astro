@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import Status from '../components/Status.astro';
+import data from '../data/providers.json';
+import countries from '../data/countries.json';
+import { CHECKED_ON, u } from '../site.js';
+const guides = Object.values(import.meta.glob('../published/*.md', { eager: true })).map((m) => m.frontmatter).sort((a, b) => a.title.localeCompare(b.title));
+const mors = data.providers.filter((p) => p.category === 'Merchant of record' || p.slug === 'stripe');
+---
+<Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment providers and merchants of record accept founders from your country. Sourced country rules and fees for Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments and more.">
+  <h1>Get paid from anywhere</h1>
+  <p>If you sell software or digital products and Stripe does not work in your country, this site shows which providers say they accept sellers from where you live, what they charge, and the US company route. Every fact links to the provider's own page and shows the date we checked it.</p>
+
+  <h2>Pick your country</h2>
+  <ul class="cards">
+    {countries.map((c) => (<li><a href={u(`/country/${c.slug}/`)}><strong>Stripe alternatives in {c.name}</strong></a></li>))}
+  </ul>
+
+  <h2>At a glance</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th>{countries.map((c) => <th><a href={u(`/country/${c.slug}/`)}>{c.name}</a></th>)}</tr></thead>
+    <tbody>
+      {mors.map((p) => (<tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td>{countries.map((c) => <td><Status status={p.sellerCountries[c.slug] ? p.sellerCountries[c.slug].status : 'unknown'} /></td>)}</tr>))}
+    </tbody>
+  </table></div>
+  <p><small>Checked {CHECKED_ON}. Open a country page for the notes and source links behind each label.</small></p>
+
+  {guides.length > 0 && (<>
+    <h2>Guides</h2>
+    <ul>{guides.map((g) => <li><a href={u(`/${g.path}/`)}>{g.title}</a></li>)}</ul>
+  </>)}
+
+  <h2>How this site works</h2>
+  <p>We only publish facts we could confirm on a provider's own website. When we could not confirm something, we say "unknown". Read the <a href={u("/methodology/")}>methodology</a>, browse the <a href={u("/providers/")}>provider index</a>, or download the <a href={u("/data/providers.json")}>dataset</a>. Some links may become affiliate links; see the <a href={u("/affiliate-disclosure/")}>disclosure</a>.</p>
+</Base>

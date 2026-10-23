@@ -1,0 +1,23 @@
+{
+  "name": "get-paid-from-anywhere",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:links": "node scripts/check-links.mjs",
+    "check:links:external": "node scripts/check-links.mjs --external",
+    "promote": "node scripts/promote-next.mjs",
+    "promote:dry": "node scripts/promote-next.mjs --dry-run",
+    "check:style": "node scripts/check-style.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^5.18.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20.3.0"
+  }
+}

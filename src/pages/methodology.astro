@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/providers.json';
+import { STATUS_TEXT, CHECKED_ON, u } from '../site.js';
+---
+<Base title="Methodology: how we check provider facts" description="How Get Paid From Anywhere sources, dates and labels payment provider facts, what each status label means, and how corrections work.">
+  <h1>Methodology</h1>
+  <h2>Sources</h2>
+  <p>Every fact on this site comes from the provider's own website: help center, documentation, pricing or legal pages. We do not use reviews, forum posts or third-party blogs as a source for facts. Each fact in the <a href={u("/data/providers.json")}>dataset</a> carries its source URL and the date we checked it. The current data was checked on {CHECKED_ON}.</p>
+  <h2>What "unknown" means</h2>
+  <p>If we could not confirm a fact on the provider's own site, we mark it unknown. Unknown does not mean no. It means you should ask the provider.</p>
+  <h2>Status labels</h2>
+  <table>
+    <thead><tr><th>Label</th><th>Meaning</th></tr></thead>
+    <tbody>{Object.entries(data.statusLegend).map(([k, v]) => <tr><td>{STATUS_TEXT[k]}</td><td>{v}</td></tr>)}</tbody>
+  </table>
+  <p>"Not excluded" is weaker than "Listed". Some providers, such as Paddle and Wise, publish a list of countries they cannot serve instead of a list they can. A country missing from that list is not a promise of approval.</p>
+  <h2>What we do not do</h2>
+  <ul>
+    <li>We do not publish user reviews, ratings or traffic numbers.</li>
+    <li>We do not rank providers by affiliate payout.</li>
+    <li>We do not give legal, tax or financial advice. Forming a US company or receiving foreign payments can have tax and regulatory consequences in your country.</li>
+  </ul>
+  <h2>Updates and corrections</h2>
+  <p>When we recheck a provider page, we update the checked date. If a provider page changes and a fact here is wrong, we fix it and note the new checked date.</p>
+</Base>

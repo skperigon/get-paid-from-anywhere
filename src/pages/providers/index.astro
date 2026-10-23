@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import data from '../../data/providers.json';
+import { CHECKED_ON, u } from '../../site.js';
+const cats = [...new Set(data.providers.map((p) => p.category))];
+---
+<Base title="Payment providers for founders outside the US and EU" description={`Index of ${data.providers.length} merchants of record, payment processors, business accounts and US formation services, with sourced facts. Checked ${CHECKED_ON}.`}>
+  <h1>Provider index</h1>
+  <p>Every provider we track, grouped by type. Each page lists fees and country rules with a link to the provider's own source. Last checked: {CHECKED_ON}. The full dataset is available as <a href={u("/data/providers.json")}>JSON</a>.</p>
+  {cats.map((cat) => (
+    <>
+      <h2>{cat}</h2>
+      <ul class="cards">
+        {data.providers.filter((p) => p.category === cat).map((p) => (
+          <li><a href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong></a><br /><small>{p.summary}</small></li>
+        ))}
+      </ul>
+    </>
+  ))}
+</Base>

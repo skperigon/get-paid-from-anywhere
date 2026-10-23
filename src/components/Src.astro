@@ -1,0 +1,5 @@
+---
+import { host } from '../site.js';
+const { href } = Astro.props;
+---
+<a href={href} rel="nofollow noopener" target="_blank">{host(href)}</a>

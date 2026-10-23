@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "india",
+    "name": "India",
+    "people": "Indian founders",
+    "intro": "Stripe still lists India, but new Indian accounts are invite-only. For most solo founders and small teams selling software or digital products abroad, the realistic options are a merchant of record, a US company, or both.",
+    "stripeAnswer": "Partly. Stripe's global availability page lists India with a Preview label, and Stripe's support article says new accounts in India are invite-only. You can request an invite through Stripe Sales, but Stripe says it can only support a select number of businesses for now. Existing Indian Stripe accounts continue to be supported.",
+    "morAnswer": "Paddle does not exclude India. Polar and Dodo Payments both list India. Lemon Squeezy lists India for bank payouts, but says Indian merchants without a pre-approved Stripe account need to use PayPal payouts instead.",
+    "llcAnswer": "A US LLC or C Corp is a common route for selling through Stripe directly. Mercury does not list India on its prohibited countries page, so Indian residents with a US company may be able to apply. Airwallex also lists the United States as an eligible registration country. Forming a US company brings US tax filing duties, and it can also have Indian tax and foreign exchange implications. Get advice from a qualified accountant before you form one.",
+    "bankingAnswer": "Airwallex onboards India-registered businesses through its Singapore entity. India is not on Wise's unsupported list, and Wise confirms business eligibility during sign-up. We have not verified Payoneer's country eligibility.",
+    "faqs": [
+      {
+        "q": "Can I open a new Stripe account in India?",
+        "a": "Only by invitation. Stripe's support article says new accounts in India are invite-only and that you request an invite through Stripe Sales."
+      },
+      {
+        "q": "Which merchants of record accept sellers from India?",
+        "a": "Based on each provider's own pages checked on 2026-10-22: Paddle (India is not on its unsupported list), Polar and Dodo Payments (both list India), and Lemon Squeezy (with PayPal payouts if you do not have a pre-approved Stripe account)."
+      },
+      {
+        "q": "Does Mercury accept founders living in India?",
+        "a": "India is not on Mercury's prohibited countries list, which is based on residence. Mercury requires a US-formed company, and approval is up to Mercury."
+      }
+    ]
+  },
+  {
+    "slug": "pakistan",
+    "name": "Pakistan",
+    "people": "Pakistani founders",
+    "intro": "Stripe does not list Pakistan, and several US banking options exclude Pakistani residents. A few merchants of record do list Pakistan, which makes them the most direct way to sell software and digital products to international buyers.",
+    "stripeAnswer": "No. Pakistan is not on Stripe's global availability page.",
+    "morAnswer": "Paddle does not exclude Pakistan. Lemon Squeezy lists Pakistan for bank payouts, and Polar lists Pakistan for payouts. Dodo Payments does not list Pakistan.",
+    "llcAnswer": "Some founders form a US company to access US payment tools. Be careful: Mercury lists Pakistan on its prohibited countries page, and that list is based on where you live, not your citizenship. A US company also brings US tax filing duties. Talk to a qualified accountant first.",
+    "bankingAnswer": "Pakistan is not on Wise's unsupported list, and Wise confirms business eligibility during sign-up. Airwallex does not list Pakistan as a registration country, though it does list the United States. We have not verified Payoneer's country eligibility.",
+    "faqs": [
+      {
+        "q": "Is Stripe available in Pakistan?",
+        "a": "No. Pakistan does not appear on Stripe's global availability page as of 2026-10-22."
+      },
+      {
+        "q": "Which merchants of record accept sellers from Pakistan?",
+        "a": "Based on each provider's own pages checked on 2026-10-22: Paddle (Pakistan is not on its unsupported list), Lemon Squeezy (Pakistan is on its bank payout list) and Polar (Pakistan is on its payout list). Dodo Payments does not list Pakistan."
+      },
+      {
+        "q": "Can I open a Mercury account if I live in Pakistan?",
+        "a": "Mercury lists Pakistan on its prohibited countries page, and the restriction is based on residence."
+      }
+    ]
+  },
+  {
+    "slug": "nigeria",
+    "name": "Nigeria",
+    "people": "Nigerian founders",
+    "intro": "Stripe lists Nigeria with an Extended network label, and Paystack, a Stripe company, is the local option. For selling software or digital products to buyers abroad, merchants of record are worth comparing too.",
+    "stripeAnswer": "Stripe's global availability page lists Nigeria with an Extended network label, and the page does not explain what that label means for sign-ups. Paystack, which Stripe acquired in 2020, serves businesses in Africa and says they can accept local and international payments with USD payouts. Paystack's page also says that businesses which use Stripe itself for international payments do so by registering a business in the US. Ask Stripe or Paystack what applies to you.",
+    "morAnswer": "Paddle does not exclude Nigeria. Lemon Squeezy lists Nigeria for bank payouts, and Polar lists Nigeria for payouts. Dodo Payments keeps existing Nigerian merchants but does not accept new ones.",
+    "llcAnswer": "Paystack's own page describes the US company route for using Stripe and points to Stripe Atlas. Note that Mercury lists Nigeria on its prohibited countries page, based on residence. A US company also brings US tax filing duties. Talk to a qualified accountant first.",
+    "bankingAnswer": "Paystack supports USD payouts for African businesses. Nigeria is not on Wise's unsupported list, and Wise confirms business eligibility during sign-up. Airwallex does not list Nigeria as a registration country. We have not verified Payoneer's country eligibility.",
+    "faqs": [
+      {
+        "q": "Is Stripe available in Nigeria?",
+        "a": "Stripe lists Nigeria with an Extended network label on its global availability page. Paystack, a Stripe company, is the option Stripe points Nigerian businesses to. Ask Stripe or Paystack what applies to your business."
+      },
+      {
+        "q": "Does Dodo Payments accept new sellers from Nigeria?",
+        "a": "No. Dodo lists Nigeria as grandfathered: merchants who joined before March 23, 2026 are kept, and new Nigerian merchants are not eligible."
+      },
+      {
+        "q": "Which merchants of record accept sellers from Nigeria?",
+        "a": "Based on each provider's own pages checked on 2026-10-22: Paddle (Nigeria is not on its unsupported list), Lemon Squeezy (bank payout list) and Polar (payout list)."
+      }
+    ]
+  },
+  {
+    "slug": "bangladesh",
+    "name": "Bangladesh",
+    "people": "Bangladeshi founders",
+    "intro": "Stripe does not list Bangladesh, Dodo Payments no longer takes new Bangladeshi merchants, and Mercury excludes Bangladeshi residents. Paddle, Lemon Squeezy and Polar are the merchants of record still open to new sellers based on their own pages.",
+    "stripeAnswer": "No. Bangladesh is not on Stripe's global availability page.",
+    "morAnswer": "Paddle does not exclude Bangladesh. Lemon Squeezy lists Bangladesh for bank payouts, and Polar lists Bangladesh for payouts. Dodo Payments keeps existing Bangladeshi merchants but does not accept new ones.",
+    "llcAnswer": "A US company is one way to reach US payment tools, but Mercury lists Bangladesh on its prohibited countries page, based on residence. A US company also brings US tax filing duties. Talk to a qualified accountant first.",
+    "bankingAnswer": "Bangladesh is not on Wise's unsupported list, and Wise confirms business eligibility during sign-up. Airwallex does not list Bangladesh as a registration country. We have not verified Payoneer's country eligibility.",
+    "faqs": [
+      {
+        "q": "Is Stripe available in Bangladesh?",
+        "a": "No. Bangladesh does not appear on Stripe's global availability page as of 2026-10-22."
+      },
+      {
+        "q": "Does Dodo Payments accept sellers from Bangladesh?",
+        "a": "Only existing merchants. Dodo lists Bangladesh as grandfathered since March 23, 2026, so new Bangladeshi merchants are not eligible."
+      },
+      {
+        "q": "Which merchants of record accept new sellers from Bangladesh?",
+        "a": "Based on each provider's own pages checked on 2026-10-22: Paddle (Bangladesh is not on its unsupported list), Lemon Squeezy (bank payout list) and Polar (payout list)."
+      }
+    ]
+  },
+  {
+    "slug": "brazil",
+    "name": "Brazil",
+    "people": "Brazilian founders",
+    "intro": "Stripe supports Brazil directly, so the question for Brazilian founders is usually not access but whether to use a merchant of record to handle global sales tax. Coverage among merchants of record is mixed.",
+    "stripeAnswer": "Yes. Brazil is on Stripe's global availability page.",
+    "morAnswer": "Paddle does not exclude Brazil, and Dodo Payments lists Brazil. Polar does not list Brazil for payouts. Brazil is not on Lemon Squeezy's bank payout list, so PayPal payouts would be the route to check with Lemon Squeezy.",
+    "llcAnswer": "Since Stripe works in Brazil, a US company is optional. If you do form one, Mercury does not list Brazil on its prohibited countries page. A US company brings US tax filing duties, and Brazilian tax rules apply too. Talk to a qualified accountant first.",
+    "bankingAnswer": "Airwallex onboards Brazil-registered businesses through its US entity. Wise supports only some Brazilian business types (Empresario Individual/MEI, Sociedade Limitada Unipessoal and Sociedade Unipessoal de Advocacia) and charges a registration fee for Brazilian businesses. We have not verified Payoneer's country eligibility.",
+    "faqs": [
+      {
+        "q": "Is Stripe available in Brazil?",
+        "a": "Yes. Brazil is on Stripe's global availability page as of 2026-10-22."
+      },
+      {
+        "q": "Does Polar support sellers in Brazil?",
+        "a": "Brazil was not on Polar's supported payout country list when we checked on 2026-10-22."
+      },
+      {
+        "q": "Which Brazilian business types can use Wise Business?",
+        "a": "Wise lists Empresario Individual/MEI, Sociedade Limitada Unipessoal and Sociedade Unipessoal de Advocacia."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+---
+import { STATUS_TEXT, STATUS_CLASS } from '../site.js';
+const { status } = Astro.props;
+---
+<span class={`badge ${STATUS_CLASS[status] || 'unk'}`}>{STATUS_TEXT[status] || 'Unknown'}</span>

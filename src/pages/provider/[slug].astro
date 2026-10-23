@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import Status from '../../components/Status.astro';
+import Src from '../../components/Src.astro';
+import data from '../../data/providers.json';
+import countries from '../../data/countries.json';
+import { CHECKED_ON, u } from '../../site.js';
+export function getStaticPaths() {
+  return data.providers.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const cs = countries.filter((c) => p.sellerCountries[c.slug]);
+const title = `${p.name}: countries, fees and merchant of record status`;
+const description = `${p.name} facts for founders outside the US and EU: ${p.category.toLowerCase()}, fees and country eligibility, each with a source link. Checked ${CHECKED_ON}.`;
+---
+<Base title={title} description={description}>
+  <h1>{p.name}</h1>
+  <p class="muted">{p.category}. Last checked: {CHECKED_ON}.</p>
+  <p>{p.summary}</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Fact</th><th>Value</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Merchant of record</td><td>{p.merchantOfRecord.value}{p.merchantOfRecord.note && <> <small>{p.merchantOfRecord.note}</small></>}</td><td><Src href={p.merchantOfRecord.source} /></td></tr>
+      {p.facts.map((f) => (<tr><td>{f.label}</td><td>{f.value === 'unknown' ? <span class="badge unk">Unknown</span> : f.value}</td><td><Src href={f.source} /></td></tr>))}
+    </tbody>
+  </table></div>
+  {cs.length > 0 && (
+    <>
+      <h2>Country status</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Country</th><th>Status</th><th>Note</th><th>Source</th></tr></thead>
+        <tbody>
+          {cs.map((c) => (<tr><td><a href={u(`/country/${c.slug}/`)}>{c.name}</a></td><td><Status status={p.sellerCountries[c.slug].status} /></td><td>{p.sellerCountries[c.slug].note}</td><td><Src href={p.sellerCountries[c.slug].source} /></td></tr>))}
+        </tbody>
+      </table></div>
+    </>
+  )}
+  <div class="note"><strong>Verify with the provider.</strong> Fees and eligibility change. Check {p.name}'s own site before you sign up.</div>
+  <p><a href={p.affiliateUrl} rel="nofollow noopener" target="_blank">Visit {p.name}</a> <small>(<a href={u("/affiliate-disclosure/")}>disclosure</a>)</small></p>
+  <p><a href={u("/providers/")}>All providers</a></p>
+</Base>

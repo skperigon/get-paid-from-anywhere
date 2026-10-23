@@ -1,0 +1,72 @@
+# Publish workflow for GitHub Pages.
+# - Nightly (schedule): promote the next ready draft (scripts/promote-next.mjs and its
+#   safety checks), style check, build, internal link check, commit the promoted page, deploy.
+# - Push to main and manual runs: build, check and deploy only (no promotion unless the
+#   manual "promote" input is ticked).
+# Everything is gated on the repo variable PUBLISH_ENABLED == 'true'.
+# Emergency stop: set PUBLISH_ENABLED to "false" (or disable this workflow in the Actions tab).
+name: publish
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC = 2:00 AM New York while on EDT, 1:00 AM on EST
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      promote:
+        description: 'Also promote the next ready draft'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: ${{ vars.PUBLISH_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Promote next ready draft
+        id: promote
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.promote) }}
+        run: node scripts/promote-next.mjs
+      - run: npm run check:style
+      - run: npm run build
+      - run: npm run check:links
+      - name: Commit promoted page
+        if: ${{ steps.promote.outputs.promoted != '' }}
+        run: |
+          git config user.name "nightly-publish"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A drafts src/published
+          git commit -m "Publish /${{ steps.promote.outputs.promoted }}/"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

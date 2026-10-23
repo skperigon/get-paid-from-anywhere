@@ -1,0 +1,291 @@
+{
+  "checkedOn": "2026-10-22",
+  "statusLegend": {
+    "listed": "The provider's own page lists this country as supported.",
+    "not-excluded": "The country is not on the provider's published list of unsupported countries.",
+    "invite-only": "The provider says new accounts from this country are invite-only.",
+    "label-only": "The provider lists the country with a label it does not explain on that page. Ask the provider what it means for you.",
+    "conditional": "Supported only under conditions described in the note.",
+    "grandfathered-only": "Only existing merchants are kept. New merchants from this country are not eligible.",
+    "not-listed": "The country does not appear on the provider's supported list.",
+    "prohibited": "The provider names this country on its prohibited list.",
+    "unknown": "We could not verify this on the provider's own site."
+  },
+  "providers": [
+    {
+      "slug": "stripe",
+      "name": "Stripe",
+      "category": "Payment processor",
+      "website": "https://stripe.com/",
+      "affiliateUrl": "https://stripe.com/",
+      "summary": "Payment processor. You need a Stripe account in a country Stripe supports. Stripe is not the merchant of record by default.",
+      "merchantOfRecord": { "value": "No (by default)", "note": "Stripe's pricing page also lists a separate Managed Payments offering described as merchant of record services. Pricing for it was not shown.", "source": "https://stripe.com/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Countries", "value": "51 countries listed on Stripe's global availability page. Some carry labels: India and Indonesia are marked Preview. Cote d'Ivoire, Ghana, Kenya, Nigeria and South Africa are marked Extended network.", "source": "https://stripe.com/global", "checkedOn": "2026-10-22" },
+        { "label": "India", "value": "Stripe says new accounts in India are invite-only. Businesses request an invite through Stripe Sales.", "source": "https://support.stripe.com/questions/stripe-accounts-are-invite-only-in-india", "checkedOn": "2026-10-22" },
+        { "label": "Standard card fee (US pricing page)", "value": "2.9% + 30 cents per successful domestic card transaction", "source": "https://stripe.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Dispute fee (US pricing page)", "value": "$15 per dispute", "source": "https://stripe.com/pricing", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "invite-only", "note": "Listed as Preview on the global page. Stripe's support article says new Indian accounts are invite-only.", "source": "https://support.stripe.com/questions/stripe-accounts-are-invite-only-in-india" },
+        "pakistan": { "status": "not-listed", "note": "Pakistan is not on Stripe's global availability list.", "source": "https://stripe.com/global" },
+        "nigeria": { "status": "label-only", "note": "Listed as Extended network. Paystack, a Stripe company, serves businesses based in Africa.", "source": "https://stripe.com/global" },
+        "bangladesh": { "status": "not-listed", "note": "Bangladesh is not on Stripe's global availability list.", "source": "https://stripe.com/global" },
+        "brazil": { "status": "listed", "note": "Brazil is on Stripe's global availability list.", "source": "https://stripe.com/global" }
+      }
+    },
+    {
+      "slug": "stripe-atlas",
+      "name": "Stripe Atlas",
+      "category": "US company formation",
+      "website": "https://stripe.com/atlas",
+      "affiliateUrl": "https://stripe.com/atlas",
+      "summary": "Stripe's service for forming a Delaware company.",
+      "merchantOfRecord": { "value": "No", "note": "Atlas is a company formation service, not a payment provider.", "source": "https://stripe.com/atlas", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Setup fee", "value": "$500 one-time. Stripe says this includes government fees and the first year of registered agent service.", "source": "https://stripe.com/atlas", "checkedOn": "2026-10-22" },
+        { "label": "Registered agent after year one", "value": "$100 per year, renews automatically", "source": "https://stripe.com/atlas", "checkedOn": "2026-10-22" },
+        { "label": "State", "value": "Delaware", "source": "https://stripe.com/atlas", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "unknown", "note": "Founder country eligibility was not verified.", "source": "https://stripe.com/atlas" },
+        "pakistan": { "status": "unknown", "note": "Founder country eligibility was not verified.", "source": "https://stripe.com/atlas" },
+        "nigeria": { "status": "unknown", "note": "Founder country eligibility was not verified. Paystack's Stripe page points African businesses that want a US company to Atlas.", "source": "https://paystack.com/stripe/nigeria" },
+        "bangladesh": { "status": "unknown", "note": "Founder country eligibility was not verified.", "source": "https://stripe.com/atlas" },
+        "brazil": { "status": "unknown", "note": "Founder country eligibility was not verified.", "source": "https://stripe.com/atlas" }
+      }
+    },
+    {
+      "slug": "paddle",
+      "name": "Paddle",
+      "category": "Merchant of record",
+      "website": "https://www.paddle.com/",
+      "affiliateUrl": "https://www.paddle.com/",
+      "summary": "Merchant of record for software businesses. Paddle publishes a list of countries it cannot work with rather than a list of countries it supports.",
+      "merchantOfRecord": { "value": "Yes", "note": "", "source": "https://www.paddle.com/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Seller countries", "value": "Sellers from anywhere except a published list of unsupported countries and regions, including Afghanistan, Belarus, Cuba, Iran, Iraq, North Korea, Russia, Syria, Venezuela, Yemen and Zimbabwe.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle", "checkedOn": "2026-10-22" },
+        { "label": "Fee", "value": "5% + 50 cents per checkout transaction, no monthly fee. Products under $10 can contact Paddle for different pricing.", "source": "https://www.paddle.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Product type", "value": "Paddle says it works with software businesses.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "not-excluded", "note": "India is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
+        "pakistan": { "status": "not-excluded", "note": "Pakistan is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
+        "nigeria": { "status": "not-excluded", "note": "Nigeria is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
+        "bangladesh": { "status": "not-excluded", "note": "Bangladesh is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
+        "brazil": { "status": "not-excluded", "note": "Brazil is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" }
+      }
+    },
+    {
+      "slug": "lemon-squeezy",
+      "name": "Lemon Squeezy",
+      "category": "Merchant of record",
+      "website": "https://www.lemonsqueezy.com/",
+      "affiliateUrl": "https://www.lemonsqueezy.com/",
+      "summary": "Merchant of record for digital products and software. Eligibility depends on whether you can receive a bank payout or a PayPal payout.",
+      "merchantOfRecord": { "value": "Yes", "note": "", "source": "https://www.lemonsqueezy.com/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Seller countries", "value": "Merchants who can receive bank payouts (published country list) or PayPal payouts (Lemon Squeezy says PayPal payouts work in 200+ countries).", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries", "checkedOn": "2026-10-22" },
+        { "label": "Fee", "value": "5% + 50 cents per transaction. Lemon Squeezy notes some payments may carry additional fees.", "source": "https://www.lemonsqueezy.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Payout schedule", "value": "Twice a month, by bank or PayPal", "source": "https://www.lemonsqueezy.com/pricing", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "conditional", "note": "India is on the bank payout list with a caveat: because new Stripe accounts in India are invite-only, Indian merchants without a pre-approved Stripe account need to use PayPal payouts.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
+        "pakistan": { "status": "listed", "note": "Pakistan is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
+        "nigeria": { "status": "listed", "note": "Nigeria is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
+        "bangladesh": { "status": "listed", "note": "Bangladesh is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
+        "brazil": { "status": "conditional", "note": "Brazil is not on the bank payout list. PayPal payouts may be an option. Confirm with Lemon Squeezy and PayPal.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" }
+      }
+    },
+    {
+      "slug": "polar",
+      "name": "Polar",
+      "category": "Merchant of record",
+      "website": "https://polar.sh/",
+      "affiliateUrl": "https://polar.sh/",
+      "summary": "Merchant of record aimed at developers. Payouts go through Stripe Connect Express, and Polar publishes its own payout country list.",
+      "merchantOfRecord": { "value": "Yes", "note": "", "source": "https://polar.sh/docs/merchant-of-record/supported-countries", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Seller countries", "value": "Countries where Polar can pay out through Stripe Connect Express, per Polar's list. Polar's FAQ says this works in places where Stripe itself is invite-only, such as India.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries", "checkedOn": "2026-10-22" },
+        { "label": "Fees", "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. Plus 1.5% for international (non-US) cards.", "source": "https://polar.sh/docs/merchant-of-record/fees", "checkedOn": "2026-10-22" },
+        { "label": "Dispute fee", "value": "$15", "source": "https://polar.sh/docs/merchant-of-record/fees", "checkedOn": "2026-10-22" },
+        { "label": "Payout fees", "value": "Stripe payout fees passed through: $2 per month with active payouts, 0.25% + 25 cents per payout, and cross-border FX from 0.25% (EU) to 1% elsewhere.", "source": "https://polar.sh/docs/merchant-of-record/fees", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "listed", "note": "India is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
+        "pakistan": { "status": "listed", "note": "Pakistan is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
+        "nigeria": { "status": "listed", "note": "Nigeria is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
+        "bangladesh": { "status": "listed", "note": "Bangladesh is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
+        "brazil": { "status": "not-listed", "note": "Brazil is not on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" }
+      }
+    },
+    {
+      "slug": "dodo-payments",
+      "name": "Dodo Payments",
+      "category": "Merchant of record",
+      "website": "https://dodopayments.com/",
+      "affiliateUrl": "https://dodopayments.com/",
+      "summary": "Merchant of record. Eligibility is based on the country of your government ID, and for companies, on every director and beneficial owner too.",
+      "merchantOfRecord": { "value": "Yes", "note": "", "source": "https://dodopayments.com/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Eligibility rule", "value": "Individuals: country of government ID. Entities: incorporation country plus the ID country of every director and beneficial owner. Dodo says registering a company in a supported country does not by itself make you eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories", "checkedOn": "2026-10-22" },
+        { "label": "Grandfathered countries", "value": "Since March 23, 2026, merchants from Bangladesh, Egypt, Equatorial Guinea, Eritrea, Marshall Islands, Micronesia, Morocco, Nauru, Nigeria, Tuvalu and Ukraine who joined before the change are kept. New merchants from these countries are not eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories", "checkedOn": "2026-10-22" },
+        { "label": "Fees", "value": "4% + 40 cents for US domestic cards, plus 1.5% for international cards and 0.5% for subscriptions. India domestic INR payments: 4% + 15 cents. PayPal and BNPL add 3%.", "source": "https://dodopayments.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Other fees", "value": "Disputes $30. Refunds $1. USD SWIFT payouts $25.", "source": "https://dodopayments.com/pricing", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "listed", "note": "India is on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
+        "pakistan": { "status": "not-listed", "note": "Pakistan is not on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
+        "nigeria": { "status": "grandfathered-only", "note": "Existing merchants from before March 23, 2026 are kept. New Nigerian merchants are not eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
+        "bangladesh": { "status": "grandfathered-only", "note": "Existing merchants from before March 23, 2026 are kept. New Bangladeshi merchants are not eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
+        "brazil": { "status": "listed", "note": "Brazil is on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" }
+      }
+    },
+    {
+      "slug": "paystack",
+      "name": "Paystack",
+      "category": "Payment processor (Africa)",
+      "website": "https://paystack.com/",
+      "affiliateUrl": "https://paystack.com/",
+      "summary": "A Stripe company focused on businesses operating in Africa. Supports local and international payments, with USD payouts.",
+      "merchantOfRecord": { "value": "No", "note": "Paystack is a payment processor.", "source": "https://paystack.com/stripe/nigeria", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Ownership", "value": "Acquired by Stripe in 2020.", "source": "https://paystack.com/stripe/nigeria", "checkedOn": "2026-10-22" },
+        { "label": "International payments", "value": "Paystack says businesses based in Africa can accept local and international payments and get paid out in USD.", "source": "https://paystack.com/stripe/nigeria", "checkedOn": "2026-10-22" },
+        { "label": "Fees", "value": "unknown", "source": "https://paystack.com/", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "nigeria": { "status": "listed", "note": "Paystack serves businesses in Nigeria. A Stripe account does not give access to Paystack payment methods; a separate Paystack account is needed.", "source": "https://paystack.com/stripe/nigeria" }
+      }
+    },
+    {
+      "slug": "wise-business",
+      "name": "Wise Business",
+      "category": "Multi-currency account",
+      "website": "https://wise.com/business/",
+      "affiliateUrl": "https://wise.com/business/",
+      "summary": "Multi-currency business account with local account details in several currencies. Wise confirms whether it supports businesses in your country during sign-up.",
+      "merchantOfRecord": { "value": "No", "note": "Wise is an account and transfer provider.", "source": "https://wise.com/help/articles/2977974/can-my-business-use-wise", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Unsupported countries", "value": "Wise lists countries it cannot serve, including Afghanistan, Belarus, Cuba, Iran, Iraq, North Korea, Russia, Syria, Venezuela and Yemen.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise", "checkedOn": "2026-10-22" },
+        { "label": "Business country support", "value": "Wise says it will tell you whether it supports businesses in your country when you add your details.", "source": "https://wise.com/help/articles/2977974/can-my-business-use-wise", "checkedOn": "2026-10-22" },
+        { "label": "Setup fee", "value": "Brazil: a registration fee at sign-up. Most other regions except India: free to sign up, with a fee to get account details that depends on where the business is registered. Exact amounts are on Wise's pricing page for your country.", "source": "https://wise.com/help/articles/2977969/fees-for-using-wise-business", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "not-excluded", "note": "India is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
+        "pakistan": { "status": "not-excluded", "note": "Pakistan is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
+        "nigeria": { "status": "not-excluded", "note": "Nigeria is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
+        "bangladesh": { "status": "not-excluded", "note": "Bangladesh is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
+        "brazil": { "status": "conditional", "note": "Wise supports only some Brazilian business types: Empresario Individual/MEI, Sociedade Limitada Unipessoal and Sociedade Unipessoal de Advocacia.", "source": "https://wise.com/help/articles/2977974/can-my-business-use-wise" }
+      }
+    },
+    {
+      "slug": "payoneer",
+      "name": "Payoneer",
+      "category": "Cross-border payments account",
+      "website": "https://www.payoneer.com/",
+      "affiliateUrl": "https://www.payoneer.com/",
+      "summary": "Account for receiving cross-border payments from clients and marketplaces. Fees depend on the payment method and corridor.",
+      "merchantOfRecord": { "value": "No", "note": "Payoneer is a payments account provider.", "source": "https://www.payoneer.com/pricing/", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Coverage claim", "value": "Payoneer says it covers 190+ countries and territories and 70+ currencies.", "source": "https://www.payoneer.com/pricing/", "checkedOn": "2026-10-22" },
+        { "label": "Receiving fees", "value": "Free from another Payoneer balance or a local-currency receiving account. 1% (minimum $1) via a receiving account in a non-local currency. Up to 3.99% + 49 cents when a payer uses a card.", "source": "https://www.payoneer.com/pricing/", "checkedOn": "2026-10-22" },
+        { "label": "Withdrawal fees", "value": "1.2% to 4% to a bank account in another currency or country, minimums of up to $20 may apply.", "source": "https://www.payoneer.com/pricing/", "checkedOn": "2026-10-22" },
+        { "label": "Annual account fee", "value": "$29.95 if the account receives less than $6,000 in 12 consecutive months", "source": "https://www.payoneer.com/pricing/", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "unknown", "note": "Country eligibility was not verified on Payoneer's site.", "source": "https://www.payoneer.com/pricing/" },
+        "pakistan": { "status": "unknown", "note": "Country eligibility was not verified on Payoneer's site.", "source": "https://www.payoneer.com/pricing/" },
+        "nigeria": { "status": "unknown", "note": "Country eligibility was not verified on Payoneer's site.", "source": "https://www.payoneer.com/pricing/" },
+        "bangladesh": { "status": "unknown", "note": "Country eligibility was not verified on Payoneer's site.", "source": "https://www.payoneer.com/pricing/" },
+        "brazil": { "status": "unknown", "note": "Country eligibility was not verified on Payoneer's site.", "source": "https://www.payoneer.com/pricing/" }
+      }
+    },
+    {
+      "slug": "airwallex",
+      "name": "Airwallex",
+      "category": "Business account and payments",
+      "website": "https://www.airwallex.com/",
+      "affiliateUrl": "https://www.airwallex.com/",
+      "summary": "Business account and payments platform. Onboards only businesses registered in its listed countries.",
+      "merchantOfRecord": { "value": "No", "note": "", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Eligibility", "value": "Businesses registered in a listed country. Each country is onboarded to a specific Airwallex entity. The United States is on the list.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories", "checkedOn": "2026-10-22" },
+        { "label": "Fees", "value": "unknown", "source": "https://www.airwallex.com/", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "listed", "note": "India-registered businesses are onboarded to Airwallex's Singapore entity.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
+        "pakistan": { "status": "not-listed", "note": "Pakistan is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
+        "nigeria": { "status": "not-listed", "note": "Nigeria is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
+        "bangladesh": { "status": "not-listed", "note": "Bangladesh is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
+        "brazil": { "status": "listed", "note": "Brazil-registered businesses are onboarded to Airwallex's US entity.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" }
+      }
+    },
+    {
+      "slug": "mercury",
+      "name": "Mercury",
+      "category": "US business banking (fintech)",
+      "website": "https://mercury.com/",
+      "affiliateUrl": "https://mercury.com/",
+      "summary": "US business banking for US-formed companies. Mercury is a fintech company, not a bank; banking services are provided through partner banks. Some founder countries of residence are prohibited.",
+      "merchantOfRecord": { "value": "No", "note": "", "source": "https://mercury.com/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Prohibited countries", "value": "Based on residence, not citizenship. The list includes Bangladesh, Nigeria and Pakistan, among others.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries", "checkedOn": "2026-10-22" },
+        { "label": "Monthly fee", "value": "$0 base plan. Mercury Plus is $29.90 per month.", "source": "https://mercury.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "International wires", "value": "USD international wires free. Non-USD wires carry a 1% currency exchange fee.", "source": "https://mercury.com/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Banking partners", "value": "Choice Financial Group and Column N.A., Members FDIC", "source": "https://mercury.com/pricing", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {
+        "india": { "status": "not-excluded", "note": "India is not on Mercury's prohibited list. You still need a US-formed company.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
+        "pakistan": { "status": "prohibited", "note": "Pakistan is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
+        "nigeria": { "status": "prohibited", "note": "Nigeria is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
+        "bangladesh": { "status": "prohibited", "note": "Bangladesh is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
+        "brazil": { "status": "not-excluded", "note": "Brazil is not on Mercury's prohibited list. You still need a US-formed company.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" }
+      }
+    },
+    {
+      "slug": "doola",
+      "name": "doola",
+      "category": "US company formation",
+      "website": "https://www.doola.com/",
+      "affiliateUrl": "https://www.doola.com/",
+      "summary": "US LLC or C Corp formation with EIN and a US address, sold as yearly plans. Accepts non-US citizens.",
+      "merchantOfRecord": { "value": "No", "note": "Formation service.", "source": "https://www.doola.com/pricing/", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Starter plan", "value": "$297 per year plus state fees. Includes LLC or C Corp formation, EIN and a US address.", "source": "https://www.doola.com/pricing/", "checkedOn": "2026-10-22" },
+        { "label": "Other plans", "value": "Tax and Compliance $1,999 per year. Business-in-a-Box $2,999 per year.", "source": "https://www.doola.com/pricing/", "checkedOn": "2026-10-22" },
+        { "label": "Non-US founders", "value": "doola's pricing page says non-US citizens are accepted.", "source": "https://www.doola.com/pricing/", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {}
+    },
+    {
+      "slug": "firstbase",
+      "name": "Firstbase",
+      "category": "US company formation",
+      "website": "https://www.firstbase.io/",
+      "affiliateUrl": "https://www.firstbase.io/",
+      "summary": "US company formation in Delaware or Wyoming with EIN.",
+      "merchantOfRecord": { "value": "No", "note": "Formation service.", "source": "https://www.firstbase.io/pricing", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "Start plan", "value": "$399 one-time list price. On 2026-10-22 the page also showed a discounted price of $99. Delaware or Wyoming, includes EIN. A registered agent is required separately.", "source": "https://www.firstbase.io/pricing", "checkedOn": "2026-10-22" },
+        { "label": "Firstbase One", "value": "$2,388 per year, billed yearly", "source": "https://www.firstbase.io/pricing", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {}
+    },
+    {
+      "slug": "northwest-registered-agent",
+      "name": "Northwest Registered Agent",
+      "category": "US company formation",
+      "website": "https://www.northwestregisteredagent.com/",
+      "affiliateUrl": "https://www.northwestregisteredagent.com/",
+      "summary": "LLC formation with the first year of registered agent service included.",
+      "merchantOfRecord": { "value": "No", "note": "Formation service.", "source": "https://www.northwestregisteredagent.com/llc", "checkedOn": "2026-10-22" },
+      "facts": [
+        { "label": "LLC formation", "value": "$39 plus state fees, first year of registered agent service included", "source": "https://www.northwestregisteredagent.com/llc", "checkedOn": "2026-10-22" },
+        { "label": "Registered agent renewal", "value": "$125 per year", "source": "https://www.northwestregisteredagent.com/llc", "checkedOn": "2026-10-22" },
+        { "label": "Non-US founders", "value": "unknown", "source": "https://www.northwestregisteredagent.com/llc", "checkedOn": "2026-10-22" }
+      ],
+      "sellerCountries": {}
+    }
+  ]
+}

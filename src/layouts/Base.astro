@@ -1,0 +1,65 @@
+---
+import { SITE_NAME, u } from '../site.js';
+interface Props { title: string; description: string; faqs?: { q: string; a: string }[]; jsonLd?: object[] }
+const { title, description, faqs = [], jsonLd = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const schemas = [...jsonLd];
+if (faqs.length) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+}
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE_NAME} />
+<link rel="sitemap" href={u("/sitemap-index.xml")} />
+{schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+<style is:global>
+:root { --fg:#1a1a1a; --muted:#555; --line:#e3e3e3; --bg:#fff; --accent:#0b5cad; --ok:#e6f4ea; --warn:#fff4d6; --no:#fde7e7; --unk:#eee; }
+* { box-sizing: border-box; }
+body { margin:0; font: 17px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--fg); background:var(--bg); }
+a { color:var(--accent); }
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 18px; }
+header { display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+header .brand { font-weight:700; text-decoration:none; color:var(--fg); }
+header nav a { margin-left:14px; font-size:15px; }
+h1 { line-height:1.25; font-size:32px; margin-top:28px; }
+h2 { margin-top:34px; font-size:22px; }
+table { border-collapse:collapse; width:100%; font-size:15px; margin:12px 0; }
+th, td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align:top; }
+th { background:#fafafa; }
+.badge { display:inline-block; padding:1px 8px; border-radius:10px; font-size:13px; white-space:nowrap; }
+.ok { background:var(--ok); } .warn { background:var(--warn); } .no { background:var(--no); } .unk { background:var(--unk); }
+.note { background:#f5f8fc; border-left:4px solid var(--accent); padding:10px 14px; margin:18px 0; }
+.muted, small { color:var(--muted); }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; padding:0; list-style:none; }
+.cards li { border:1px solid var(--line); border-radius:8px; padding:12px; }
+footer { border-top:1px solid var(--line); margin-top:48px; padding-top:16px; padding-bottom:30px; font-size:14px; color:var(--muted); }
+.table-wrap { overflow-x:auto; }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href={u("/")}>{SITE_NAME}</a>
+  <nav><a href={u("/providers/")}>Providers</a><a href={u("/methodology/")}>Methodology</a><a href={u("/data/providers.json")}>Data</a></nav>
+</header>
+<main><slot /></main>
+<footer>
+  <p>Facts on this site come from each provider's own pages and carry a source link and a checked date. Providers change their rules often, so always verify with the provider before you sign up. This is not legal, tax or financial advice.</p>
+  <p><a href={u("/methodology/")}>Methodology</a> · <a href={u("/affiliate-disclosure/")}>Affiliate disclosure</a> · <a href={u("/providers/")}>All providers</a></p>
+</footer>
+</body>
+</html>
