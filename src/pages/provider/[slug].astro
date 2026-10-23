@@ -13,7 +13,7 @@ const cs = countries.filter((c) => p.sellerCountries[c.slug]);
 const title = `${p.name}: countries, fees and merchant of record status`;
 const description = `${p.name} facts for founders outside the US and EU: ${p.category.toLowerCase()}, fees and country eligibility, each with a source link. Checked ${CHECKED_ON}.`;
 ---
-<Base title={title} description={description}>
+<Base title={title} description={description} crumb={p.name}>
   <h1>{p.name}</h1>
   <p class="muted">{p.category}. Last checked: {CHECKED_ON}.</p>
   <p>{p.summary}</p>

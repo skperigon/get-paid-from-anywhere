@@ -5,6 +5,7 @@ import Src from '../../components/Src.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
 import { CHECKED_ON, u } from '../../site.js';
+import { allCountries } from '../../lib/countries.js';
 
 export function getStaticPaths() {
   return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -18,11 +19,11 @@ const groups = [
   { title: 'US company formation', match: (p) => p.category === 'US company formation' },
 ];
 const formation = data.providers.filter((p) => p.category === 'US company formation');
-const others = countries.filter((o) => o.slug !== c.slug);
+const others = allCountries().filter((o) => o.slug !== c.slug);
 const title = `Stripe alternatives in ${c.name} (checked ${CHECKED_ON})`;
 const description = `Is Stripe available in ${c.name}? Which merchants of record accept ${c.people}, the US LLC route, and banking options, with a source link for every fact.`;
 ---
-<Base title={title} description={description} faqs={c.faqs}>
+<Base title={title} description={description} faqs={c.faqs} dateModified={CHECKED_ON} crumb={`Stripe alternatives in ${c.name}`}>
   <h1>Stripe alternatives in {c.name}</h1>
   <p class="muted">Last checked: {CHECKED_ON}. Every fact links to the provider's own page.</p>
   <p>{c.intro}</p>

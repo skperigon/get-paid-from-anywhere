@@ -1,9 +1,36 @@
 ---
 import { SITE_NAME, u } from '../site.js';
-interface Props { title: string; description: string; faqs?: { q: string; a: string }[]; jsonLd?: object[] }
-const { title, description, faqs = [], jsonLd = [] } = Astro.props;
+interface Props { title: string; description: string; faqs?: { q: string; a: string }[]; jsonLd?: object[]; dateModified?: string; crumb?: string }
+const { title, description, faqs = [], jsonLd = [], dateModified, crumb } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const home = new URL(u('/'), Astro.site).href;
+const isHome = canonical === home;
 const schemas = [...jsonLd];
+const publisher = { '@type': 'Organization', name: SITE_NAME, url: home };
+if (isHome) {
+  schemas.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: home, description });
+} else {
+  const crumbs = [{ name: 'Home', item: home }];
+  if (canonical.includes('/provider/')) crumbs.push({ name: 'Providers', item: new URL(u('/providers/'), Astro.site).href });
+  crumbs.push({ name: crumb || title.replace(/\s*\(checked [^)]*\)\s*$/, ''), item: canonical });
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
+  });
+}
+if (dateModified) {
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    dateModified,
+    mainEntityOfPage: canonical,
+    author: publisher,
+    publisher,
+  });
+}
 if (faqs.length) {
   schemas.push({
     '@context': 'https://schema.org',
@@ -23,7 +50,7 @@ if (faqs.length) {
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={dateModified ? "article" : "website"} />
 <meta property="og:site_name" content={SITE_NAME} />
 <link rel="sitemap" href={u("/sitemap-index.xml")} />
 {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}

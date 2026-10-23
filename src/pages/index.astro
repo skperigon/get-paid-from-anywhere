@@ -4,7 +4,8 @@ import Status from '../components/Status.astro';
 import data from '../data/providers.json';
 import countries from '../data/countries.json';
 import { CHECKED_ON, u } from '../site.js';
-const guides = Object.values(import.meta.glob('../published/*.md', { eager: true })).map((m) => m.frontmatter).sort((a, b) => a.title.localeCompare(b.title));
+import { allCountries } from '../lib/countries.js';
+const guides = Object.values(import.meta.glob('../published/*.md', { eager: true })).map((m) => m.frontmatter).filter((g) => !/^country\//.test(g.path)).sort((a, b) => a.title.localeCompare(b.title));
 const mors = data.providers.filter((p) => p.category === 'Merchant of record' || p.slug === 'stripe');
 ---
 <Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment providers and merchants of record accept founders from your country. Sourced country rules and fees for Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments and more.">
@@ -13,7 +14,7 @@ const mors = data.providers.filter((p) => p.category === 'Merchant of record' ||
 
   <h2>Pick your country</h2>
   <ul class="cards">
-    {countries.map((c) => (<li><a href={u(`/country/${c.slug}/`)}><strong>Stripe alternatives in {c.name}</strong></a></li>))}
+    {allCountries().map((c) => (<li><a href={u(`/country/${c.slug}/`)}><strong>Stripe alternatives in {c.name}</strong></a></li>))}
   </ul>
 
   <h2>At a glance</h2>
