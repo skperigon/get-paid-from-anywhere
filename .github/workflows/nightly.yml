@@ -3,6 +3,7 @@
 #   safety checks), style check, build, internal link check, commit the promoted page, deploy.
 # - Push to main and manual runs: build, check and deploy only (no promotion unless the
 #   manual "promote" input is ticked).
+# - After a nightly deploy that published a page, the new URL is submitted to IndexNow.
 # Everything is gated on the repo variable PUBLISH_ENABLED == 'true'.
 # Emergency stop: set PUBLISH_ENABLED to "false" (or disable this workflow in the Actions tab).
 name: publish
@@ -32,6 +33,8 @@ jobs:
   build:
     if: ${{ vars.PUBLISH_ENABLED == 'true' }}
     runs-on: ubuntu-latest
+    outputs:
+      promoted: ${{ steps.promote.outputs.promoted }}
     env:
       SITE_URL: ${{ vars.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere' }}
     steps:
@@ -70,3 +73,19 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Tell IndexNow (Bing, Yandex and others) about the page published tonight.
+  # Runs only after a successful deploy and only when a page was promoted.
+  indexnow:
+    needs: [build, deploy]
+    if: ${{ needs.build.outputs.promoted != '' }}
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Submit new URL to IndexNow
+        run: node scripts/indexnow-submit.mjs "${{ needs.build.outputs.promoted }}" "$SITE_URL/" || true
