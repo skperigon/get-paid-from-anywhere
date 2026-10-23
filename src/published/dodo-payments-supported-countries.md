@@ -1,7 +1,7 @@
 ---
 order: 1
 idea: 25
-status: ready
+status: published
 path: "guides/dodo-payments-supported-countries"
 title: "Dodo Payments supported countries, explained (checked 2026-10-22)"
 h1: "Dodo Payments supported countries, explained"
