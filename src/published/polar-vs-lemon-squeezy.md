@@ -1,7 +1,7 @@
 ---
 order: 2
 idea: 20
-status: ready
+status: published
 path: "compare/polar-vs-lemon-squeezy"
 title: "Polar vs Lemon Squeezy: fees and payout countries (checked 2026-10-22)"
 h1: "Polar vs Lemon Squeezy"
