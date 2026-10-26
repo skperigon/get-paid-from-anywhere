@@ -1,7 +1,7 @@
 ---
 order: 4
 idea: 6
-status: ready
+status: published
 path: "country/south-africa"
 title: "Stripe alternatives in South Africa (checked 2026-10-22)"
 h1: "Stripe alternatives in South Africa"
