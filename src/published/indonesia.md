@@ -1,7 +1,7 @@
 ---
 order: 5
 idea: 7
-status: ready
+status: published
 path: "country/indonesia"
 title: "Stripe alternatives in Indonesia (checked 2026-10-22)"
 h1: "Stripe alternatives in Indonesia"
