@@ -1,7 +1,7 @@
 ---
 order: 6
 idea: 8
-status: ready
+status: published
 path: "country/kenya"
 title: "Can I use Stripe in Kenya? Alternatives that work (checked 2026-10-22)"
 h1: "Can I use Stripe in Kenya?"
