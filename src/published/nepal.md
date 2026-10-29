@@ -1,7 +1,7 @@
 ---
 order: 7
 idea: 9
-status: ready
+status: published
 path: "country/nepal"
 title: "Stripe alternatives in Nepal (checked 2026-10-22)"
 h1: "Stripe alternatives in Nepal"
