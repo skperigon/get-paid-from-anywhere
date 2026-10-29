@@ -1,14 +1,43 @@
 ---
 import Base from '../layouts/Base.astro';
 import data from '../data/providers.json';
-import { STATUS_TEXT, STATUS_CLASS, CHECKED_ON, u } from '../site.js';
+import { STATUS_TEXT, STATUS_CLASS, CHECKED_ON, RUBRIC, PICKS, score, u } from '../site.js';
+import Byline from '../components/Byline.astro';
+const scored = data.providers.map((p) => ({ p, s: score(p) })).filter((x) => x.s).sort((a, b) => b.s.total - a.s.total || a.p.name.localeCompare(b.p.name));
+const unscored = data.providers.filter((p) => !score(p));
 ---
-<Base title="Methodology: how we check provider facts" description="How Get Paid From Anywhere sources, dates and labels payment provider facts, what each status label means, and how corrections work." crumb="Methodology">
+<Base title="How we rate and check provider facts" description="How Get Paid From Anywhere sources and dates payment provider facts, how the checklist score and Best for picks work, what each status label means, and how corrections work." crumb="How we rate">
   <div class="prose">
-  <h1>Methodology</h1>
-  <p class="meta"><span class="chip">Data last checked {CHECKED_ON}</span></p>
+  <h1>How we rate and check facts</h1>
+  <Byline date={CHECKED_ON} />
+  <div class="summary-box">
+    <h2>The short version</h2>
+    <ul>
+      <li>Facts come only from each provider's own pages, with a link and a checked date.</li>
+      <li>The checklist score is five yes or no checks computed from those facts. No reviews, no opinions.</li>
+      <li>Affiliate deals never change a fact, a label, a score or a pick.</li>
+    </ul>
+  </div>
   <h2>Sources</h2>
   <p>Every fact on this site comes from the provider's own website: help center, documentation, pricing or legal pages. We do not use reviews, forum posts or third-party blogs as a source for facts. Each fact in the <a href={u("/data/providers.json")}>dataset</a> carries its source URL and the date we checked it. The current data was checked on {CHECKED_ON}.</p>
+  <h2 id="score">The checklist score</h2>
+  <p>Payment providers get a score out of 5. It is not a quality rating. It counts how many of these checks a provider passes, using only the facts in our dataset for the countries we track in detail:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Check</th><th>Points</th></tr></thead>
+    <tbody>{RUBRIC.map((r) => <tr><td>{r.label}{r.half && <><br /><small>{r.half}.</small></>}</td><td>{r.points}</td></tr>)}</tbody>
+  </table></div>
+  <p>"Open" means the status is Listed or Not excluded. US company formation services are not scored, because country eligibility does not apply to them in the same way. Providers we only track in some countries are not scored either.</p>
+  <h3>Current scores</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Type</th>{RUBRIC.map((r) => <th>{r.key === 'access' ? 'Countries' : r.key === 'mor' ? 'Tax handled' : r.key === 'fee' ? 'Fees public' : 'No unknowns'}</th>)}<th>Score</th></tr></thead>
+    <tbody>{scored.map(({ p, s }) => <tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td><td>{p.category}</td>{RUBRIC.map((r) => <td>{s.parts[r.key]}</td>)}<td><strong>{s.total}/{s.max}</strong></td></tr>)}</tbody>
+  </table></div>
+  <p><small>Not scored: {unscored.map((p) => p.name).join(', ')}.</small></p>
+
+  <h2 id="picks">How we choose "Best for" picks</h2>
+  <p>Each pick is tied to one fact you can check on the provider's page. We do not pick on reputation or on affiliate payouts.</p>
+  <ul>{PICKS.map((k) => { const p = data.providers.find((x) => x.slug === k.slug); return p && <li><strong>{k.label}: <a href={u(`/provider/${p.slug}/`)}>{p.name}</a>.</strong> {k.why}</li>; })}</ul>
+
   <h2>What "unknown" means</h2>
   <p>If we could not confirm a fact on the provider's own site, we mark it unknown. Unknown does not mean no. It means you should ask the provider.</p>
   <h2>Status labels</h2>

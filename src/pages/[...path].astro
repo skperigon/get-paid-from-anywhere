@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { CHECKED_ON, u } from '../site.js';
+import { CHECKED_ON, fmtDate, u } from '../site.js';
+import Byline from '../components/Byline.astro';
 import { allCountries, providersIn } from '../lib/countries.js';
 export function getStaticPaths() {
   const mods = Object.values(import.meta.glob('../published/*.md', { eager: true }));
@@ -15,10 +16,15 @@ const raw = typeof m.rawContent === 'function' ? m.rawContent() : '';
 const mentioned = providersIn(raw);
 const checked = fm.checkedOn || CHECKED_ON;
 ---
-<Base title={fm.title} description={fm.description} faqs={fm.faqs || []} dateModified={checked} crumb={fm.h1}>
+<Base title={fm.title} description={fm.description} faqs={fm.faqs || []} dateModified={checked} crumb={fm.h1} crumbs={countrySlug ? undefined : [{ name: 'Guides', path: '/guides/' }]}>
   <div class="prose">
   <h1>{fm.h1 || fm.title}</h1>
-  <p class="meta"><span class="chip">Last checked {checked}</span><span class="chip">Every fact links to its source</span></p>
+  <Byline date={checked} sources={(fm.sources || []).length || null} />
+  <div class="summary-box">
+    <h2>The short answer</h2>
+    <p>{fm.description}</p>
+    {mentioned.length > 0 && <p><strong>Providers covered:</strong> {mentioned.map((p, i) => <>{i > 0 && ', '}<a href={u(`/provider/${p.slug}/`)}>{p.name}</a></>)}</p>}
+  </div>
   <article><Content /></article>
   {fm.sources && fm.sources.length > 0 && (<><h2>Sources</h2><ul>{fm.sources.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}</ul></>)}
   <div class="note"><strong>Verify with the provider.</strong> Rules and fees change. Confirm on the provider's site before you sign up.</div>

@@ -1,13 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import data from '../data/providers.json';
-import { CHECKED_ON, REPO_URL, SITE_NAME, u } from '../site.js';
+import { CHECKED_ON, REPO_URL, SITE_NAME, SITE_LINE, u } from '../site.js';
+import Byline from '../components/Byline.astro';
 ---
 <Base title="About Get Paid From Anywhere" description="Who runs Get Paid From Anywhere, how it is funded, and how to report a correction. An independent site with sourced payment provider facts by country." crumb="About">
   <div class="prose">
     <h1>About</h1>
-    <p class="meta"><span class="chip">Last updated {CHECKED_ON}</span></p>
-    <p class="lede">{SITE_NAME} is an independent publisher. It helps founders outside the US and EU find out which payment providers will actually accept them.</p>
+    <Byline date={CHECKED_ON} />
+    <p class="lede">{SITE_NAME} is an independent comparison site. It answers one question for founders and freelancers outside the US: {SITE_LINE.charAt(0).toLowerCase() + SITE_LINE.slice(1)}</p>
+
+    <h2>What this site is</h2>
+    <p>It is a reference guide, not a marketplace and not a blog. We do not sell anything or process payments. We compare four kinds of provider: payment processors, merchants of record, payout and banking accounts, and US company formation services. For each one we record the fees it publishes and which countries it accepts, with a link to the page we read it on.</p>
 
     <h2>Why this site exists</h2>
     <p>Founders in many countries hit the same wall: Stripe is not available, or is invite-only, and the answers online are scattered, out of date or written to sell something. Provider rules are public, but they are spread across help centers, docs and legal pages. This site puts those rules in one place, by country, with a link to each source.</p>

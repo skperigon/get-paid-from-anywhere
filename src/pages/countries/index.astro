@@ -5,11 +5,12 @@ import Status from '../../components/Status.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
 import { CHECKED_ON, u } from '../../site.js';
+import Byline from '../../components/Byline.astro';
 const mors = data.providers.filter((p) => p.category === 'Merchant of record' || p.slug === 'stripe');
 ---
 <Base title="Stripe alternatives by country: all country guides" description={`Country guides for founders where Stripe is limited or missing. Which merchants of record and payment providers accept sellers from each country, with sources. Checked ${CHECKED_ON}.`} crumb="Countries">
   <h1>Country guides</h1>
-  <p class="meta"><span class="chip">Last checked {CHECKED_ON}</span></p>
+  <Byline date={CHECKED_ON} />
   <p class="lede">Pick the country you live in or where your company is registered. Each guide covers Stripe's status, merchants of record, the US company route and banking options, with a source for every fact.</p>
   <CountryGrid />
 

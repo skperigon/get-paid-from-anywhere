@@ -4,7 +4,8 @@ import Status from '../../components/Status.astro';
 import Src from '../../components/Src.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
-import { groupOf, isAffiliate, outHref, outRel, providerChecked, host, u } from '../../site.js';
+import { groupOf, isAffiliate, outHref, outRel, providerChecked, host, u, score, prosCons, pickFor, fmtDate, RUBRIC } from '../../site.js';
+import Byline from '../../components/Byline.astro';
 import { pagesLinkingTo } from '../../lib/countries.js';
 export function getStaticPaths() {
   return data.providers.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -16,13 +17,26 @@ const g = groupOf(p);
 const related = data.providers.filter((o) => o.slug !== p.slug && groupOf(o)?.key === g?.key);
 const guides = pagesLinkingTo(`/provider/${p.slug}/`);
 const aff = isAffiliate(p);
+const sc = score(p);
+const pc = prosCons(p);
+const pick = pickFor(p.slug);
 const title = `${p.name}: countries, fees and merchant of record status`;
 const description = `${p.name} facts for founders outside the US and EU: ${p.category.toLowerCase()}, fees and country eligibility, each with a source link. Checked ${checked}.`;
 ---
 <Base title={title} description={description} crumb={p.name} dateModified={checked}>
   <h1>{p.name}</h1>
-  <p class="meta"><span class="chip">{p.category}</span><span class="chip">Last checked {checked}</span></p>
+  <p class="ptype">{p.category}{pick && <span class="ppick">Best for: {pick.label}</span>}</p>
+  <Byline date={checked} />
   <p class="lede">{p.summary}</p>
+  <div class="summary-box pbox">
+    <h2>At a glance</h2>
+    {sc && <div class="pscore"><p class="ps-n"><strong>{sc.total}/{sc.max}</strong> on our <a href={u('/methodology/#score')}>fact checklist</a></p><ul>{RUBRIC.map((r) => <li class={sc.parts[r.key] > 0 ? 'y' : 'n'}><span aria-hidden="true">{sc.parts[r.key] > 0 ? '✓' : '×'}</span> {r.label}</li>)}</ul></div>}
+    {pick && <p>{pick.why}</p>}
+    <div class="ppc">
+      {pc.pros.length > 0 && <div><h3>Pros</h3><ul>{pc.pros.map((x) => <li>{x}</li>)}</ul></div>}
+      {pc.cons.length > 0 && <div><h3>Cons</h3><ul>{pc.cons.map((x) => <li>{x}</li>)}</ul></div>}
+    </div>
+  </div>
   <p class="visit">
     <a class="btn" href={outHref(p)} rel={outRel(p)} target="_blank">Visit {host(outHref(p))}</a>
     <small>{aff ? <>Affiliate link. We may earn a commission. <a href={u('/affiliate-disclosure/')}>Disclosure</a></> : <>Not an affiliate link. <a href={u('/affiliate-disclosure/')}>Disclosure</a></>}</small>
@@ -32,8 +46,8 @@ const description = `${p.name} facts for founders outside the US and EU: ${p.cat
   <div class="table-wrap"><table>
     <thead><tr><th>Fact</th><th>What {p.name} says</th><th>Source</th><th>Checked</th></tr></thead>
     <tbody>
-      <tr><td><strong>Merchant of record</strong></td><td>{p.merchantOfRecord.value}{p.merchantOfRecord.note && <> <small>{p.merchantOfRecord.note}</small></>}</td><td><Src href={p.merchantOfRecord.source} /></td><td class="nowrap">{p.merchantOfRecord.checkedOn || checked}</td></tr>
-      {p.facts.map((f) => (<tr><td><strong>{f.label}</strong></td><td>{f.value === 'unknown' ? <span class="badge unk">Unknown</span> : f.value}</td><td><Src href={f.source} /></td><td class="nowrap">{f.checkedOn || checked}</td></tr>))}
+      <tr><td><strong>Merchant of record</strong></td><td>{p.merchantOfRecord.value}{p.merchantOfRecord.note && <> <small>{p.merchantOfRecord.note}</small></>}</td><td><Src href={p.merchantOfRecord.source} /></td><td class="nowrap">{fmtDate(p.merchantOfRecord.checkedOn || checked)}</td></tr>
+      {p.facts.map((f) => (<tr><td><strong>{f.label}</strong></td><td>{f.value === 'unknown' ? <span class="badge unk">Unknown</span> : f.value}</td><td><Src href={f.source} /></td><td class="nowrap">{fmtDate(f.checkedOn || checked)}</td></tr>))}
     </tbody>
   </table></div>
 
@@ -53,7 +67,7 @@ const description = `${p.name} facts for founders outside the US and EU: ${p.cat
 
   {guides.length > 0 && (<>
     <h2>Guides that cover {p.name}</h2>
-    <ul class="cards">{guides.map((gd) => <li><a class="card" href={u(`/${gd.path}/`)}><strong>{gd.h1 || gd.title}</strong><span class="sub">Checked {gd.checkedOn}</span></a></li>)}</ul>
+    <ul class="cards">{guides.map((gd) => <li><a class="card" href={u(`/${gd.path}/`)}><strong>{gd.h1 || gd.title}</strong><span class="sub">Updated {fmtDate(gd.checkedOn)}</span></a></li>)}</ul>
   </>)}
 
   {related.length > 0 && (<>
@@ -65,4 +79,15 @@ const description = `${p.name} facts for founders outside the US and EU: ${p.cat
 <style>
 .visit { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 .nowrap { white-space:nowrap; }
+.ptype { margin:0; color:var(--muted); font-size:15px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.ppick { background:var(--ink); color:#fff; font-size:12.5px; font-weight:650; padding:3px 10px; border-radius:6px; }
+.pscore { margin:0 0 14px; }
+.ps-n { margin:0 0 6px; font-size:15px; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; }
+.ps-n strong { font-size:24px; color:var(--ok-fg); }
+.pscore ul { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:3px; }
+.pscore .y { color:var(--ok-fg); } .pscore .n { color:var(--muted); }
+.ppc { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0 24px; }
+@media (max-width:560px) { .ppc { grid-template-columns:1fr; } }
+.ppc h3 { margin:6px 0 4px; font-size:14px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.ppc ul { margin:0 0 12px; padding-left:18px; font-size:15px; }
 </style>

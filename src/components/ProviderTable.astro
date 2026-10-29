@@ -3,7 +3,7 @@
 import data from '../data/providers.json';
 import Status from './Status.astro';
 import Src from './Src.astro';
-import { GROUPS, groupOf, priceFact, providerChecked, STATUS_RANK, u } from '../site.js';
+import { fmtDate, GROUPS, groupOf, priceFact, providerChecked, STATUS_RANK, u } from '../site.js';
 import countries from '../data/countries.json';
 const { id = 'provider-table' } = Astro.props;
 const rows = data.providers.map((p) => ({ p, g: groupOf(p), fee: priceFact(p), checked: providerChecked(p) }));
@@ -32,14 +32,14 @@ const rows = data.providers.map((p) => ({ p, g: groupOf(p), fee: priceFact(p), c
     </tr></thead>
     <tbody>
       {rows.map(({ p, g, fee, checked }) => (
-        <tr data-group={g?.key} data-name={p.name.toLowerCase()} data-type={p.category.toLowerCase()} data-mor={p.merchantOfRecord.value.startsWith('Yes') ? '0' : '1'} data-checked={checked}
+        <tr data-slug={p.slug} data-group={g?.key} data-name={p.name.toLowerCase()} data-type={p.category.toLowerCase()} data-mor={p.merchantOfRecord.value.startsWith('Yes') ? '0' : '1'} data-checked={checked}
           {...Object.fromEntries(countries.map((c) => [`data-c-${c.slug}`, String(STATUS_RANK[p.sellerCountries?.[c.slug]?.status || 'unknown'])]))}>
           <td><a href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong></a></td>
           <td>{p.category}</td>
           <td>{p.merchantOfRecord.value}</td>
           {countries.map((c) => <td class={`col-country cc-${c.slug}`} hidden><Status status={p.sellerCountries?.[c.slug]?.status || 'unknown'} /></td>)}
           <td>{fee ? (fee.value === 'unknown' ? <span class="badge unk">Unknown</span> : <><span class="fee-label">{fee.label}:</span> {fee.value}</>) : <span class="badge unk">Unknown</span>}</td>
-          <td>{fee ? <Src href={fee.source} /> : <Src href={p.merchantOfRecord.source} />}<br /><small class="nowrap">Checked {fee?.checkedOn || checked}</small></td>
+          <td>{fee ? <Src href={fee.source} /> : <Src href={p.merchantOfRecord.source} />}<br /><small class="nowrap">Checked {fmtDate(fee?.checkedOn || checked)}</small></td>
         </tr>
       ))}
     </tbody>
@@ -49,9 +49,9 @@ const rows = data.providers.map((p) => ({ p, g: groupOf(p), fee: priceFact(p), c
 <style>
 .cmp-tools { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin:14px 0 6px; }
 .chips { display:flex; flex-wrap:wrap; gap:6px; }
-.chip-btn { font:inherit; font-size:14px; border:1px solid var(--line); background:#fff; color:var(--fg); border-radius:999px; padding:5px 12px; cursor:pointer; }
+.chip-btn { font:inherit; font-size:14px; font-weight:550; border:1px solid var(--line2); background:#fff; color:var(--fg); border-radius:999px; padding:6px 14px; cursor:pointer; }
 .chip-btn:hover { border-color:var(--accent); }
-.chip-btn.on { background:var(--brand); border-color:var(--brand); color:#fff; }
+.chip-btn.on { background:var(--ink); border-color:var(--ink); color:#fff; }
 .cmp-country { font-size:14px; color:var(--muted); display:flex; gap:8px; align-items:center; }
 .cmp-country select { font-size:14px; padding:5px 10px; }
 .cmp-table th button { all:unset; cursor:pointer; }
@@ -63,6 +63,10 @@ const rows = data.providers.map((p) => ({ p, g: groupOf(p), fee: priceFact(p), c
 .cmp-table td:nth-child(2) { min-width:110px; }
 .cmp-table td:nth-child(3) { min-width:90px; }
 .cmp-table td:first-child { font-size:15px; white-space:nowrap; }
+.cmp-table td:first-child a { color:var(--ink); text-decoration:none; }
+.cmp-table td:first-child a:hover { text-decoration:underline; }
+.cmp-table tbody tr:hover { background:#fafcfd; }
+.cmp-table thead th { position:sticky; top:0; }
 .fee-label { color:var(--muted); }
 .nowrap { white-space:nowrap; }
 </style>

@@ -42,7 +42,7 @@ for (const f of htmlFiles) {
     if (href.startsWith('/')) {
       if (BASE && href !== BASE + '/' && !href.startsWith(BASE + '/')) { broken.push(`${path.relative(DIST, f)} -> ${href} (missing base ${BASE})`); continue; }
       if (!resolves(BASE ? href.slice(BASE.length) || '/' : href)) broken.push(`${path.relative(DIST, f)} -> ${href}`);
-      if (!href.endsWith('/') && !path.extname(href.split('#')[0])) broken.push(`${path.relative(DIST, f)} -> ${href} (missing trailing slash)`);
+      if (!href.split('#')[0].split('?')[0].endsWith('/') && !path.extname(href.split('#')[0])) broken.push(`${path.relative(DIST, f)} -> ${href} (missing trailing slash)`);
     } else {
       broken.push(`${path.relative(DIST, f)} -> ${href} (relative link)`);
     }

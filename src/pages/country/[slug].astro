@@ -4,7 +4,9 @@ import Status from '../../components/Status.astro';
 import Src from '../../components/Src.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
-import { CHECKED_ON, u } from '../../site.js';
+import { CHECKED_ON, fmtDate, u } from '../../site.js';
+import Byline from '../../components/Byline.astro';
+import ProviderCard from '../../components/ProviderCard.astro';
 import { allCountries, countryStats, pagesLinkingTo } from '../../lib/countries.js';
 
 export function getStaticPaths() {
@@ -22,18 +24,24 @@ const formation = data.providers.filter((p) => p.category === 'US company format
 const others = allCountries().filter((o) => o.slug !== c.slug);
 const stats = countryStats(c.slug);
 const guides = pagesLinkingTo(`/country/${c.slug}/`);
+const openMors = rows.filter((p) => p.category === 'Merchant of record' && ['listed', 'not-excluded'].includes(p.sellerCountries[c.slug].status));
+const srcList = [...new Set(rows.map((p) => p.sellerCountries[c.slug].source).concat(formation.map((p) => p.facts[0].source)))];
 const title = `Stripe alternatives in ${c.name} (checked ${CHECKED_ON})`;
 const description = `Is Stripe available in ${c.name}? Which merchants of record accept ${c.people}, the US LLC route, and banking options, with a source link for every fact.`;
 ---
 <Base title={title} description={description} faqs={c.faqs} dateModified={CHECKED_ON} crumb={`Stripe alternatives in ${c.name}`}>
   <h1>Stripe alternatives in {c.name}</h1>
-  <p class="meta"><span class="chip">Last checked {CHECKED_ON}</span><span class="chip">Every fact links to its source</span></p>
+  <Byline date={CHECKED_ON} sources={srcList.length} />
   <p class="lede">{c.intro}</p>
-  {stats && <div class="summary">
-    <div><span class="k">Stripe</span><Status status={stats.stripe} /></div>
-    <div><span class="k">Merchants of record</span><span><strong>{stats.open} of {stats.total}</strong> list {c.name} or do not exclude it</span></div>
-    <div><span class="k">Jump to</span><span><a href="#comparison">Comparison</a> · <a href="#llc">US LLC route</a> · <a href="#banking">Banking</a> · <a href="#faq">FAQ</a></span></div>
-  </div>}
+  <div class="summary-box">
+    <h2>The short answer</h2>
+    <ul>
+      {stats && <li><strong>Stripe:</strong> <Status status={stats.stripe} /></li>}
+      {stats && <li><strong>Merchants of record:</strong> {stats.open} of {stats.total} we track list {c.name} or do not exclude it{openMors.length > 0 && <>: {openMors.map((p, i) => <>{i > 0 && ', '}<a href={u(`/provider/${p.slug}/`)}>{p.name}</a></>)}</>}.</li>}
+      <li><strong>US company route:</strong> what it involves and what it costs, in <a href="#llc">the LLC section</a>.</li>
+    </ul>
+    <p class="jump"><a href="#options">Options</a> · <a href="#comparison">Comparison</a> · <a href="#llc">US LLC route</a> · <a href="#banking">Banking</a> · <a href="#faq">FAQ</a></p>
+  </div>
   <div class="note"><strong>Verify with the provider.</strong> Country rules change, and approval is always up to the provider. Read the linked source and confirm with the provider before you build your business on it.</div>
 
   <h2>Is Stripe available in {c.name}?</h2>
@@ -41,6 +49,11 @@ const description = `Is Stripe available in ${c.name}? Which merchants of record
 
   <h2>Merchants of record that accept {c.people}</h2>
   <p>A merchant of record sells to your customer on your behalf and handles sales tax and VAT, then pays you out. {c.morAnswer}</p>
+
+  {openMors.length > 0 && (<>
+    <h2 id="options">Your options side by side</h2>
+    <div class="pgrid">{openMors.map((p) => <ProviderCard p={p} />)}</div>
+  </>)}
 
   <h2 id="comparison">Quick comparison</h2>
   {groups.map((g) => {
@@ -86,21 +99,20 @@ const description = `Is Stripe available in ${c.name}? Which merchants of record
 
   <h2>Sources</h2>
   <ul>
-    {[...new Set(rows.map((p) => p.sellerCountries[c.slug].source).concat(formation.map((p) => p.facts[0].source)))].map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}
+    {srcList.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}
   </ul>
-  <p class="muted">Last checked: {CHECKED_ON}. Spotted something out of date? See how to report a correction on the <a href={u("/about/")}>About</a> page.</p>
+  <p class="muted">Last checked: {fmtDate(CHECKED_ON)}. Spotted something out of date? See how to report a correction on the <a href={u("/about/")}>About</a> page.</p>
 
   {guides.length > 0 && (<>
     <h2>Related guides</h2>
-    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">Checked {g.checkedOn}</span></a></li>)}</ul>
+    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">Updated {fmtDate(g.checkedOn)}</span></a></li>)}</ul>
   </>)}
 
   <h2>Other countries</h2>
   <ul class="cards">{others.map((o) => <li><a class="card" href={u(`/country/${o.slug}/`)}><strong>{o.name}</strong><span class="sub">Stripe alternatives in {o.name}</span></a></li>)}</ul>
 </Base>
 <style>
-.summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:18px 0; }
-.summary > div { border:1px solid var(--line); border-radius:var(--radius); padding:10px 14px; display:flex; flex-direction:column; gap:4px; font-size:15px; }
-.summary .k { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
-.summary .badge { align-self:flex-start; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
+@media (max-width:420px) { .pgrid { grid-template-columns:1fr; } }
+.summary-box .jump { font-size:14.5px; }
 </style>

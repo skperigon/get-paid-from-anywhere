@@ -1,26 +1,77 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ProviderTable from '../../components/ProviderTable.astro';
+import ProviderCard from '../../components/ProviderCard.astro';
+import Byline from '../../components/Byline.astro';
 import data from '../../data/providers.json';
-import { CHECKED_ON, GROUPS, priceFact, u } from '../../site.js';
+import { CHECKED_ON, GROUPS, fmtDate, u } from '../../site.js';
 ---
 <Base title="Payment providers for founders outside the US and EU" description={`Compare ${data.providers.length} merchants of record, payment processors, business accounts and US formation services, with sourced fees and country rules. Checked ${CHECKED_ON}.`} crumb="Providers">
-  <h1>Provider index</h1>
-  <p class="meta"><span class="chip">Last checked {CHECKED_ON}</span><span class="chip">{data.providers.length} providers</span></p>
-  <p class="lede">Every provider we track. Each page lists fees and country rules with a link to the provider's own source. The full dataset is available as <a href={u('/data/providers.json')}>JSON</a>.</p>
-  <ProviderTable />
+  <h1>Compare payment providers</h1>
+  <p class="lede">Every provider we track, with the fee it publishes, whether it handles sales tax for you, and which of our tracked countries it accepts. Tick "Compare" on up to four cards to see them side by side.</p>
+  <Byline date={CHECKED_ON} />
+  <nav class="jump" aria-label="Provider types">
+    {GROUPS.map((g) => <a href={`#${g.key}`}>{g.title}</a>)}
+    <a href="#table">Full table</a>
+  </nav>
   {GROUPS.map((g) => {
     const list = data.providers.filter(g.match);
     return list.length > 0 && (
-      <>
-        <h2>{g.title}</h2>
-        <ul class="cards">
-          {list.map((p) => {
-            const f = priceFact(p);
-            return <li><a class="card" href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong><span class="sub">{p.summary}</span>{f && f.value !== 'unknown' && <span class="sub"><b>{f.label}:</b> {f.value}</span>}</a></li>;
-          })}
-        </ul>
-      </>
+      <section>
+        <h2 id={g.key}>{g.title} <span class="count">{list.length}</span></h2>
+        <div class="pgrid">{list.map((p) => <ProviderCard p={p} compare />)}</div>
+      </section>
     );
   })}
+  <h2 id="table">Full comparison table</h2>
+  <p class="muted" data-cmp-note hidden>Showing the providers you picked. <button type="button" class="linkbtn" data-cmp-all>Show all</button></p>
+  <ProviderTable />
+  <p><small>The full dataset, with every source URL and checked date, is available as <a href={u('/data/providers.json')}>JSON</a>. Data last checked {fmtDate(CHECKED_ON)}.</small></p>
+
+  <div class="cbar" data-cbar hidden>
+    <div class="cbar-in">
+      <span><strong data-cbar-n>0</strong> selected: <span data-cbar-names></span></span>
+      <span class="cbar-act"><button type="button" class="btn" data-cbar-go>Compare</button><button type="button" class="btn btn-ghost" data-cbar-clear>Clear</button></span>
+    </div>
+  </div>
 </Base>
+<style>
+.jump { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 8px; }
+.jump a { font-size:14px; font-weight:550; padding:6px 14px; border:1px solid var(--line2); border-radius:999px; text-decoration:none; color:var(--ink); background:#fff; }
+.jump a:hover { border-color:var(--accent); color:var(--accent); }
+.count { font-size:14px; font-weight:650; color:var(--muted); background:var(--soft2); border-radius:999px; padding:2px 10px; vertical-align:middle; margin-left:6px; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
+@media (max-width:420px) { .pgrid { grid-template-columns:1fr; } }
+.cbar { position:fixed; left:0; right:0; bottom:0; z-index:30; background:var(--ink); color:#fff; box-shadow:0 -6px 24px rgba(11,31,51,.2); }
+.cbar-in { max-width:var(--wide); margin:0 auto; padding:12px 24px; display:flex; flex-wrap:wrap; gap:10px 20px; align-items:center; justify-content:space-between; font-size:15px; }
+.cbar-act { display:flex; gap:8px; }
+.cbar .btn { padding:8px 16px; }
+.cbar .btn-ghost { background:transparent; color:#fff; border-color:#40566d; }
+.linkbtn { all:unset; color:var(--link); text-decoration:underline; cursor:pointer; }
+</style>
+<script is:inline>
+(function () {
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('[data-compare]'));
+  var bar = document.querySelector('[data-cbar]');
+  var note = document.querySelector('[data-cmp-note]');
+  var rows = function () { return Array.prototype.slice.call(document.querySelectorAll('#provider-table tbody tr')); };
+  function picked() { return boxes.filter(function (b) { return b.checked; }); }
+  function update() {
+    var p = picked();
+    boxes.forEach(function (b) { b.disabled = !b.checked && p.length >= 4; });
+    bar.hidden = p.length === 0;
+    bar.querySelector('[data-cbar-n]').textContent = p.length;
+    bar.querySelector('[data-cbar-names]').textContent = p.map(function (b) { return b.getAttribute('data-name'); }).join(', ');
+  }
+  boxes.forEach(function (b) { b.addEventListener('change', update); });
+  bar.querySelector('[data-cbar-go]').addEventListener('click', function () {
+    var s = picked().map(function (b) { return b.getAttribute('data-compare'); });
+    rows().forEach(function (r) { r.hidden = s.indexOf(r.getAttribute('data-slug')) < 0; });
+    note.hidden = false;
+    document.getElementById('table').scrollIntoView({ behavior: 'smooth' });
+  });
+  function showAll() { rows().forEach(function (r) { r.hidden = false; }); note.hidden = true; }
+  note.querySelector('[data-cmp-all]').addEventListener('click', showAll);
+  bar.querySelector('[data-cbar-clear]').addEventListener('click', function () { boxes.forEach(function (b) { b.checked = false; }); update(); showAll(); });
+})();
+</script>

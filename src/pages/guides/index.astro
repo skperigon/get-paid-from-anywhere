@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+import Byline from '../../components/Byline.astro';
+import { CHECKED_ON, fmtDate, u } from '../../site.js';
+import { publishedPages } from '../../lib/countries.js';
+const pages = publishedPages().sort((a, b) => (b.checkedOn || '').localeCompare(a.checkedOn || '') || a.title.localeCompare(b.title));
+const kinds = [
+  { title: 'Comparisons and explainers', list: pages.filter((g) => !/^country\//.test(g.path)) },
+  { title: 'Country Q and A', list: pages.filter((g) => /^country\//.test(g.path)) },
+];
+---
+<Base title="Guides: Stripe alternatives, comparisons and country Q and A" description={`Plain guides for founders outside the US: provider comparisons and country Q and A pages, each with sources and a checked date. Updated ${CHECKED_ON}.`} crumb="Guides">
+  <h1>Guides</h1>
+  <p class="lede">Short, sourced answers to the questions founders outside the US ask most. Each guide opens with a summary and ends with its sources.</p>
+  <Byline date={CHECKED_ON} />
+  {kinds.map((k) => k.list.length > 0 && (<>
+    <h2>{k.title}</h2>
+    <ul class="glist">{k.list.map((g) => <li><a href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span>{g.description}</span><small>Updated {fmtDate(g.checkedOn || CHECKED_ON)}</small></a></li>)}</ul>
+  </>))}
+</Base>
+<style>
+.glist { list-style:none; padding:0; margin:0; border-top:1px solid var(--line); max-width:860px; }
+.glist a { display:flex; flex-direction:column; gap:4px; padding:16px 4px; border-bottom:1px solid var(--line); text-decoration:none; color:var(--fg); }
+.glist a:hover strong { color:var(--accent); }
+.glist strong { font-size:18px; color:var(--ink); font-weight:680; letter-spacing:-.01em; }
+.glist span { font-size:15px; color:#33455a; }
+</style>

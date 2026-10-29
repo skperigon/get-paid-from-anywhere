@@ -1,0 +1,10 @@
+---
+import { fmtDate, u } from '../site.js';
+const { date, sources } = Astro.props;
+---
+<p class="byline">
+  <span>Updated <strong>{fmtDate(date)}</strong></span>
+  <a class="chk" href={u('/methodology/')}>Fact-checked against provider pages</a>
+  {sources ? <span>{sources} sources cited</span> : null}
+  <span><a href={u('/affiliate-disclosure/')}>No paid placements</a></span>
+</p>

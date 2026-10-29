@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import { CHECKED_ON, u, affiliateProviders } from '../site.js';
+import Byline from '../components/Byline.astro';
 const aff = affiliateProviders();
 ---
 <Base title="Affiliate disclosure" description="How Get Paid From Anywhere may earn money from links, which links are affiliate links today, and how that does and does not affect what we publish." crumb="Affiliate disclosure">
   <div class="prose">
     <h1>Affiliate disclosure</h1>
-    <p class="meta"><span class="chip">Last updated {CHECKED_ON}</span></p>
+    <Byline date={CHECKED_ON} />
     <h2>Which links are affiliate links</h2>
     {aff.length === 0
       ? <p><strong>None today.</strong> Every provider link on this site goes to the provider's normal website, and we earn nothing if you sign up.</p>

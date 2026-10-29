@@ -2,69 +2,129 @@
 import Base from '../layouts/Base.astro';
 import CountryGrid from '../components/CountryGrid.astro';
 import ProviderTable from '../components/ProviderTable.astro';
+import ProviderCard from '../components/ProviderCard.astro';
+import Status from '../components/Status.astro';
 import data from '../data/providers.json';
-import { CHECKED_ON, u } from '../site.js';
-import { allCountries, publishedPages } from '../lib/countries.js';
+import countries from '../data/countries.json';
+import { CHECKED_ON, PICKS, SITE_LINE, SITE_SUBLINE, fmtDate, u } from '../site.js';
+import { allCountries, publishedPages, countryStats } from '../lib/countries.js';
 const countryList = allCountries();
 const guides = publishedPages().filter((g) => !/^country\//.test(g.path)).sort((a, b) => a.title.localeCompare(b.title));
 const sourceCount = new Set(data.providers.flatMap((p) => [p.merchantOfRecord.source, ...p.facts.map((f) => f.source), ...Object.values(p.sellerCountries || {}).map((s) => s.source)])).size;
+const picks = PICKS.map((k) => ({ ...k, p: data.providers.find((p) => p.slug === k.slug) })).filter((k) => k.p);
+const glance = countries.map((c) => ({ c, s: countryStats(c.slug) })).filter((x) => x.s);
 ---
-<Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment providers and merchants of record accept founders from your country. Sourced country rules and fees for Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments and more.">
+<Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment providers work in your country, and what they cost. An independent, fact-checked comparison of Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments and more for founders outside the US.">
   <section class="hero">
-    <h1>Stripe not available where you live?</h1>
-    <p class="lede">See which payment providers say they accept sellers from your country, what they charge, and the US company route. Every fact links to the provider's own page and shows the date we checked it.</p>
-    <form class="picker" action={u('/countries/')} method="get" data-picker>
-      <label for="country-pick"><strong>Where are you based?</strong></label>
-      <div class="picker-row">
-        <select id="country-pick" name="c" required>
-          <option value="">Choose your country</option>
-          {countryList.map((c) => <option value={u(`/country/${c.slug}/`)}>{c.name}</option>)}
-        </select>
-        <button class="btn" type="submit">Show my options</button>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent comparison · Updated {fmtDate(CHECKED_ON)}</p>
+        <h1>{SITE_LINE}</h1>
+        <p class="lede">{SITE_SUBLINE}</p>
+        <form class="picker" action={u('/countries/')} method="get" data-picker>
+          <label for="country-pick">Where are you based?</label>
+          <div class="picker-row">
+            <select id="country-pick" name="c" required>
+              <option value="">Choose your country</option>
+              {countryList.map((c) => <option value={u(`/country/${c.slug}/`)}>{c.name}</option>)}
+            </select>
+            <button class="btn" type="submit">See my options</button>
+          </div>
+        </form>
+        <ul class="facts">
+          <li><strong>{data.providers.length}</strong> providers compared</li>
+          <li><strong>{countryList.length}</strong> country guides</li>
+          <li><strong>{sourceCount}</strong> provider pages cited</li>
+        </ul>
       </div>
-    </form>
-    <ul class="facts">
-      <li><strong>{data.providers.length}</strong> providers tracked</li>
-      <li><strong>{countryList.length}</strong> country guides</li>
-      <li><strong>{sourceCount}</strong> source pages cited</li>
-      <li>Checked <strong>{CHECKED_ON}</strong></li>
-    </ul>
+      <aside class="glance" aria-label="Stripe at a glance">
+        <p class="g-h">Can new sellers open a Stripe account?</p>
+        <table>
+          <thead><tr><th scope="col">Country</th><th scope="col">Stripe</th><th scope="col" class="g-m">Merchants of record open</th></tr></thead>
+          <tbody>
+            {glance.map(({ c, s }) => <tr><th scope="row"><a href={u(`/country/${c.slug}/`)}>{c.name}</a></th><td><Status status={s.stripe} /></td><td class="g-m"><strong>{s.open}</strong> of {s.total}</td></tr>)}
+          </tbody>
+        </table>
+        <p class="g-f">From Stripe's own pages, checked {fmtDate(CHECKED_ON)}. <a href={u('/countries/')}>All countries</a></p>
+      </aside>
+    </div>
   </section>
 
-  <h2 id="countries">Pick your country</h2>
-  <CountryGrid />
-  <p><small>More countries are added as we finish checking them. See <a href={u('/countries/')}>all countries</a>.</small></p>
+  <section>
+    <div class="sec-head">
+      <h2 id="picks">Our picks, by what you need</h2>
+      <p>Each pick names the fact it is based on. <a href={u('/methodology/')}>How we rate</a></p>
+    </div>
+    <div class="pick-grid">{picks.map((k) => <ProviderCard p={k.p} />)}</div>
+  </section>
 
-  <h2 id="compare">Compare providers</h2>
-  <p class="prose">Filter by type, sort by any column, or pick a country to see each provider's status there.</p>
-  <ProviderTable />
+  <section>
+    <div class="sec-head">
+      <h2 id="countries">Browse by country</h2>
+      <p>Stripe's status and how many of the merchants of record we track are open to new sellers.</p>
+    </div>
+    <CountryGrid />
+  </section>
 
-  {guides.length > 0 && (<>
-    <h2>Guides</h2>
-    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">Checked {g.checkedOn}</span></a></li>)}</ul>
-  </>)}
+  <section>
+    <div class="sec-head">
+      <h2 id="compare">Compare all {data.providers.length} providers</h2>
+      <p>Filter by type, sort any column, or pick a country to see each provider's status there.</p>
+    </div>
+    <ProviderTable />
+  </section>
 
-  <h2>How we check facts</h2>
-  <div class="how">
-    <div><h3>Provider pages only</h3><p>Every fact comes from the provider's own help center, docs, pricing or legal pages. No forums, reviews or third-party blogs.</p></div>
-    <div><h3>Linked and dated</h3><p>Each fact shows its source link and the date we checked it. If we could not confirm something, we say "unknown".</p></div>
-    <div><h3>Not for sale</h3><p>We do not rank providers by payout and do not accept payment to change a status. See the <a href={u('/affiliate-disclosure/')}>affiliate disclosure</a>.</p></div>
-  </div>
-  <p><a href={u('/methodology/')}>Read the full methodology</a> · <a href={u('/data/providers.json')}>Download the dataset</a></p>
+  {guides.length > 0 && (<section>
+    <div class="sec-head"><h2>Guides</h2><p><a href={u('/guides/')}>All guides</a></p></div>
+    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">{g.description}</span><span class="sub">Updated {fmtDate(g.checkedOn)}</span></a></li>)}</ul>
+  </section>)}
+
+  <section class="how">
+    <h2>How we check facts</h2>
+    <ol>
+      <li><strong>Provider pages only.</strong> Every fact comes from the provider's own help center, docs, pricing or legal pages. No forums, reviews or third-party blogs.</li>
+      <li><strong>Linked and dated.</strong> Each fact shows its source link and the date we checked it. If we could not confirm something, we say "unknown".</li>
+      <li><strong>Scored by rules, not opinions.</strong> The checklist score adds up five yes or no checks from the data. Affiliate deals never change it.</li>
+    </ol>
+    <p><a href={u('/methodology/')}>How we rate</a> · <a href={u('/data/providers.json')}>Download the dataset</a> · <a href={u('/affiliate-disclosure/')}>Affiliate disclosure</a></p>
+  </section>
 </Base>
 <style>
-.hero { padding:28px 0 8px; }
-.hero h1 { margin-top:10px; max-width:820px; }
-.picker { margin:22px 0 10px; background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:18px; max-width:640px; }
-.picker label { display:block; margin-bottom:8px; font-size:18px; }
+.hero { margin:0 calc(50% - 50vw); background:var(--soft); border-bottom:1px solid var(--line); }
+.hero-in { max-width:var(--wide); margin:0 auto; padding:52px 24px 48px; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:48px; align-items:center; }
+@media (max-width:900px) { .hero-in { grid-template-columns:minmax(0,1fr); gap:28px; padding:32px 16px 32px; } }
+.hero h1 { margin:10px 0 14px; max-width:640px; }
+.hero .lede { font-size:17.5px; max-width:600px; }
+.picker { margin:26px 0 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; max-width:600px; box-shadow:var(--shadow); }
+.picker label { display:block; margin-bottom:10px; font-size:15px; font-weight:650; color:var(--ink); }
 .picker-row { display:flex; gap:10px; flex-wrap:wrap; }
 .picker-row select { flex:1 1 240px; }
-.facts { list-style:none; padding:0; margin:14px 0 0; display:flex; flex-wrap:wrap; gap:8px 22px; font-size:15px; color:var(--muted); }
-.facts strong { color:var(--fg); }
-.how { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
-.how > div { border:1px solid var(--line); border-radius:var(--radius); padding:4px 16px 8px; }
-.how h3 { margin-top:12px; font-size:17px; }
-.how p { font-size:15px; margin-top:4px; }
+.picker-row .btn { flex:0 0 auto; }
+@media (max-width:480px) { .picker-row .btn { flex:1 1 100%; } }
+.facts { list-style:none; padding:0; margin:16px 0 0; display:flex; flex-wrap:wrap; gap:6px 22px; font-size:14px; color:var(--muted); }
+.facts strong { color:var(--ink); }
+.glance { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 18px 12px; box-shadow:var(--shadow); }
+.g-h { margin:0 0 8px; font-weight:700; color:var(--ink); font-size:15px; }
+.glance table { font-size:14px; }
+.glance th, .glance td { background:none; text-transform:none; letter-spacing:0; font-size:14px; padding:9px 6px; vertical-align:middle; }
+.glance th { color:var(--ink); font-weight:600; }
+.glance thead th { font-size:11.5px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; padding-top:2px; }
+.glance td.g-m, .glance th.g-m { text-align:right; }
+.glance table { min-width:0 !important; width:100%; }
+.glance th, .glance td { white-space:normal !important; }
+.glance th a { color:var(--ink); text-decoration:none; }
+.glance th a:hover { text-decoration:underline; }
+.g-m { color:var(--muted); font-size:13px !important; }
+.g-f { margin:8px 0 0; font-size:12.5px; color:var(--muted); }
+.sec-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 20px; margin:56px 0 14px; }
+.sec-head h2 { margin:0; }
+.sec-head p { margin:0; color:var(--muted); font-size:15px; }
+.pick-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
+@media (max-width:420px) { .pick-grid { grid-template-columns:1fr; } }
+.how { margin-top:56px; border:1px solid var(--line); border-radius:16px; padding:6px 28px 14px; background:#fff; }
+.how h2 { margin-top:22px; }
+.how ol { padding-left:20px; max-width:860px; }
+.how li { margin:8px 0; }
 </style>
 <script is:inline>
 document.querySelectorAll('[data-picker]').forEach(function (f) {

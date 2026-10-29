@@ -4,19 +4,27 @@ import { allCountries, countryStats } from '../lib/countries.js';
 import { u } from '../site.js';
 const list = allCountries();
 ---
-<ul class="cards">
+<ul class="cgrid">
   {list.map((c) => {
     const s = countryStats(c.slug);
     return (
-      <li><a class="card" href={u(`/country/${c.slug}/`)}>
-        <strong>{c.name}</strong>
+      <li><a href={u(`/country/${c.slug}/`)}>
+        <span class="cn">{c.name}</span>
         {s ? (
-          <>
-            <span class="sub">{s.open} of {s.total} merchants of record we track list {c.name} or do not exclude it.</span>
-            <span class="row"><span class="muted" style="font-size:13px">Stripe:</span> <Status status={s.stripe} /></span>
-          </>
-        ) : <span class="sub">Country guide with sourced provider options.</span>}
+          <span class="cm"><span class="cs">Stripe <Status status={s.stripe} /></span><span class="cc">{s.open} of {s.total} merchants of record open</span></span>
+        ) : <span class="cm"><span class="cc">Q and A guide with sources</span></span>}
+        <span class="arr" aria-hidden="true">&rsaquo;</span>
       </a></li>
     );
   })}
 </ul>
+<style>
+.cgrid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:10px; }
+.cgrid a { position:relative; display:flex; flex-direction:column; gap:6px; padding:14px 34px 14px 16px; border:1px solid var(--line); border-radius:12px; text-decoration:none; color:var(--fg); background:#fff; transition:box-shadow .15s, border-color .15s; height:100%; }
+.cgrid a:hover { box-shadow:var(--shadow); border-color:var(--line2); }
+.cn { font-weight:680; color:var(--ink); font-size:16.5px; }
+.cm { display:flex; flex-direction:column; gap:4px; font-size:13.5px; color:var(--muted); }
+.cs { display:flex; align-items:center; gap:8px; }
+.arr { position:absolute; right:14px; top:50%; transform:translateY(-50%); font-size:24px; color:#9aa7b4; }
+a:hover .arr { color:var(--accent); }
+</style>
