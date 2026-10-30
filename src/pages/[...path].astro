@@ -25,7 +25,7 @@ const checked = fm.checkedOn || CHECKED_ON;
     <p>{fm.description}</p>
     {mentioned.length > 0 && <p><strong>Providers covered:</strong> {mentioned.map((p, i) => <>{i > 0 && ', '}<a href={u(`/provider/${p.slug}/`)}>{p.name}</a></>)}</p>}
   </div>
-  <article><Content /></article>
+  <article data-md><Content /></article>
   {fm.sources && fm.sources.length > 0 && (<><h2>Sources</h2><ul>{fm.sources.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}</ul></>)}
   <div class="note"><strong>Verify with the provider.</strong> Rules and fees change. Confirm on the provider's site before you sign up.</div>
   {fm.faqs && fm.faqs.length > 0 && (<><h2>Frequently asked questions</h2>{fm.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}</>)}

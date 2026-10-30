@@ -2,6 +2,9 @@
 // Promotes the next draft with status "ready" from drafts/ to src/published/.
 // Safety gates: refuses drafts that are not ready, lack sources or checkedOn,
 // were checked more than MAX_AGE_DAYS ago, or contain em dashes.
+// Also lists internal links in the draft whose target page is not live yet. Those are not an
+// error: scripts/unlink-unpublished.mjs (run after every build) shows them as plain text until
+// the target publishes. The list is printed so the nightly prep can see it the night before.
 // Usage: node scripts/promote-next.mjs [--dry-run]
 import fs from 'node:fs';
 import path from 'node:path';
@@ -61,6 +64,35 @@ for (const f of existing) {
 if (problems.length) {
   console.error(`Refusing to promote ${d.f}:\n - ${problems.join('\n - ')}`);
   process.exit(1);
+}
+
+// Internal links to pages that are not live yet (shown as plain text until they publish).
+function liveRoutes() {
+  const routes = new Set(['']);
+  const pagesDir = path.join(ROOT, 'src', 'pages');
+  for (const e of fs.readdirSync(pagesDir, { withFileTypes: true })) {
+    if (e.isFile() && e.name.endsWith('.astro') && !e.name.startsWith('[') && e.name !== 'index.astro' && e.name !== '404.astro') routes.add(e.name.replace(/\.astro$/, ''));
+    if (e.isDirectory() && fs.existsSync(path.join(pagesDir, e.name, 'index.astro'))) routes.add(e.name);
+  }
+  const read = (f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'src', 'data', f), 'utf8'));
+  for (const c of read('countries.json')) routes.add(`country/${c.slug}`);
+  for (const p of read('providers.json').providers) routes.add(`provider/${p.slug}`);
+  for (const f of existing) {
+    const fm = frontmatter(fs.readFileSync(path.join(PUBLISHED, f), 'utf8'));
+    if (fm.path) routes.add(fm.path);
+  }
+  routes.add(d.fm.path);
+  return routes;
+}
+const live = liveRoutes();
+const pending = [...new Set([...d.text.matchAll(/\]\((\/[^)\s#?]*)[^)]*\)/g)].map((m) => m[1]))]
+  .filter((href) => !live.has(href.replace(/^\/+|\/+$/g, '')));
+if (pending.length) {
+  console.log(`Note: ${d.f} links to ${pending.length} page(s) not live yet; they will show as plain text until published:`);
+  pending.forEach((h) => {
+    const queued = drafts.find((x) => x.fm.path === h.replace(/^\/+|\/+$/g, ''));
+    console.log(`  - ${h} ${queued ? `(queued: ${queued.f}, status ${queued.fm.status})` : '(no draft for this path)'}`);
+  });
 }
 
 const target = path.join(PUBLISHED, d.f.replace(/^\d+-/, ''));

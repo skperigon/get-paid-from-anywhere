@@ -1,7 +1,7 @@
 ---
 order: 11
 idea: 13
-status: ready
+status: published
 path: "country/egypt"
 title: "How to sell SaaS from Egypt: Stripe alternatives (checked 2026-10-22)"
 h1: "How to sell SaaS from Egypt"

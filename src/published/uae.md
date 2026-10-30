@@ -1,7 +1,7 @@
 ---
 order: 8
 idea: 10
-status: ready
+status: published
 path: "country/uae"
 title: "Stripe alternatives in the UAE (checked 2026-10-29)"
 h1: "Stripe alternatives in the UAE"

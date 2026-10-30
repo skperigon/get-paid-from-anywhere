@@ -9,7 +9,8 @@
     "check:links:external": "node scripts/check-links.mjs --external",
     "promote": "node scripts/promote-next.mjs",
     "promote:dry": "node scripts/promote-next.mjs --dry-run",
-    "check:style": "node scripts/check-style.mjs"
+    "check:style": "node scripts/check-style.mjs",
+    "postbuild": "node scripts/unlink-unpublished.mjs"
   },
   "type": "module",
   "dependencies": {
