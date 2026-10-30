@@ -31,7 +31,8 @@
         "pakistan": { "status": "not-listed", "note": "Pakistan is not on Stripe's global availability list.", "source": "https://stripe.com/global" },
         "nigeria": { "status": "label-only", "note": "Listed as Extended network. Paystack, a Stripe company, serves businesses based in Africa.", "source": "https://stripe.com/global" },
         "bangladesh": { "status": "not-listed", "note": "Bangladesh is not on Stripe's global availability list.", "source": "https://stripe.com/global" },
-        "brazil": { "status": "listed", "note": "Brazil is on Stripe's global availability list.", "source": "https://stripe.com/global" }
+        "brazil": { "status": "listed", "note": "Brazil is on Stripe's global availability list.", "source": "https://stripe.com/global" },
+        "uae": { "status": "listed", "note": "The UAE is on Stripe's global availability page with no label.", "source": "https://stripe.com/global", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -73,7 +74,8 @@
         "pakistan": { "status": "not-excluded", "note": "Pakistan is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
         "nigeria": { "status": "not-excluded", "note": "Nigeria is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
         "bangladesh": { "status": "not-excluded", "note": "Bangladesh is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
-        "brazil": { "status": "not-excluded", "note": "Brazil is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" }
+        "brazil": { "status": "not-excluded", "note": "Brazil is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle" },
+        "uae": { "status": "not-excluded", "note": "The UAE is not on Paddle's unsupported list.", "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -94,7 +96,8 @@
         "pakistan": { "status": "listed", "note": "Pakistan is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
         "nigeria": { "status": "listed", "note": "Nigeria is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
         "bangladesh": { "status": "listed", "note": "Bangladesh is on the bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
-        "brazil": { "status": "conditional", "note": "Brazil is not on the bank payout list. PayPal payouts may be an option. Confirm with Lemon Squeezy and PayPal.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" }
+        "brazil": { "status": "conditional", "note": "Brazil is not on the bank payout list. PayPal payouts may be an option. Confirm with Lemon Squeezy and PayPal.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries" },
+        "uae": { "status": "listed", "note": "The UAE is on Lemon Squeezy's bank payout list.", "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -116,7 +119,8 @@
         "pakistan": { "status": "listed", "note": "Pakistan is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
         "nigeria": { "status": "listed", "note": "Nigeria is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
         "bangladesh": { "status": "listed", "note": "Bangladesh is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
-        "brazil": { "status": "not-listed", "note": "Brazil is not on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" }
+        "brazil": { "status": "not-listed", "note": "Brazil is not on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries" },
+        "uae": { "status": "listed", "note": "The UAE is on Polar's supported payout list.", "source": "https://polar.sh/docs/merchant-of-record/supported-countries", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -138,7 +142,8 @@
         "pakistan": { "status": "not-listed", "note": "Pakistan is not on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
         "nigeria": { "status": "grandfathered-only", "note": "Existing merchants from before March 23, 2026 are kept. New Nigerian merchants are not eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
         "bangladesh": { "status": "grandfathered-only", "note": "Existing merchants from before March 23, 2026 are kept. New Bangladeshi merchants are not eligible.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
-        "brazil": { "status": "listed", "note": "Brazil is on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" }
+        "brazil": { "status": "listed", "note": "Brazil is on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories" },
+        "uae": { "status": "listed", "note": "The UAE is on Dodo's accepted countries list.", "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -176,7 +181,8 @@
         "pakistan": { "status": "not-excluded", "note": "Pakistan is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
         "nigeria": { "status": "not-excluded", "note": "Nigeria is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
         "bangladesh": { "status": "not-excluded", "note": "Bangladesh is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise" },
-        "brazil": { "status": "conditional", "note": "Wise supports only some Brazilian business types: Empresario Individual/MEI, Sociedade Limitada Unipessoal and Sociedade Unipessoal de Advocacia.", "source": "https://wise.com/help/articles/2977974/can-my-business-use-wise" }
+        "brazil": { "status": "conditional", "note": "Wise supports only some Brazilian business types: Empresario Individual/MEI, Sociedade Limitada Unipessoal and Sociedade Unipessoal de Advocacia.", "source": "https://wise.com/help/articles/2977974/can-my-business-use-wise" },
+        "uae": { "status": "not-excluded", "note": "The UAE is not on Wise's unsupported list. Wise confirms business support during sign-up.", "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -218,7 +224,8 @@
         "pakistan": { "status": "not-listed", "note": "Pakistan is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
         "nigeria": { "status": "not-listed", "note": "Nigeria is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
         "bangladesh": { "status": "not-listed", "note": "Bangladesh is not on Airwallex's eligible list. A US-registered company is eligible.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
-        "brazil": { "status": "listed", "note": "Brazil-registered businesses are onboarded to Airwallex's US entity.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" }
+        "brazil": { "status": "listed", "note": "Brazil-registered businesses are onboarded to Airwallex's US entity.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories" },
+        "uae": { "status": "not-listed", "note": "The UAE is not on Airwallex's eligible business registration list.", "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories", "checkedOn": "2026-10-29" }
       }
     },
     {
@@ -240,7 +247,8 @@
         "pakistan": { "status": "prohibited", "note": "Pakistan is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
         "nigeria": { "status": "prohibited", "note": "Nigeria is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
         "bangladesh": { "status": "prohibited", "note": "Bangladesh is on Mercury's prohibited list (by residence).", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
-        "brazil": { "status": "not-excluded", "note": "Brazil is not on Mercury's prohibited list. You still need a US-formed company.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" }
+        "brazil": { "status": "not-excluded", "note": "Brazil is not on Mercury's prohibited list. You still need a US-formed company.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries" },
+        "uae": { "status": "not-excluded", "note": "The UAE is not on Mercury's prohibited list. You still need a US-formed company.", "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries", "checkedOn": "2026-10-29" }
       }
     },
     {
