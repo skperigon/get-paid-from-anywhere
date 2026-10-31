@@ -1,0 +1,56 @@
+---
+// Every country with its answer in one line: Stripe's status and our pick.
+import Status from './Status.astro';
+import data from '../data/providers.json';
+import { allCountries, publishedPages } from '../lib/countries.js';
+import { countryPick, u } from '../site.js';
+const stripe = data.providers.find((p) => p.slug === 'stripe');
+const pages = publishedPages();
+const rows = allCountries().map((c) => {
+  const pk = countryPick(c.slug);
+  const st = stripe?.sellerCountries?.[c.slug]?.status;
+  const md = pages.find((g) => g.path === `country/${c.slug}`);
+  const line = md ? (md.description || '').split(/(?<=\.)\s/)[0] : '';
+  return { c, pk, st, line };
+});
+---
+<div class="ca">
+  <div class="ca-head" aria-hidden="true"><span>Country</span><span>Stripe for new sellers</span><span>What we would use</span></div>
+  <ul>
+    {rows.map(({ c, pk, st, line }) => (
+      <li><a href={u(`/country/${c.slug}/`)}>
+        <span class="ca-c">{c.name}</span>
+        {pk ? (<>
+          <span class="ca-s">{st ? <Status status={st} /> : <span class="muted">See guide</span>}</span>
+          <span class="ca-p"><strong>{pk.p.name}</strong>{pk.fee && <span class="num"> {pk.fee.text}</span>}</span>
+        </>) : <span class="ca-l">{line}</span>}
+        <span class="ca-go" aria-hidden="true">&rarr;</span>
+      </a></li>
+    ))}
+  </ul>
+</div>
+<style>
+.ca { border-top:1px solid var(--ink); }
+.ca-head, .ca a { display:grid; grid-template-columns:minmax(120px,1fr) minmax(170px,1fr) minmax(200px,1.3fr) 24px; gap:16px; align-items:baseline; }
+.ca-head { padding:10px 0; font-size:13.5px; font-weight:600; color:var(--muted); border-bottom:1px solid var(--line); }
+.ca ul { list-style:none; margin:0; padding:0; }
+.ca li { border-bottom:1px solid var(--line); }
+.ca a { padding:13px 0; text-decoration:none; color:var(--fg); }
+.ca a:hover { background:var(--soft); }
+.ca-c { font-family:var(--serif); font-size:20px; font-weight:650; color:var(--ink); }
+.ca a:hover .ca-c { text-decoration:underline; }
+.ca-p strong { color:var(--ink); font-weight:600; }
+.ca-p .num { color:var(--muted); font-size:14.5px; margin-left:6px; }
+.ca-l { grid-column:span 2; font-size:15px; color:var(--muted); }
+.ca-go { color:var(--muted); text-align:right; }
+a:hover .ca-go { color:var(--accent); }
+@media (max-width:700px) {
+  .ca-head { display:none; }
+  .ca a { grid-template-columns:1fr auto; gap:2px 12px; }
+  .ca-c { grid-column:1; }
+  .ca-go { grid-column:2; grid-row:1; }
+  .ca-s, .ca-p, .ca-l { grid-column:1 / -1; font-size:14.5px; }
+  .ca-s::before { content:"Stripe: "; color:var(--muted); }
+  .ca-p::before { content:"Use: "; color:var(--muted); }
+}
+</style>

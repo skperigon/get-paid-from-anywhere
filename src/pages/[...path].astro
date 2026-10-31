@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { CHECKED_ON, fmtDate, u } from '../site.js';
 import Byline from '../components/Byline.astro';
+import PickBlock from '../components/PickBlock.astro';
 import { allCountries, providersIn } from '../lib/countries.js';
 export function getStaticPaths() {
   const mods = Object.values(import.meta.glob('../published/*.md', { eager: true }));
@@ -15,6 +16,7 @@ const others = countrySlug ? allCountries().filter((c) => c.slug !== countrySlug
 const raw = typeof m.rawContent === 'function' ? m.rawContent() : '';
 const mentioned = providersIn(raw);
 const checked = fm.checkedOn || CHECKED_ON;
+const countryName = countrySlug ? (allCountries().find((c) => c.slug === countrySlug)?.name || '') : '';
 ---
 <Base title={fm.title} description={fm.description} faqs={fm.faqs || []} dateModified={checked} crumb={fm.h1} crumbs={countrySlug ? undefined : [{ name: 'Guides', path: '/guides/' }]}>
   <div class="prose">
@@ -23,14 +25,15 @@ const checked = fm.checkedOn || CHECKED_ON;
   <div class="summary-box">
     <h2>The short answer</h2>
     <p>{fm.description}</p>
-    {mentioned.length > 0 && <p><strong>Providers covered:</strong> {mentioned.map((p, i) => <>{i > 0 && ', '}<a href={u(`/provider/${p.slug}/`)}>{p.name}</a></>)}</p>}
   </div>
+  </div>
+  {countrySlug && <PickBlock slug={countrySlug} name={countryName} />}
+  <div class="prose">
   <article data-md><Content /></article>
-  {fm.sources && fm.sources.length > 0 && (<><h2>Sources</h2><ul>{fm.sources.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}</ul></>)}
-  <div class="note"><strong>Verify with the provider.</strong> Rules and fees change. Confirm on the provider's site before you sign up.</div>
-  {fm.faqs && fm.faqs.length > 0 && (<><h2>Frequently asked questions</h2>{fm.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}</>)}
+  <div class="note"><strong>Check with the provider.</strong> Rules and fees change. Confirm on the provider's site before you sign up.</div>
+  {fm.faqs && fm.faqs.length > 0 && (<><h2>Common questions</h2>{fm.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}</>)}
+  {fm.sources && fm.sources.length > 0 && (<><h2>Sources</h2><details><summary>{fm.sources.length} provider pages, checked {fmtDate(checked)}</summary><ul>{fm.sources.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}</ul></details></>)}
+  {mentioned.length > 0 && (<><h2>Providers on this page</h2><ul class="inline-list">{mentioned.map((p) => <li><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></li>)}</ul></>)}
+  {others.length > 0 && (<><h2>{countrySlug ? 'Other countries' : 'Country guides'}</h2><ul class="inline-list">{others.map((o) => <li><a href={u(`/country/${o.slug}/`)}>{o.name}</a></li>)}</ul></>)}
   </div>
-  {mentioned.length > 0 && (<><h2>Providers in this guide</h2><ul class="cards">{mentioned.map((p) => <li><a class="card" href={u(`/provider/${p.slug}/`)}><strong>{p.name}</strong><span class="sub">{p.category}</span></a></li>)}</ul></>)}
-  {others.length > 0 && (<><h2>{countrySlug ? 'Other countries' : 'Country guides'}</h2><ul class="cards">{others.map((o) => <li><a class="card" href={u(`/country/${o.slug}/`)}><strong>{o.name}</strong><span class="sub">Stripe alternatives in {o.name}</span></a></li>)}</ul></>)}
-  <p><a href={u("/providers/")}>All providers</a> · <a href={u("/countries/")}>All countries</a></p>
 </Base>

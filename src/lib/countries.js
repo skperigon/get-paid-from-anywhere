@@ -4,7 +4,8 @@ import countries from '../data/countries.json';
 import data from '../data/providers.json';
 
 const mods = Object.values(import.meta.glob('../published/*.md', { eager: true }));
-const titleCase = (slug) => slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+const NAMES = { uae: 'UAE' };
+const titleCase = (slug) => NAMES[slug] || slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 const OPEN = ['listed', 'not-excluded'];
 
 export function allCountries() {
@@ -41,3 +42,6 @@ export function providersIn(raw) {
   const slugs = [...raw.matchAll(/\]\(\/provider\/([a-z0-9-]+)\/\)/g)].map((m) => m[1]);
   return [...new Set(slugs)].map((s) => data.providers.find((p) => p.slug === s)).filter(Boolean);
 }
+
+// Country name as it reads inside a sentence ("the UAE").
+export const inSentence = (name) => (/^(UAE|US|UK)$/.test(name) ? `the ${name}` : name);

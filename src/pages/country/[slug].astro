@@ -2,117 +2,97 @@
 import Base from '../../layouts/Base.astro';
 import Status from '../../components/Status.astro';
 import Src from '../../components/Src.astro';
+import PickBlock from '../../components/PickBlock.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
-import { CHECKED_ON, fmtDate, u } from '../../site.js';
+import { CHECKED_ON, fmtDate, plainType, u } from '../../site.js';
 import Byline from '../../components/Byline.astro';
-import ProviderCard from '../../components/ProviderCard.astro';
-import { allCountries, countryStats, pagesLinkingTo } from '../../lib/countries.js';
+import { allCountries, pagesLinkingTo } from '../../lib/countries.js';
 
 export function getStaticPaths() {
   return countries.map((c) => ({ params: { slug: c.slug }, props: { c } }));
 }
 const { c } = Astro.props;
-const rows = data.providers.filter((p) => p.sellerCountries && p.sellerCountries[c.slug]);
-const groups = [
-  { title: 'Merchants of record', match: (p) => p.category === 'Merchant of record' },
-  { title: 'Payment processors', match: (p) => p.category.startsWith('Payment processor') },
-  { title: 'Accounts, banking and payouts', match: (p) => !p.category.startsWith('Payment processor') && p.category !== 'Merchant of record' && p.category !== 'US company formation' },
-  { title: 'US company formation', match: (p) => p.category === 'US company formation' },
-];
+const order = (p) => (p.category === 'Merchant of record' ? 0 : p.category.startsWith('Payment processor') ? 1 : p.category === 'US company formation' ? 3 : 2);
+const rows = data.providers.filter((p) => p.sellerCountries && p.sellerCountries[c.slug]).sort((a, b) => order(a) - order(b));
 const formation = data.providers.filter((p) => p.category === 'US company formation');
 const others = allCountries().filter((o) => o.slug !== c.slug);
-const stats = countryStats(c.slug);
 const guides = pagesLinkingTo(`/country/${c.slug}/`);
-const openMors = rows.filter((p) => p.category === 'Merchant of record' && ['listed', 'not-excluded'].includes(p.sellerCountries[c.slug].status));
 const srcList = [...new Set(rows.map((p) => p.sellerCountries[c.slug].source).concat(formation.map((p) => p.facts[0].source)))];
 const title = `Stripe alternatives in ${c.name} (checked ${CHECKED_ON})`;
 const description = `Is Stripe available in ${c.name}? Which merchants of record accept ${c.people}, the US LLC route, and banking options, with a source link for every fact.`;
 ---
 <Base title={title} description={description} faqs={c.faqs} dateModified={CHECKED_ON} crumb={`Stripe alternatives in ${c.name}`}>
-  <h1>Stripe alternatives in {c.name}</h1>
-  <Byline date={CHECKED_ON} sources={srcList.length} />
-  <p class="lede">{c.intro}</p>
-  <div class="summary-box">
-    <h2>The short answer</h2>
-    <ul>
-      {stats && <li><strong>Stripe:</strong> <Status status={stats.stripe} /></li>}
-      {stats && <li><strong>Merchants of record:</strong> {stats.open} of {stats.total} we track list {c.name} or do not exclude it{openMors.length > 0 && <>: {openMors.map((p, i) => <>{i > 0 && ', '}<a href={u(`/provider/${p.slug}/`)}>{p.name}</a></>)}</>}.</li>}
-      <li><strong>US company route:</strong> what it involves and what it costs, in <a href="#llc">the LLC section</a>.</li>
-    </ul>
-    <p class="jump"><a href="#options">Options</a> · <a href="#comparison">Comparison</a> · <a href="#llc">US LLC route</a> · <a href="#banking">Banking</a> · <a href="#faq">FAQ</a></p>
+  <div class="prose">
+    <h1>Stripe alternatives in {c.name}</h1>
+    <Byline date={CHECKED_ON} sources={srcList.length} />
+    <p class="lede">{c.intro}</p>
   </div>
-  <div class="note"><strong>Verify with the provider.</strong> Country rules change, and approval is always up to the provider. Read the linked source and confirm with the provider before you build your business on it.</div>
 
-  <h2>Is Stripe available in {c.name}?</h2>
-  <p>{c.stripeAnswer}</p>
+  <PickBlock slug={c.slug} name={c.name} />
+  <p class="verify">Approval is always up to the provider, and country rules change. Read the linked source before you build on it.</p>
 
-  <h2>Merchants of record that accept {c.people}</h2>
-  <p>A merchant of record sells to your customer on your behalf and handles sales tax and VAT, then pays you out. {c.morAnswer}</p>
+  <div class="prose">
+    <h2 id="stripe">Is Stripe available in {c.name}?</h2>
+    <p>{c.stripeAnswer}</p>
 
-  {openMors.length > 0 && (<>
-    <h2 id="options">Your options side by side</h2>
-    <div class="pgrid">{openMors.map((p) => <ProviderCard p={p} />)}</div>
-  </>)}
+    <h2 id="mor">What a merchant of record does</h2>
+    <p>A merchant of record sells to your customer on your behalf, handles sales tax and VAT, then pays you out. {c.morAnswer}</p>
+  </div>
 
-  <h2 id="comparison">Quick comparison</h2>
-  {groups.map((g) => {
-    const list = rows.filter(g.match);
-    return list.length > 0 && (
-      <>
-        <h3>{g.title}</h3>
-        <div class="table-wrap"><table>
-          <thead><tr><th>Provider</th><th>{c.name}</th><th>What the provider says</th><th>Source</th></tr></thead>
-          <tbody>
-            {list.map((p) => (
-              <tr>
-                <td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td>
-                <td><Status status={p.sellerCountries[c.slug].status} /></td>
-                <td>{p.sellerCountries[c.slug].note}</td>
-                <td><Src href={p.sellerCountries[c.slug].source} /></td>
-              </tr>
-            ))}
-          </tbody>
-        </table></div>
-      </>
-    );
-  })}
-  <p><small>Status labels are explained on the <a href={u("/methodology/")}>methodology</a> page.</small></p>
-
-  <h2 id="llc">The US LLC route</h2>
-  <p>{c.llcAnswer}</p>
+  <h2 id="comparison">Every provider we checked for {c.name}</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th>Formation service</th><th>Price shown on its site</th><th>Source</th></tr></thead>
+    <thead><tr><th>Provider</th><th>What it is</th><th>Can you sign up from {c.name}?</th><th>What the provider says</th><th>Source</th></tr></thead>
     <tbody>
-      {formation.map((p) => (
-        <tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td><td>{p.facts[0].value}</td><td><Src href={p.facts[0].source} /></td></tr>
+      {rows.map((p) => (
+        <tr>
+          <th scope="row"><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></th>
+          <td class="t-type">{plainType(p)}</td>
+          <td><Status status={p.sellerCountries[c.slug].status} /></td>
+          <td>{p.sellerCountries[c.slug].note}</td>
+          <td><Src href={p.sellerCountries[c.slug].source} /></td>
+        </tr>
       ))}
     </tbody>
   </table></div>
-  <p><small>We have not verified whether each formation service accepts founders from {c.name} unless stated above.</small></p>
+  <p><small>What each answer means is on <a href={u('/methodology/')}>How we pick</a>.</small></p>
 
-  <h2 id="banking">Banking and payout options</h2>
-  <p>{c.bankingAnswer}</p>
+  <div class="prose">
+    <h2 id="llc">The US company route</h2>
+    <p>{c.llcAnswer}</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Formation service</th><th>Price shown on its site</th><th>Source</th></tr></thead>
+      <tbody>
+        {formation.map((p) => (
+          <tr><th scope="row"><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></th><td>{p.facts[0].value}</td><td><Src href={p.facts[0].source} /></td></tr>
+        ))}
+      </tbody>
+    </table></div>
+    <p><small>We have not checked whether each formation service accepts founders from {c.name} unless stated above.</small></p>
 
-  <h2 id="faq">Frequently asked questions</h2>
-  {c.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}
+    <h2 id="banking">Banking and payouts</h2>
+    <p>{c.bankingAnswer}</p>
 
-  <h2>Sources</h2>
-  <ul>
-    {srcList.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}
-  </ul>
-  <p class="muted">Last checked: {fmtDate(CHECKED_ON)}. Spotted something out of date? See how to report a correction on the <a href={u("/about/")}>About</a> page.</p>
+    <h2 id="faq">Common questions</h2>
+    {c.faqs.map((f) => (<><h3>{f.q}</h3><p>{f.a}</p></>))}
 
-  {guides.length > 0 && (<>
-    <h2>Related guides</h2>
-    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">Updated {fmtDate(g.checkedOn)}</span></a></li>)}</ul>
-  </>)}
+    <h2 id="sources">Sources</h2>
+    <details>
+      <summary>{srcList.length} provider pages, checked {fmtDate(CHECKED_ON)}</summary>
+      <ul>{srcList.map((s) => <li><a href={s} rel="nofollow noopener" target="_blank">{s}</a></li>)}</ul>
+    </details>
+    <p class="muted">Spotted something out of date? See how to report a correction on the <a href={u('/about/')}>About</a> page.</p>
 
-  <h2>Other countries</h2>
-  <ul class="cards">{others.map((o) => <li><a class="card" href={u(`/country/${o.slug}/`)}><strong>{o.name}</strong><span class="sub">Stripe alternatives in {o.name}</span></a></li>)}</ul>
+    {guides.length > 0 && (<>
+      <h2>Related guides</h2>
+      <ul class="inline-list">{guides.map((g) => <li><a href={u(`/${g.path}/`)}>{g.h1 || g.title}</a></li>)}</ul>
+    </>)}
+
+    <h2>Other countries</h2>
+    <ul class="inline-list">{others.map((o) => <li><a href={u(`/country/${o.slug}/`)}>{o.name}</a></li>)}</ul>
+  </div>
 </Base>
 <style>
-.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
-@media (max-width:420px) { .pgrid { grid-template-columns:1fr; } }
-.summary-box .jump { font-size:14.5px; }
+.verify { font-size:14px; color:var(--muted); margin:8px 0 0; }
+.t-type { font-size:14.5px; color:var(--muted); }
 </style>

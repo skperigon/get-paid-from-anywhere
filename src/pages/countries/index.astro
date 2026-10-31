@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import CountryGrid from '../../components/CountryGrid.astro';
+import CountryAnswers from '../../components/CountryAnswers.astro';
 import Status from '../../components/Status.astro';
 import data from '../../data/providers.json';
 import countries from '../../data/countries.json';
@@ -9,17 +9,17 @@ import Byline from '../../components/Byline.astro';
 const mors = data.providers.filter((p) => p.category === 'Merchant of record' || p.slug === 'stripe');
 ---
 <Base title="Stripe alternatives by country: all country guides" description={`Country guides for founders where Stripe is limited or missing. Which merchants of record and payment providers accept sellers from each country, with sources. Checked ${CHECKED_ON}.`} crumb="Countries">
-  <h1>Country guides</h1>
+  <h1>Pick your country</h1>
   <Byline date={CHECKED_ON} />
-  <p class="lede">Pick the country you live in or where your company is registered. Each guide covers Stripe's status, merchants of record, the US company route and banking options, with a source for every fact.</p>
-  <CountryGrid />
+  <p class="lede">Choose where you live or where your company is registered. Each page names one provider to start with, then covers Stripe, the US company route and banking, with a source for every fact.</p>
+  <CountryAnswers />
 
-  <h2>Stripe and merchants of record at a glance</h2>
+  <h2>Can you sign up? Every country side by side</h2>
   <div class="table-wrap"><table>
     <thead><tr><th>Provider</th>{countries.map((c) => <th><a href={u(`/country/${c.slug}/`)}>{c.name}</a></th>)}</tr></thead>
     <tbody>
       {mors.map((p) => (<tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td>{countries.map((c) => <td><Status status={p.sellerCountries[c.slug] ? p.sellerCountries[c.slug].status : 'unknown'} /></td>)}</tr>))}
     </tbody>
   </table></div>
-  <p><small>Open a country page for the notes and source links behind each label. Labels are explained in the <a href={u('/methodology/')}>methodology</a>.</small></p>
+  <p><small>Open a country page for the notes and source links behind each label. What each answer means is on <a href={u('/methodology/')}>How we pick</a>.</small></p>
 </Base>

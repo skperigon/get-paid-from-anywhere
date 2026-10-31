@@ -1,0 +1,69 @@
+---
+// One recommendation for a country, plus up to three alternatives.
+import Status from './Status.astro';
+import { countryPick, pickReason, outHref, outRel, host, u, fmtDate } from '../site.js';
+import { inSentence } from '../lib/countries.js';
+const { slug, name } = Astro.props;
+const pk = countryPick(slug);
+const cn = inSentence(name);
+const firstSentence = (t) => (t || '').split(/(?<=\.)\s/)[0];
+const altLine = (a) => {
+  if (a.p.slug === 'stripe') return `Stripe is open to sellers in ${cn}. It does not handle sales tax or VAT for you.`;
+  return firstSentence(a.status.note);
+};
+---
+{pk && (
+<section class="pick" aria-labelledby="pick-h">
+  <div class="pick-main">
+    <p class="pick-k" id="pick-h">Our pick for {cn}</p>
+    <p class="pick-name"><a href={u(`/provider/${pk.p.slug}/`)}>{pk.p.name}</a></p>
+    {pk.fee && <p class="pick-fee"><span class="num">{pk.fee.text}</span>{' '}<span>per sale, base fee</span></p>}
+    <p class="pick-why">{pickReason(pk, cn)}</p>
+    {pk.fee && <p class="pick-watch"><strong>Full fee:</strong>{' '}{pk.fee.full}{' '}<a href={pk.fee.source} rel="nofollow noopener" target="_blank">Source</a></p>}
+    <p class="pick-cta">
+      <a class="btn" href={outHref(pk.p)} rel={outRel(pk.p)} target="_blank">Go to {host(pk.p.website)}</a>
+      <a href={u(`/provider/${pk.p.slug}/`)}>Our notes on {pk.p.name}</a>
+    </p>
+  </div>
+  {pk.alternatives.length > 0 && (
+  <div class="pick-alts">
+    <p class="pick-k">If it does not fit</p>
+    <ol>
+      {pk.alternatives.map((a) => (
+        <li>
+          <span class="alt-top"><a href={u(`/provider/${a.p.slug}/`)}>{a.p.name}</a>{a.fee && <span class="num">{a.fee.text}</span>}</span>
+          <span class="alt-line"><Status status={a.status.status} />{' '}{altLine(a)}</span>
+        </li>
+      ))}
+    </ol>
+    <p class="pick-rule"><a href={u('/methodology/')}>How we choose the pick</a></p>
+  </div>
+  )}
+</section>
+)}
+<style>
+.pick { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:0; border-top:3px solid var(--ink); border-bottom:1px solid var(--ink); margin:28px 0 8px; }
+@media (max-width:820px) { .pick { grid-template-columns:1fr; } }
+.pick-main { padding:22px 32px 22px 0; }
+.pick-alts { padding:22px 0 22px 32px; border-left:1px solid var(--line); }
+@media (max-width:820px) { .pick-main { padding:18px 0; } .pick-alts { padding:18px 0; border-left:0; border-top:1px solid var(--line); } }
+.pick-k { margin:0 0 6px; font-size:14px; font-weight:600; color:var(--muted); }
+.pick-name { margin:0; font-family:var(--serif); font-size:clamp(32px,4vw,42px); font-weight:700; line-height:1.1; letter-spacing:-.01em; }
+.pick-name a { color:var(--ink); text-decoration:none; }
+.pick-name a:hover { text-decoration:underline; }
+.pick-fee { margin:10px 0 0; font-size:15px; color:var(--muted); }
+.pick-fee .num { font-family:var(--serif); font-size:26px; font-weight:650; color:var(--accent); margin-right:6px; }
+.pick-why { margin:12px 0 0; font-size:17.5px; max-width:560px; }
+.pick-watch { margin:10px 0 0; font-size:14.5px; color:var(--muted); max-width:560px; }
+.pick-watch strong { color:var(--fg); }
+.pick-cta { margin:18px 0 0; display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; }
+.pick-alts ol { list-style:none; margin:0; padding:0; }
+.pick-alts li { padding:10px 0; border-bottom:1px solid var(--line); display:grid; gap:2px; }
+.pick-alts li:last-child { border-bottom:0; }
+.alt-top { display:flex; justify-content:space-between; gap:12px; font-weight:600; font-size:17px; }
+.alt-top a { color:var(--ink); }
+.alt-top .num { color:var(--fg); font-weight:600; }
+.alt-line { font-size:14.5px; color:var(--muted); }
+.alt-line .badge { font-size:13.5px; margin-right:4px; }
+.pick-rule { margin:8px 0 0; font-size:14px; }
+</style>

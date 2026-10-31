@@ -1,130 +1,91 @@
 ---
 import Base from '../layouts/Base.astro';
-import CountryGrid from '../components/CountryGrid.astro';
-import ProviderTable from '../components/ProviderTable.astro';
-import ProviderCard from '../components/ProviderCard.astro';
-import Status from '../components/Status.astro';
-import data from '../data/providers.json';
-import countries from '../data/countries.json';
-import { CHECKED_ON, PICKS, SITE_LINE, SITE_SUBLINE, fmtDate, u } from '../site.js';
-import { allCountries, publishedPages, countryStats } from '../lib/countries.js';
+import CountryAnswers from '../components/CountryAnswers.astro';
+import { CHECKED_ON, PICK_RULE, SITE_LINE, SITE_SUBLINE, affiliateProviders, fmtDate, u } from '../site.js';
+import { allCountries, publishedPages } from '../lib/countries.js';
 const countryList = allCountries();
 const guides = publishedPages().filter((g) => !/^country\//.test(g.path)).sort((a, b) => a.title.localeCompare(b.title));
-const sourceCount = new Set(data.providers.flatMap((p) => [p.merchantOfRecord.source, ...p.facts.map((f) => f.source), ...Object.values(p.sellerCountries || {}).map((s) => s.source)])).size;
-const picks = PICKS.map((k) => ({ ...k, p: data.providers.find((p) => p.slug === k.slug) })).filter((k) => k.p);
-const glance = countries.map((c) => ({ c, s: countryStats(c.slug) })).filter((x) => x.s);
+const hasAffiliate = affiliateProviders().length > 0;
+const kinds = [
+  { t: 'Merchant of record', d: 'Sells your product to the customer for you, collects sales tax and VAT, then pays you. You do not need a US company. This is usually the easiest start when Stripe is closed to you.', ex: [['Paddle', 'paddle'], ['Polar', 'polar'], ['Dodo Payments', 'dodo-payments'], ['Lemon Squeezy', 'lemon-squeezy']] },
+  { t: 'Payment processor', d: 'Takes card payments for your own business. Lower fees, but you register for and pay sales tax and VAT yourself.', ex: [['Stripe', 'stripe'], ['Paystack', 'paystack']] },
+  { t: 'Payout account', d: 'Receives money from platforms and clients abroad and sends it to your local bank.', ex: [['Wise', 'wise-business'], ['Payoneer', 'payoneer'], ['Airwallex', 'airwallex']] },
+  { t: 'US company', d: 'You form a US LLC so you can apply to Stripe and US banks as a US business. It costs money every year and adds paperwork.', ex: [['Stripe Atlas', 'stripe-atlas'], ['doola', 'doola']] },
+];
 ---
-<Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment providers work in your country, and what they cost. An independent, fact-checked comparison of Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments and more for founders outside the US.">
+<Base title="Get Paid From Anywhere: Stripe alternatives by country" description="Which payment provider should you use in your country? One pick per country, what it costs and why, with every fact linked to the provider's own page. For founders outside the US.">
   <section class="hero">
-    <div class="hero-in">
-      <div class="hero-copy">
-        <p class="eyebrow">Independent comparison · Updated {fmtDate(CHECKED_ON)}</p>
-        <h1>{SITE_LINE}</h1>
-        <p class="lede">{SITE_SUBLINE}</p>
-        <form class="picker" action={u('/countries/')} method="get" data-picker>
-          <label for="country-pick">Where are you based?</label>
-          <div class="picker-row">
-            <select id="country-pick" name="c" required>
-              <option value="">Choose your country</option>
-              {countryList.map((c) => <option value={u(`/country/${c.slug}/`)}>{c.name}</option>)}
-            </select>
-            <button class="btn" type="submit">See my options</button>
-          </div>
-        </form>
-        <ul class="facts">
-          <li><strong>{data.providers.length}</strong> providers compared</li>
-          <li><strong>{countryList.length}</strong> country guides</li>
-          <li><strong>{sourceCount}</strong> provider pages cited</li>
-        </ul>
+    <h1>{SITE_LINE}</h1>
+    <p class="lede">{SITE_SUBLINE}</p>
+    <form class="picker" action={u('/countries/')} method="get" data-picker>
+      <label for="country-pick">Where do you live?</label>
+      <div class="picker-row">
+        <select id="country-pick" name="c" required>
+          <option value="">Choose your country</option>
+          {countryList.map((c) => <option value={u(`/country/${c.slug}/`)}>{c.name}</option>)}
+        </select>
+        <button class="btn" type="submit">Show my answer</button>
       </div>
-      <aside class="glance" aria-label="Stripe at a glance">
-        <p class="g-h">Can new sellers open a Stripe account?</p>
-        <table>
-          <thead><tr><th scope="col">Country</th><th scope="col">Stripe</th><th scope="col" class="g-m">Merchants of record open</th></tr></thead>
-          <tbody>
-            {glance.map(({ c, s }) => <tr><th scope="row"><a href={u(`/country/${c.slug}/`)}>{c.name}</a></th><td><Status status={s.stripe} /></td><td class="g-m"><strong>{s.open}</strong> of {s.total}</td></tr>)}
-          </tbody>
-        </table>
-        <p class="g-f">From Stripe's own pages, checked {fmtDate(CHECKED_ON)}. <a href={u('/countries/')}>All countries</a></p>
-      </aside>
-    </div>
+    </form>
   </section>
 
   <section>
-    <div class="sec-head">
-      <h2 id="picks">Our picks, by what you need</h2>
-      <p>Each pick names the fact it is based on. <a href={u('/methodology/')}>How we rate</a></p>
-    </div>
-    <div class="pick-grid">{picks.map((k) => <ProviderCard p={k.p} />)}</div>
+    <div class="sec-head"><h2 id="countries">The answer for each country</h2><p>Checked {fmtDate(CHECKED_ON)}</p></div>
+    <CountryAnswers />
   </section>
 
   <section>
-    <div class="sec-head">
-      <h2 id="countries">Browse by country</h2>
-      <p>Stripe's status and how many of the merchants of record we track are open to new sellers.</p>
-    </div>
-    <CountryGrid />
+    <h2 id="kinds">Four kinds of provider, in plain English</h2>
+    <dl class="kinds">
+      {kinds.map((k) => (
+        <div><dt>{k.t}</dt><dd>{k.d}</dd><dd class="ex">For example {k.ex.map(([n, s], i) => <>{i > 0 && (i === k.ex.length - 1 ? ' and ' : ', ')}<a href={u(`/provider/${s}/`)}>{n}</a></>)}.</dd></div>
+      ))}
+    </dl>
   </section>
 
-  <section>
-    <div class="sec-head">
-      <h2 id="compare">Compare all {data.providers.length} providers</h2>
-      <p>Filter by type, sort any column, or pick a country to see each provider's status there.</p>
+  <section class="how">
+    <h2 id="how">How we pick</h2>
+    <div>
+      <ol>{PICK_RULE.map((r) => <li>{r}</li>)}</ol>
+      <p>Every fact comes from the provider's own pages, with a link and the date we checked it. {hasAffiliate ? 'Some links are affiliate links, and they are marked.' : 'No links on this site are affiliate links today.'} <a href={u('/methodology/')}>The full method</a>, <a href={u('/affiliate-disclosure/')}>the disclosure</a> and <a href={u('/data/providers.json')}>the dataset</a>.</p>
     </div>
-    <ProviderTable />
   </section>
 
   {guides.length > 0 && (<section>
-    <div class="sec-head"><h2>Guides</h2><p><a href={u('/guides/')}>All guides</a></p></div>
-    <ul class="cards">{guides.map((g) => <li><a class="card" href={u(`/${g.path}/`)}><strong>{g.h1 || g.title}</strong><span class="sub">{g.description}</span><span class="sub">Updated {fmtDate(g.checkedOn)}</span></a></li>)}</ul>
+    <h2 id="guides">Guides</h2>
+    <ul class="glist">{guides.map((g) => <li><a href={u(`/${g.path}/`)}>{g.h1 || g.title}</a> <span>{g.description}</span></li>)}</ul>
+    <p><a href={u('/guides/')}>All guides</a></p>
   </section>)}
-
-  <section class="how">
-    <h2>How we check facts</h2>
-    <ol>
-      <li><strong>Provider pages only.</strong> Every fact comes from the provider's own help center, docs, pricing or legal pages. No forums, reviews or third-party blogs.</li>
-      <li><strong>Linked and dated.</strong> Each fact shows its source link and the date we checked it. If we could not confirm something, we say "unknown".</li>
-      <li><strong>Scored by rules, not opinions.</strong> The checklist score adds up five yes or no checks from the data. Affiliate deals never change it.</li>
-    </ol>
-    <p><a href={u('/methodology/')}>How we rate</a> · <a href={u('/data/providers.json')}>Download the dataset</a> · <a href={u('/affiliate-disclosure/')}>Affiliate disclosure</a></p>
-  </section>
 </Base>
 <style>
-.hero { margin:0 calc(50% - 50vw); background:var(--soft); border-bottom:1px solid var(--line); }
-.hero-in { max-width:var(--wide); margin:0 auto; padding:52px 24px 48px; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:48px; align-items:center; }
-@media (max-width:900px) { .hero-in { grid-template-columns:minmax(0,1fr); gap:28px; padding:32px 16px 32px; } }
-.hero h1 { margin:10px 0 14px; max-width:640px; }
-.hero .lede { font-size:17.5px; max-width:600px; }
-.picker { margin:26px 0 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; max-width:600px; box-shadow:var(--shadow); }
-.picker label { display:block; margin-bottom:10px; font-size:15px; font-weight:650; color:var(--ink); }
+.hero { padding:48px 0 32px; max-width:940px; }
+@media (max-width:760px) { .hero { padding:28px 0 24px; } }
+.hero h1 { margin:0 0 16px; font-size:clamp(36px, 5.4vw, 60px); }
+.hero .lede { margin:0; max-width:640px; }
+.picker { margin:28px 0 0; max-width:600px; }
+.picker label { display:block; margin-bottom:8px; font-size:15px; font-weight:600; color:var(--ink); }
 .picker-row { display:flex; gap:10px; flex-wrap:wrap; }
-.picker-row select { flex:1 1 240px; }
-.picker-row .btn { flex:0 0 auto; }
+.picker-row select { flex:1 1 260px; }
 @media (max-width:480px) { .picker-row .btn { flex:1 1 100%; } }
-.facts { list-style:none; padding:0; margin:16px 0 0; display:flex; flex-wrap:wrap; gap:6px 22px; font-size:14px; color:var(--muted); }
-.facts strong { color:var(--ink); }
-.glance { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 18px 12px; box-shadow:var(--shadow); }
-.g-h { margin:0 0 8px; font-weight:700; color:var(--ink); font-size:15px; }
-.glance table { font-size:14px; }
-.glance th, .glance td { background:none; text-transform:none; letter-spacing:0; font-size:14px; padding:9px 6px; vertical-align:middle; }
-.glance th { color:var(--ink); font-weight:600; }
-.glance thead th { font-size:11.5px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; padding-top:2px; }
-.glance td.g-m, .glance th.g-m { text-align:right; }
-.glance table { min-width:0 !important; width:100%; }
-.glance th, .glance td { white-space:normal !important; }
-.glance th a { color:var(--ink); text-decoration:none; }
-.glance th a:hover { text-decoration:underline; }
-.g-m { color:var(--muted); font-size:13px !important; }
-.g-f { margin:8px 0 0; font-size:12.5px; color:var(--muted); }
-.sec-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 20px; margin:56px 0 14px; }
+.sec-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:4px 20px; margin:40px 0 12px; }
 .sec-head h2 { margin:0; }
-.sec-head p { margin:0; color:var(--muted); font-size:15px; }
-.pick-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px; }
-@media (max-width:420px) { .pick-grid { grid-template-columns:1fr; } }
-.how { margin-top:56px; border:1px solid var(--line); border-radius:16px; padding:6px 28px 14px; background:#fff; }
-.how h2 { margin-top:22px; }
-.how ol { padding-left:20px; max-width:860px; }
-.how li { margin:8px 0; }
+.sec-head p { margin:0; color:var(--muted); font-size:14.5px; }
+.kinds { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 48px; margin:16px 0 0; }
+@media (max-width:760px) { .kinds { grid-template-columns:1fr; } }
+.kinds div { border-top:1px solid var(--ink); padding:14px 0 18px; }
+.kinds dt { font-family:var(--serif); font-size:21px; font-weight:650; color:var(--ink); }
+.kinds dd { margin:6px 0 0; }
+.kinds .ex { font-size:15px; color:var(--muted); }
+.how { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); gap:8px 48px; margin-top:56px; padding-top:8px; border-top:3px solid var(--ink); }
+@media (max-width:760px) { .how { grid-template-columns:1fr; } }
+.how h2 { margin:16px 0 0; }
+.how ol { margin:18px 0 12px; padding-left:22px; }
+.how li { margin:0 0 8px; }
+.how p { color:var(--muted); font-size:15.5px; margin:0; }
+.glist { list-style:none; padding:0; margin:12px 0; border-top:1px solid var(--line); max-width:860px; }
+.glist li { padding:12px 0; border-bottom:1px solid var(--line); }
+.glist a { font-weight:600; font-size:17px; }
+.glist span { display:block; font-size:15px; color:var(--muted); margin-top:2px; }
 </style>
 <script is:inline>
 document.querySelectorAll('[data-picker]').forEach(function (f) {

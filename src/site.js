@@ -5,15 +5,15 @@ export const SITE_TAGLINE = 'Sourced payment options for founders outside the US
 export const CHECKED_ON = data.checkedOn || '2026-10-22';
 export const REPO_URL = 'https://github.com/skperigon/get-paid-from-anywhere';
 export const STATUS_TEXT = {
-  'listed': 'Listed',
-  'not-excluded': 'Not excluded',
-  'invite-only': 'Invite-only',
-  'label-only': 'Listed with a label',
-  'conditional': 'Conditional',
-  'grandfathered-only': 'Existing merchants only',
+  'listed': 'Yes, listed',
+  'not-excluded': 'Not on its banned list',
+  'invite-only': 'Invite only',
+  'label-only': 'Listed, with limits',
+  'conditional': 'Yes, with conditions',
+  'grandfathered-only': 'Existing accounts only',
   'not-listed': 'Not listed',
-  'prohibited': 'Prohibited',
-  'unknown': 'Unknown',
+  'prohibited': 'No, banned',
+  'unknown': 'Not confirmed',
 };
 export const STATUS_CLASS = {
   'listed': 'ok', 'not-excluded': 'ok', 'invite-only': 'warn', 'label-only': 'warn',
@@ -61,8 +61,8 @@ export function fmtDate(iso) {
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || '');
   return m ? `${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}` : iso;
 }
-export const SITE_LINE = 'Which payment providers work in your country, and what they cost.';
-export const SITE_SUBLINE = 'An independent, fact-checked comparison of payment processors, merchants of record, payout accounts and US company formation for founders and freelancers outside the US. Every fact links to the provider\u2019s own page and shows the date we checked it.';
+export const SITE_LINE = 'Which payment provider should you use in your country?';
+export const SITE_SUBLINE = 'Pick where you live. We name one provider to start with, say what it costs and why, and link every fact to the provider\u2019s own page.';
 
 const OPEN_STATUSES = ['listed', 'not-excluded'];
 const CLOSED_STATUSES = ['grandfathered-only', 'not-listed', 'prohibited'];
@@ -138,3 +138,63 @@ export const PICKS = [
   { slug: 'doola', label: 'US company for non-US founders', why: 'The formation service in our data whose pricing page states that non-US citizens are accepted.' },
 ];
 export function pickFor(slug) { return PICKS.find((x) => x.slug === slug) || null; }
+
+// ---------- Country pick (v3) ----------
+// One recommendation per country, by a fixed rule anyone can check:
+// 1. Only merchants of record (they sell for you and handle sales tax and VAT).
+// 2. Ones that name the country on their own list come before ones that only leave it off a banned list.
+// 3. Then the lowest published base fee (percent, then cents).
+// 4. On a tie, the one that publishes all of its extra fees.
+// Alternatives: the next open merchants of record, then ones open with conditions, then Stripe if it is open.
+export const PICK_RULE = [
+  'We only pick merchants of record. They sell your product for you, collect sales tax and VAT, and pay you out, so you do not need a US company or a local Stripe account.',
+  'A provider that names your country on its own list comes before one that only leaves it off a banned list.',
+  'Among those, the lowest base fee on the provider\u2019s pricing page wins. On a tie, we pick the one that publishes all of its extra fees.',
+  'Affiliate deals never change the pick.',
+];
+const TIER = { 'listed': 0, 'not-excluded': 1 };
+export function baseFee(p) {
+  const f = priceFact(p);
+  const m = f && /(\d+(?:\.\d+)?)%\s*\+\s*(\d+)\s*cents/.exec(f.value);
+  return m ? { pct: Number(m[1]), cents: Number(m[2]), text: `${m[1]}% + ${m[2]}\u00a2`, full: f.value, source: f.source } : null;
+}
+const hiddenExtras = (p) => /may carry additional fees/i.test(priceFact(p)?.value || '');
+export function countryPick(slug) {
+  const mors = data.providers.filter((p) => p.category === 'Merchant of record' && p.sellerCountries?.[slug]);
+  if (!mors.length) return null;
+  const key = (p) => [TIER[p.sellerCountries[slug].status] ?? 9, baseFee(p)?.pct ?? 99, baseFee(p)?.cents ?? 999, hiddenExtras(p) ? 1 : 0];
+  const cmp = (a, b) => { const x = key(a), y = key(b); for (let i = 0; i < x.length; i++) if (x[i] !== y[i]) return x[i] - y[i]; return a.name.localeCompare(b.name); };
+  const open = mors.filter((p) => p.sellerCountries[slug].status in TIER).sort(cmp);
+  if (!open.length) return null;
+  const pick = open[0];
+  const sameTier = open.filter((p) => TIER[p.sellerCountries[slug].status] === TIER[pick.sellerCountries[slug].status]);
+  const pf = baseFee(pick);
+  const tie = sameTier.filter((p) => p !== pick && baseFee(p) && pf && baseFee(p).pct === pf.pct && baseFee(p).cents === pf.cents).length > 0;
+  const named = pick.sellerCountries[slug].status === 'listed';
+  const cond = mors.filter((p) => !(p.sellerCountries[slug].status in TIER) && ['conditional', 'label-only'].includes(p.sellerCountries[slug].status)).sort(cmp);
+  const alts = [...open.slice(1), ...cond];
+  const stripe = data.providers.find((p) => p.slug === 'stripe');
+  if (stripe?.sellerCountries?.[slug]?.status === 'listed') alts.push(stripe);
+  return {
+    p: pick, fee: pf, named, tie, sameTierCount: sameTier.length,
+    status: pick.sellerCountries[slug],
+    alternatives: alts.slice(0, 3).map((a) => ({ p: a, fee: baseFee(a), status: a.sellerCountries[slug] })),
+  };
+}
+export function pickReason(pk, countryName) {
+  const n = pk.p.name;
+  const W = ['zero','one','two','three','four','five'];
+  const where = pk.named ? `${n} names ${countryName} on its own list of supported countries.` : `${countryName} is not on ${n}\u2019s list of countries it cannot serve.`;
+  let fee = '';
+  if (pk.fee && pk.sameTierCount > 1) fee = pk.tie ? ` Its base fee ties for the lowest of the ${W[pk.sameTierCount]} that do, and it publishes all of its extra fees.` : ` Its base fee is the lowest of the ${W[pk.sameTierCount]} that do.`;
+  else if (pk.fee && pk.named) fee = ' It is the only merchant of record we track that does.';
+  return `${where}${fee} It sells for you and handles sales tax and VAT.`;
+}
+// Plain-English provider type.
+export function plainType(p) {
+  if (p.category === 'Merchant of record') return 'Sells for you, handles tax';
+  if (p.category.startsWith('Payment processor')) return 'Card payments, you handle tax';
+  if (p.category === 'US company formation') return 'Forms a US company';
+  if (/banking/i.test(p.category)) return 'US bank account';
+  return 'Receive and move money';
+}

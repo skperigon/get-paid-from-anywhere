@@ -1,60 +1,49 @@
 ---
 import Base from '../layouts/Base.astro';
 import data from '../data/providers.json';
-import { STATUS_TEXT, STATUS_CLASS, CHECKED_ON, RUBRIC, PICKS, score, u } from '../site.js';
+import Status from '../components/Status.astro';
+import { STATUS_TEXT, CHECKED_ON, PICK_RULE, countryPick, u } from '../site.js';
 import Byline from '../components/Byline.astro';
-const scored = data.providers.map((p) => ({ p, s: score(p) })).filter((x) => x.s).sort((a, b) => b.s.total - a.s.total || a.p.name.localeCompare(b.p.name));
-const unscored = data.providers.filter((p) => !score(p));
+import { allCountries } from '../lib/countries.js';
+const picks = allCountries().map((c) => ({ c, pk: countryPick(c.slug) })).filter((x) => x.pk);
+const noPick = allCountries().filter((c) => !countryPick(c.slug));
 ---
-<Base title="How we rate and check provider facts" description="How Get Paid From Anywhere sources and dates payment provider facts, how the checklist score and Best for picks work, what each status label means, and how corrections work." crumb="How we rate">
+<Base title="How we pick and check provider facts" description="How Get Paid From Anywhere picks one payment provider per country, where every fact comes from, what each status answer means, and how corrections work." crumb="How we pick">
   <div class="prose">
-  <h1>How we rate and check facts</h1>
+  <h1>How we pick</h1>
   <Byline date={CHECKED_ON} />
-  <div class="summary-box">
-    <h2>The short version</h2>
-    <ul>
-      <li>Facts come only from each provider's own pages, with a link and a checked date.</li>
-      <li>The checklist score is five yes or no checks computed from those facts. No reviews, no opinions.</li>
-      <li>Affiliate deals never change a fact, a label, a score or a pick.</li>
-    </ul>
-  </div>
-  <h2>Sources</h2>
-  <p>Every fact on this site comes from the provider's own website: help center, documentation, pricing or legal pages. We do not use reviews, forum posts or third-party blogs as a source for facts. Each fact in the <a href={u("/data/providers.json")}>dataset</a> carries its source URL and the date we checked it. The current data was checked on {CHECKED_ON}.</p>
-  <h2 id="score">The checklist score</h2>
-  <p>Payment providers get a score out of 5. It is not a quality rating. It counts how many of these checks a provider passes, using only the facts in our dataset for the countries we track in detail:</p>
-  <div class="table-wrap"><table>
-    <thead><tr><th>Check</th><th>Points</th></tr></thead>
-    <tbody>{RUBRIC.map((r) => <tr><td>{r.label}{r.half && <><br /><small>{r.half}.</small></>}</td><td>{r.points}</td></tr>)}</tbody>
-  </table></div>
-  <p>"Open" means the status is Listed or Not excluded. US company formation services are not scored, because country eligibility does not apply to them in the same way. Providers we only track in some countries are not scored either.</p>
-  <h3>Current scores</h3>
-  <div class="table-wrap"><table>
-    <thead><tr><th>Provider</th><th>Type</th>{RUBRIC.map((r) => <th>{r.key === 'access' ? 'Countries' : r.key === 'mor' ? 'Tax handled' : r.key === 'fee' ? 'Fees public' : 'No unknowns'}</th>)}<th>Score</th></tr></thead>
-    <tbody>{scored.map(({ p, s }) => <tr><td><a href={u(`/provider/${p.slug}/`)}>{p.name}</a></td><td>{p.category}</td>{RUBRIC.map((r) => <td>{s.parts[r.key]}</td>)}<td><strong>{s.total}/{s.max}</strong></td></tr>)}</tbody>
-  </table></div>
-  <p><small>Not scored: {unscored.map((p) => p.name).join(', ')}.</small></p>
+  <p class="lede">Each country page names one provider to start with. The pick comes from a fixed rule applied to facts on the providers' own pages, so you can check it yourself.</p>
 
-  <h2 id="picks">How we choose "Best for" picks</h2>
-  <p>Each pick is tied to one fact you can check on the provider's page. We do not pick on reputation or on affiliate payouts.</p>
-  <ul>{PICKS.map((k) => { const p = data.providers.find((x) => x.slug === k.slug); return p && <li><strong>{k.label}: <a href={u(`/provider/${p.slug}/`)}>{p.name}</a>.</strong> {k.why}</li>; })}</ul>
+  <h2 id="rule">The rule</h2>
+  <ol>{PICK_RULE.map((r) => <li>{r}</li>)}</ol>
+  <p>The base fee is the first percent plus cents fee on the provider's pricing page, before extra fees for international cards, subscriptions or payout methods. Each pick shows those extra fees next to it.</p>
 
-  <h2>What "unknown" means</h2>
-  <p>If we could not confirm a fact on the provider's own site, we mark it unknown. Unknown does not mean no. It means you should ask the provider.</p>
-  <h2>Status labels</h2>
+  <h2 id="picks">Today's picks</h2>
   <div class="table-wrap"><table>
-    <thead><tr><th>Label</th><th>Meaning</th></tr></thead>
-    <tbody>{Object.entries(data.statusLegend).map(([k, v]) => <tr><td><span class={`badge ${STATUS_CLASS[k]}`}>{STATUS_TEXT[k]}</span></td><td>{v}</td></tr>)}</tbody>
+    <thead><tr><th>Country</th><th>Pick</th><th>Base fee</th><th>Why</th></tr></thead>
+    <tbody>{picks.map(({ c, pk }) => <tr><th scope="row"><a href={u(`/country/${c.slug}/`)}>{c.name}</a></th><td><a href={u(`/provider/${pk.p.slug}/`)}>{pk.p.name}</a></td><td class="num">{pk.fee?.text}</td><td>{pk.named ? 'Names the country on its own list' : 'Country is not on its banned list'}{pk.tie ? ', ties on fee and publishes all extra fees' : ''}</td></tr>)}</tbody>
   </table></div>
-  <p>"Not excluded" is weaker than "Listed". Some providers, such as Paddle and Wise, publish a list of countries they cannot serve instead of a list they can. A country missing from that list is not a promise of approval.</p>
+  {noPick.length > 0 && <p><small>No pick yet for {noPick.map((c) => c.name).join(', ')}. We have not yet recorded each merchant of record's status there in the dataset, so those pages answer in plain text.</small></p>}
+
+  <h2 id="sources">Where facts come from</h2>
+  <p>Every fact comes from the provider's own website: help center, documentation, pricing or legal pages. We do not use reviews, forum posts or third-party blogs as a source. Each fact in the <a href={u('/data/providers.json')}>dataset</a> carries its source link and the date we checked it. The current data was checked on {CHECKED_ON}.</p>
+
+  <h2 id="labels">What each answer means</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Answer</th><th>Meaning</th></tr></thead>
+    <tbody>{Object.entries(data.statusLegend).map(([k, v]) => <tr><td><Status status={k} /></td><td>{v}</td></tr>)}</tbody>
+  </table></div>
+  <p>"{STATUS_TEXT['not-excluded']}" is weaker than "{STATUS_TEXT['listed']}". Some providers, such as Paddle and Wise, publish a list of countries they cannot serve instead of a list they can. A country missing from that list is not a promise of approval.</p>
+  <p>"{STATUS_TEXT['unknown']}" means we could not confirm it on the provider's own site. It does not mean no. Ask the provider.</p>
+
   <h2>What we do not do</h2>
   <ul>
-    <li>We do not publish user reviews, ratings or traffic numbers.</li>
+    <li>We do not publish user reviews, star ratings or traffic numbers.</li>
     <li>We do not rank providers by affiliate payout.</li>
     <li>We do not give legal, tax or financial advice. Forming a US company or receiving foreign payments can have tax and regulatory consequences in your country.</li>
   </ul>
+
   <h2>Updates and corrections</h2>
-  <p>When we recheck a provider page, we update the checked date. If a provider page changes and a fact here is wrong, we fix it and note the new checked date. To report an error, see the <a href={u("/about/")}>About</a> page.</p>
-  <h2>Affiliate links</h2>
-  <p>Affiliate relationships never change facts or labels. Read the <a href={u("/affiliate-disclosure/")}>affiliate disclosure</a>.</p>
+  <p>When we recheck a provider page, we update the checked date. If a provider page changes and a fact here is wrong, we fix it and note the new date. To report an error, see the <a href={u('/about/')}>About</a> page. Affiliate relationships never change facts, answers or picks. Read the <a href={u('/affiliate-disclosure/')}>affiliate disclosure</a>.</p>
   </div>
 </Base>
