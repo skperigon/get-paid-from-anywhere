@@ -1,7 +1,7 @@
 ---
 order: 9
 idea: 11
-status: ready
+status: published
 path: "country/israel"
 country: "Israel"
 title: "Stripe alternatives in Israel (checked 2026-10-30)"
