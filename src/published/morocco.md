@@ -1,7 +1,7 @@
 ---
 order: 10
 idea: 12
-status: ready
+status: published
 path: "country/morocco"
 country: "Morocco"
 title: "How to sell SaaS from Morocco: Stripe alternatives (checked 2026-10-31)"
