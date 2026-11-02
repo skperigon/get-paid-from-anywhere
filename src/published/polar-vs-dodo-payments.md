@@ -1,7 +1,7 @@
 ---
 order: 17
 idea: 21
-status: ready
+status: published
 path: "compare/polar-vs-dodo-payments"
 title: "Polar vs Dodo Payments: fees, countries and rules (checked 2026-10-30)"
 h1: "Polar vs Dodo Payments"
