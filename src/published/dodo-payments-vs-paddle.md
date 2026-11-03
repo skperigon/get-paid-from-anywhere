@@ -1,7 +1,7 @@
 ---
 order: 18
 idea: 22
-status: ready
+status: published
 path: "compare/dodo-payments-vs-paddle"
 title: "Dodo Payments vs Paddle: fees, countries and rules (checked 2026-11-01)"
 h1: "Dodo Payments vs Paddle"
