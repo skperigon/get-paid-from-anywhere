@@ -1,7 +1,7 @@
 ---
 order: 19
 idea: 23
-status: ready
+status: published
 path: "guides/lemon-squeezy-alternatives"
 title: "Lemon Squeezy alternatives: fees, countries and rules (checked 2026-11-02)"
 h1: "Lemon Squeezy alternatives"
