@@ -313,38 +313,38 @@
         "value": "Yes",
         "note": "",
         "source": "https://www.lemonsqueezy.com/pricing",
-        "checkedOn": "2026-11-02"
+        "checkedOn": "2026-11-04"
       },
       "facts": [
         {
           "label": "Seller countries",
           "value": "Merchants who can receive bank payouts (published country list) or PayPal payouts (Lemon Squeezy says PayPal payouts work in 200+ countries).",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         {
           "label": "Fee",
           "value": "5% + 50 cents per transaction. Lemon Squeezy notes some payments may carry additional fees.",
           "source": "https://www.lemonsqueezy.com/pricing",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         {
           "label": "Payout schedule",
           "value": "Twice a month, by bank or PayPal",
           "source": "https://www.lemonsqueezy.com/pricing",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         {
           "label": "Extra fees",
           "value": "Added to the 5% + 50 cents platform fee: 1.5% for international (non-US) transactions, 1.5% for PayPal transactions and 0.5% for subscription payments.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         {
           "label": "Payout fees",
           "value": "Bank payouts via Stripe: free for US bank accounts, 1% per payout outside the US. PayPal payouts: 50 cents per payout in the US, 3% capped at $30 per payout outside the US.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         {
           "label": "Product rules",
@@ -356,7 +356,13 @@
           "label": "Stripe Managed Payments",
           "value": "Stripe acquired Lemon Squeezy in July 2024. In a January 28, 2026 post, Lemon Squeezy's co-founder said the team is building Stripe Managed Payments, acknowledged slower support responses and less frequent product updates, and said the goal is an easy way for Lemon Squeezy users to migrate.",
           "source": "https://www.lemonsqueezy.com/blog/2026-update",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
+        },
+        {
+          "label": "Unsupported buyer countries",
+          "value": "Lemon Squeezy accepts purchases from all countries except: Central African Republic, Cuba, Democratic People’s Republic of Korea, Democratic Republic of the Congo, Eritrea, Guinea-Bissau, Iran, Iraq, Lebanon, Libya, Mali, North Korea, Russian Federation, Somalia, South Sudan, Sudan, Syrian Arab Republic and Yemen.",
+          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
+          "checkedOn": "2026-11-04"
         }
       ],
       "sellerCountries": {
@@ -364,85 +370,85 @@
           "status": "conditional",
           "note": "India is on the bank payout list with a caveat: because new Stripe accounts in India are invite-only, Indian merchants without a pre-approved Stripe account need to use PayPal payouts.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "pakistan": {
           "status": "listed",
           "note": "Pakistan is on the bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "nigeria": {
           "status": "listed",
           "note": "Nigeria is on the bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "bangladesh": {
           "status": "listed",
           "note": "Bangladesh is on the bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "brazil": {
           "status": "conditional",
           "note": "Brazil is not on the bank payout list. PayPal payouts may be an option. Confirm with Lemon Squeezy and PayPal.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "uae": {
           "status": "listed",
           "note": "The UAE is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "israel": {
           "status": "listed",
           "note": "Israel is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "morocco": {
           "status": "listed",
           "note": "Morocco is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "kenya": {
           "status": "listed",
           "note": "Kenya is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "egypt": {
           "status": "listed",
           "note": "Egypt is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "indonesia": {
           "status": "listed",
           "note": "Indonesia is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "philippines": {
           "status": "listed",
           "note": "The Philippines is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "south-africa": {
           "status": "listed",
           "note": "South Africa is on Lemon Squeezy's bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         },
         "nepal": {
           "status": "conditional",
           "note": "Nepal is not on Lemon Squeezy's bank payout list. Lemon Squeezy says PayPal payouts work in 200+ countries, so confirm with Lemon Squeezy and PayPal whether you can be paid in Nepal.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-04"
         }
       }
     },
