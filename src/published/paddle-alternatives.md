@@ -1,7 +1,7 @@
 ---
 order: 20
 idea: 24
-status: ready
+status: published
 path: "guides/paddle-alternatives"
 title: "Paddle alternatives: fees, payouts and countries (checked 2026-11-03)"
 h1: "Paddle alternatives"
