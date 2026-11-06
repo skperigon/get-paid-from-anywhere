@@ -1,7 +1,7 @@
 ---
 order: 21
 idea: 26
-status: ready
+status: published
 path: "guides/lemon-squeezy-supported-countries"
 title: "Lemon Squeezy supported countries, explained (checked 2026-11-04)"
 h1: "Lemon Squeezy supported countries, explained"
