@@ -52,9 +52,9 @@
         },
         {
           "label": "Managed Payments eligibility",
-          "value": "Stripe's merchant of record product. Your business must be based in a supported location: the US, Canada, 31 European countries, Australia, Hong Kong, Japan or Singapore. Digital products only. Stripe reviews each business for access. Fee not shown on Stripe's pricing page when we checked.",
+          "value": "Stripe merchant of record product for digital goods including SaaS. Business must be based in US, Canada, listed European countries, Australia, Hong Kong, Japan or Singapore. Direct integrations only; Connect platforms and Express accounts are not supported. Fee is charged in addition to Payments fees; public MoR percentage was not clearly shown on the pricing page content read on 2026-11-06.",
           "source": "https://docs.stripe.com/payments/managed-payments/eligibility",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         }
       ],
       "sellerCountries": {
@@ -175,7 +175,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://www.paddle.com/pricing",
-        "checkedOn": "2026-11-03"
+        "checkedOn": "2026-11-06"
       },
       "facts": [
         {
@@ -186,9 +186,9 @@
         },
         {
           "label": "Fee",
-          "value": "5% + 50 cents per checkout transaction, no monthly fees, migration fees or hidden extras. Custom pricing for high-volume or low-value transactions.",
+          "value": "5% + 50 cents per checkout transaction, no monthly fees, migration fees or hidden extras. Custom pricing for high-volume or low-value transactions and for products under $10.",
           "source": "https://www.paddle.com/pricing",
-          "checkedOn": "2026-11-03"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Product type",
@@ -210,9 +210,15 @@
         },
         {
           "label": "Product rules",
-          "value": "Built for software companies, including B2B SaaS, consumer software and games. Prohibits physical products, human services not tied to software, digital marketplaces, advertising and marketing services, gambling and regulated financial services, among others.",
+          "value": "Built for software companies, including B2B SaaS, consumer software and games. Prohibits physical products, human services unrelated to software, and a long list of forbidden categories on the AUP page (last updated 13 April 2026 on that page).",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle",
-          "checkedOn": "2026-11-03"
+          "checkedOn": "2026-11-06"
+        },
+        {
+          "label": "Subscription surcharge",
+          "value": "None listed on the pricing page. Subscriptions are included in the all-inclusive checkout fee description.",
+          "source": "https://www.paddle.com/pricing",
+          "checkedOn": "2026-11-06"
         }
       ],
       "sellerCountries": {
@@ -313,7 +319,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://www.lemonsqueezy.com/pricing",
-        "checkedOn": "2026-11-04"
+        "checkedOn": "2026-11-06"
       },
       "facts": [
         {
@@ -336,9 +342,9 @@
         },
         {
           "label": "Extra fees",
-          "value": "Added to the 5% + 50 cents platform fee: 1.5% for international (non-US) transactions, 1.5% for PayPal transactions and 0.5% for subscription payments.",
+          "value": "Added to the 5% + 50 cents platform fee: 1.5% for international (non-US) transactions, 1.5% for PayPal transactions and 0.5% for subscription payments. Marketing add-ons: 5% on abandoned-cart recoveries and 3% on affiliate referral sales.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/fees",
-          "checkedOn": "2026-11-04"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Payout fees",
@@ -348,9 +354,9 @@
         },
         {
           "label": "Product rules",
-          "value": "Digital goods that Lemon Squeezy can fulfil, such as software, SaaS, eBooks and design assets. Prohibits services of any kind, physical goods, job boards, advertising, marketplaces, resell-rights (PLR and MRR) products, and NFT and crypto products, among others.",
+          "value": "Acceptable examples include Software and SaaS, eBooks, PDFs and design assets. Prohibits services of any kind, physical goods, marketplaces selling others products, NFT and crypto products, and other listed categories.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/prohibited-products",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Stripe Managed Payments",
@@ -463,7 +469,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-        "checkedOn": "2026-11-02"
+        "checkedOn": "2026-11-06"
       },
       "facts": [
         {
@@ -474,9 +480,9 @@
         },
         {
           "label": "Fees",
-          "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. Plus 1.5% for international (non-US) cards.",
+          "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. International cards +1.5%.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Dispute fee",
@@ -498,15 +504,15 @@
         },
         {
           "label": "Subscription fee",
-          "value": "No separate subscription fee on Starter or paid plans.",
+          "value": "No separate subscription fee on Starter, Pro, Growth or Scale. Early Member orgs created before May 27, 2026 pay +0.5% on subscriptions while they stay on Early Member.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Product rules",
-          "value": "Accepts software and SaaS, digital products, and premium content and access. Prohibits physical goods, human services and marketplaces, among others. Directories, eBooks, AI content generation, marketing tools and VPNs get closer review. Policy effective October 1, 2026.",
+          "value": "Accepts Software and SaaS, digital products, and premium content and access. Not designed for primary human services or physical goods. Long prohibited and restricted lists on the acceptable use policy (effective October 1, 2026 on that page).",
           "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Withdrawals",
@@ -613,7 +619,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://dodopayments.com/pricing",
-        "checkedOn": "2026-11-02"
+        "checkedOn": "2026-11-06"
       },
       "facts": [
         {
@@ -630,9 +636,9 @@
         },
         {
           "label": "Fees",
-          "value": "4% + 40 cents for US domestic cards, plus 1.5% for international cards and 0.5% for subscriptions. India domestic INR payments: 4% + 15 cents. PayPal and BNPL add 3%.",
+          "value": "4% + 40 cents for US domestic cards and wallets, plus 1.5% for international cards and APMs and 0.5% for subscriptions, addons and usage-based billing. India domestic INR: 4% + 15 cents. PayPal and BNPL add 3%.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         },
         {
           "label": "Other fees",
@@ -654,9 +660,9 @@
         },
         {
           "label": "Product rules",
-          "value": "Welcomes SaaS and AI products, digital goods, and templates, plugins and apps. Lists 32 prohibited categories, including manual digital services, physical goods, gaming and virtual goods, hosting and VPNs, and marketplaces. AI content generation, marketing tools, e-books and productised services get extra review.",
+          "value": "Welcomes SaaS and AI products, digital goods, and templates, plugins and apps. Prohibits manual digital services where most value is human labour, physical goods, and many other categories on the merchant acceptance policy.",
           "source": "https://docs.dodopayments.com/miscellaneous/merchant-acceptance",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-06"
         }
       ],
       "sellerCountries": {
