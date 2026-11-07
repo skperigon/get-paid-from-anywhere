@@ -1,7 +1,7 @@
 ---
 order: 12
 idea: 15
-status: ready
+status: published
 path: "sell/saas"
 title: "Merchant of record for SaaS: how it works and who offers it (checked 2026-11-06)"
 h1: "Merchant of record for SaaS: how it works and who offers it"
