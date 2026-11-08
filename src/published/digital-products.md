@@ -1,7 +1,7 @@
 ---
 order: 13
 idea: 16
-status: ready
+status: published
 path: "sell/digital-products"
 title: "Merchant of record for digital products: ebooks, templates and courses (checked 2026-11-07)"
 h1: "Merchant of record for digital products: ebooks, templates and courses"
