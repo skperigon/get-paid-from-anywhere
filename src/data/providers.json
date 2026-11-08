@@ -23,7 +23,7 @@
         "value": "No (by default)",
         "note": "Stripe's pricing page also lists a separate Managed Payments offering described as merchant of record services. Pricing for it was not shown.",
         "source": "https://stripe.com/pricing",
-        "checkedOn": "2026-10-22"
+        "checkedOn": "2026-11-07"
       },
       "facts": [
         {
@@ -52,9 +52,9 @@
         },
         {
           "label": "Managed Payments eligibility",
-          "value": "Stripe merchant of record product for digital goods including SaaS. Business must be based in US, Canada, listed European countries, Australia, Hong Kong, Japan or Singapore. Direct integrations only; Connect platforms and Express accounts are not supported. Fee is charged in addition to Payments fees; public MoR percentage was not clearly shown on the pricing page content read on 2026-11-06.",
+          "value": "Stripe merchant of record product for digital goods including software, digital media (audiobooks, e-books, digital magazines and newspapers, audio and video, digital images or artwork), online courses and training, and SaaS tax codes. Products must be fully automated; live 1-1 coaching does not qualify. Business must be based in US, Canada, listed European countries, Australia, Hong Kong, Japan or Singapore. Direct integrations only; Connect platforms and Express accounts are not supported. Fee is charged in addition to Payments fees; public MoR percentage was not clearly shown on the pricing page content read on 2026-11-07.",
           "source": "https://docs.stripe.com/payments/managed-payments/eligibility",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         }
       ],
       "sellerCountries": {
@@ -175,7 +175,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://www.paddle.com/pricing",
-        "checkedOn": "2026-11-06"
+        "checkedOn": "2026-11-07"
       },
       "facts": [
         {
@@ -188,7 +188,7 @@
           "label": "Fee",
           "value": "5% + 50 cents per checkout transaction, no monthly fees, migration fees or hidden extras. Custom pricing for high-volume or low-value transactions and for products under $10.",
           "source": "https://www.paddle.com/pricing",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Product type",
@@ -212,13 +212,19 @@
           "label": "Product rules",
           "value": "Built for software companies, including B2B SaaS, consumer software and games. Prohibits physical products, human services unrelated to software, and a long list of forbidden categories on the AUP page (last updated 13 April 2026 on that page).",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
+        },
+        {
+          "label": "Digital products",
+          "value": "Paddle's digital products page and developer docs describe selling e-books, courses, software licenses, plugins, audio and music files, and other downloadable files. A help article on taxable categories includes eBooks and Digital Goods (examples: online video tutorials, digital artwork, posters or graphics). Templates are not named on those pages.",
+          "source": "https://www.paddle.com/solutions/sell-digital-products",
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Subscription surcharge",
           "value": "None listed on the pricing page. Subscriptions are included in the all-inclusive checkout fee description.",
           "source": "https://www.paddle.com/pricing",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         }
       ],
       "sellerCountries": {
@@ -319,7 +325,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://www.lemonsqueezy.com/pricing",
-        "checkedOn": "2026-11-06"
+        "checkedOn": "2026-11-07"
       },
       "facts": [
         {
@@ -332,7 +338,7 @@
           "label": "Fee",
           "value": "5% + 50 cents per transaction. Lemon Squeezy notes some payments may carry additional fees.",
           "source": "https://www.lemonsqueezy.com/pricing",
-          "checkedOn": "2026-11-04"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Payout schedule",
@@ -344,19 +350,25 @@
           "label": "Extra fees",
           "value": "Added to the 5% + 50 cents platform fee: 1.5% for international (non-US) transactions, 1.5% for PayPal transactions and 0.5% for subscription payments. Marketing add-ons: 5% on abandoned-cart recoveries and 3% on affiliate referral sales.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/fees",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Payout fees",
           "value": "Bank payouts via Stripe: free for US bank accounts, 1% per payout outside the US. PayPal payouts: 50 cents per payout in the US, 3% capped at $30 per payout outside the US.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/fees",
-          "checkedOn": "2026-11-04"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Product rules",
-          "value": "Acceptable examples include Software and SaaS, eBooks, PDFs and design assets. Prohibits services of any kind, physical goods, marketplaces selling others products, NFT and crypto products, and other listed categories.",
+          "value": "Acceptable examples include Software and SaaS, eBooks, PDFs, design assets, photos, audio and video. Courses are not named on this page's acceptable list. Prohibits services of any kind, physical goods, marketplaces selling others products, NFT and crypto products, and other listed categories.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/prohibited-products",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
+        },
+        {
+          "label": "Courses",
+          "value": "The pricing FAQ says you can sell digital products ranging from SaaS, digital downloads, subscriptions, memberships, courses, and more. The activate-your-store docs say businesses using subscriptions and/or license keys to manage fulfilment (examples include premium courses and membership sites) are typically allowed. Services of any kind remain prohibited on the prohibited-products page.",
+          "source": "https://docs.lemonsqueezy.com/help/getting-started/activate-your-store",
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Stripe Managed Payments",
@@ -469,7 +481,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-        "checkedOn": "2026-11-06"
+        "checkedOn": "2026-11-07"
       },
       "facts": [
         {
@@ -482,19 +494,19 @@
           "label": "Fees",
           "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. International cards +1.5%.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Dispute fee",
           "value": "$15",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Payout fees",
           "value": "Stripe payout fees passed through: $2 per month with active payouts, 0.25% + 25 cents per payout, and cross-border FX from 0.25% (EU) to 1% elsewhere.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Early Member rate",
@@ -506,13 +518,13 @@
           "label": "Subscription fee",
           "value": "No separate subscription fee on Starter, Pro, Growth or Scale. Early Member orgs created before May 27, 2026 pay +0.5% on subscriptions while they stay on Early Member.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Product rules",
-          "value": "Accepts Software and SaaS, digital products, and premium content and access. Not designed for primary human services or physical goods. Long prohibited and restricted lists on the acceptable use policy (effective October 1, 2026 on that page).",
+          "value": "Accepts Software and SaaS; digital products including templates, eBooks, PDFs, code, icons, fonts, design assets, photos, videos, audio and similar assets; and premium content and access including Discord or GitHub access, courses and subscription content. eBooks also appear on the restricted list that needs closer review. Not designed for primary human services or physical goods. Long prohibited and restricted lists on the acceptable use policy (effective October 1, 2026 on that page).",
           "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Withdrawals",
@@ -619,7 +631,7 @@
         "value": "Yes",
         "note": "",
         "source": "https://dodopayments.com/pricing",
-        "checkedOn": "2026-11-06"
+        "checkedOn": "2026-11-07"
       },
       "facts": [
         {
@@ -638,19 +650,19 @@
           "label": "Fees",
           "value": "4% + 40 cents for US domestic cards and wallets, plus 1.5% for international cards and APMs and 0.5% for subscriptions, addons and usage-based billing. India domestic INR: 4% + 15 cents. PayPal and BNPL add 3%.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Other fees",
           "value": "Disputes $30. Refunds $1. USD SWIFT payouts $25.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Payout fees",
           "value": "Standard payouts free, with a $5 fee if the payout is under $1,000. Standard FX on non-USD settlements. USD SWIFT payouts $25.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-07"
         },
         {
           "label": "Bank debits",
@@ -660,9 +672,9 @@
         },
         {
           "label": "Product rules",
-          "value": "Welcomes SaaS and AI products, digital goods, and templates, plugins and apps. Prohibits manual digital services where most value is human labour, physical goods, and many other categories on the merchant acceptance policy.",
+          "value": "Welcomes SaaS and AI products, digital goods, and templates, plugins and apps. E-books and written digital publications (guides, playbooks, reports or downloadable written content) often require extra review. Courses are not named as a welcomed or prohibited category. Prohibits manual digital services where most value is human labour (custom design, development, coaching, freelancing or consulting), physical goods, and many other categories on the merchant acceptance policy.",
           "source": "https://docs.dodopayments.com/miscellaneous/merchant-acceptance",
-          "checkedOn": "2026-11-06"
+          "checkedOn": "2026-11-07"
         }
       ],
       "sellerCountries": {
