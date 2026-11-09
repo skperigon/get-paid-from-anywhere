@@ -1,5 +1,5 @@
 {
-  "checkedOn": "2026-10-22",
+  "checkedOn": "2026-11-08",
   "statusLegend": {
     "listed": "The provider's own page lists this country as supported.",
     "not-excluded": "The country is not on the provider's published list of unsupported countries.",
@@ -66,7 +66,8 @@
         "pakistan": {
           "status": "not-listed",
           "note": "Pakistan is not on Stripe's global availability list.",
-          "source": "https://stripe.com/global"
+          "source": "https://stripe.com/global",
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "label-only",
@@ -225,6 +226,12 @@
           "value": "None listed on the pricing page. Subscriptions are included in the all-inclusive checkout fee description.",
           "source": "https://www.paddle.com/pricing",
           "checkedOn": "2026-11-07"
+        },
+        {
+          "label": "Payout fee by country",
+          "value": "Paddle says a $15 SWIFT fee may apply for certain countries but does not name them, so whether it applies to Pakistan is unknown.",
+          "source": "https://www.paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid",
+          "checkedOn": "2026-11-08"
         }
       ],
       "sellerCountries": {
@@ -238,7 +245,7 @@
           "status": "not-excluded",
           "note": "Pakistan is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "not-excluded",
@@ -394,7 +401,7 @@
           "status": "listed",
           "note": "Pakistan is on the bank payout list.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "listed",
@@ -544,7 +551,7 @@
           "status": "listed",
           "note": "Pakistan is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "listed",
@@ -688,7 +695,7 @@
           "status": "not-listed",
           "note": "Pakistan is not on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "grandfathered-only",
@@ -842,6 +849,12 @@
           "value": "Brazil: registration fee at sign-up. India: no extra charge to get account details. Most other regions: free to sign up, with a fee to get account details that depends on where the business is registered. Wise's US blog (updated 31 July 2026) states 31 USD one-time for US businesses. Check Wise's pricing page for your amount.",
           "source": "https://wise.com/help/articles/2977969/fees-for-using-wise-business",
           "checkedOn": "2026-11-05"
+        },
+        {
+          "label": "Pakistan USD details",
+          "value": "Pakistan is listed among countries where USD account details are unavailable for an address there. A US business with an address in Pakistan also cannot get USD details.",
+          "source": "https://wise.com/help/articles/2810318/can-i-get-usd-account-details",
+          "checkedOn": "2026-11-08"
         }
       ],
       "sellerCountries": {
@@ -855,7 +868,7 @@
           "status": "not-excluded",
           "note": "Pakistan is not on Wise's unsupported list. Wise confirms business support during sign-up.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "not-excluded",
@@ -913,25 +926,37 @@
           "label": "Coverage claim",
           "value": "Payoneer says it covers 190+ countries and territories and 70+ currencies.",
           "source": "https://www.payoneer.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-08"
         },
         {
           "label": "Receiving fees",
           "value": "Free from another Payoneer balance or a local-currency receiving account. 1% (minimum $1) via a receiving account in a non-local currency. Up to 3.99% + 49 cents when a payer uses a card.",
           "source": "https://www.payoneer.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-08"
         },
         {
           "label": "Withdrawal fees",
           "value": "1.2% to 4% to a bank account in another currency or country, minimums of up to $20 may apply.",
           "source": "https://www.payoneer.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-08"
         },
         {
           "label": "Annual account fee",
           "value": "$29.95 if the account receives less than $6,000 in 12 consecutive months",
           "source": "https://www.payoneer.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-08"
+        },
+        {
+          "label": "Pakistan registration",
+          "value": "Account types: Individual (no business registration), Sole Proprietor (FBR/NTN) and Company (SECP). Individual needs a government photo ID and selfie, a private residential address proven by a document in your name (no P.O. boxes), and a bank account in the exact registered name (IBAN). Applications are usually reviewed within 3 business days after all documents are submitted. One account per person.",
+          "source": "https://www.payoneer.com/resources/country-guides/payoneer-individual-account-in-pakistan/",
+          "checkedOn": "2026-11-08"
+        },
+        {
+          "label": "Pakistan withdrawals",
+          "value": "Payoneer says Individual accounts can withdraw to a local Pakistani bank account. Pakistan is not on the pricing page's list of countries with a flat local-currency withdrawal fee, so the Pakistan-specific fee is unknown. The pricing page gives a range of 1.2% to 4% for other bank withdrawals.",
+          "source": "https://www.payoneer.com/pricing/",
+          "checkedOn": "2026-11-08"
         }
       ],
       "sellerCountries": {
@@ -941,9 +966,10 @@
           "source": "https://www.payoneer.com/pricing/"
         },
         "pakistan": {
-          "status": "unknown",
-          "note": "Country eligibility was not verified on Payoneer's site.",
-          "source": "https://www.payoneer.com/pricing/"
+          "status": "listed",
+          "note": "Payoneer publishes registration guides for Pakistan (Individual, Sole Proprietor, Company), last modified 31 Aug and 1 Sep 2026. Approval is up to Payoneer.",
+          "source": "https://www.payoneer.com/resources/country-guides/payoneer-individual-account-in-pakistan/",
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "unknown",
@@ -1102,7 +1128,7 @@
           "status": "prohibited",
           "note": "Pakistan is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-08"
         },
         "nigeria": {
           "status": "prohibited",
