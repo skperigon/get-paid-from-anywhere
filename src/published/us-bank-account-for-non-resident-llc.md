@@ -1,7 +1,7 @@
 ---
 order: 22
 idea: 27
-status: ready
+status: published
 path: "guides/us-bank-account-for-non-resident-llc"
 title: "US bank account for a non-resident LLC (checked 2026-11-05)"
 h1: "US bank account for a non-resident LLC"
