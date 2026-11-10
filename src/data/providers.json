@@ -120,21 +120,27 @@
       "facts": [
         {
           "label": "Setup fee",
-          "value": "$500 one-time. Stripe says this includes government fees and the first year of registered agent service.",
+          "value": "$500 one-time. Stripe says this includes government fees, next-day expedited processing and the first year of registered agent service.",
           "source": "https://stripe.com/atlas",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "Registered agent after year one",
           "value": "$100 per year, renews automatically",
           "source": "https://stripe.com/atlas",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "State",
-          "value": "Delaware",
+          "value": "Delaware, as an LLC or a C corporation",
           "source": "https://stripe.com/atlas",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
+        },
+        {
+          "label": "Non-US founders",
+          "value": "Stripe says you can apply from almost anywhere. Its terms exclude founders and business activity in Cuba, Iran, North Korea, Syria and the Crimean region of Ukraine.",
+          "source": "https://stripe.com/legal/atlas",
+          "checkedOn": "2026-11-09"
         }
       ],
       "sellerCountries": {
@@ -385,7 +391,7 @@
         },
         {
           "label": "Unsupported buyer countries",
-          "value": "Lemon Squeezy accepts purchases from all countries except: Central African Republic, Cuba, Democratic People\u2019s Republic of Korea, Democratic Republic of the Congo, Eritrea, Guinea-Bissau, Iran, Iraq, Lebanon, Libya, Mali, North Korea, Russian Federation, Somalia, South Sudan, Sudan, Syrian Arab Republic and Yemen.",
+          "value": "Lemon Squeezy accepts purchases from all countries except: Central African Republic, Cuba, Democratic People’s Republic of Korea, Democratic Republic of the Congo, Eritrea, Guinea-Bissau, Iran, Iraq, Lebanon, Libya, Mali, North Korea, Russian Federation, Somalia, South Sudan, Sudan, Syrian Arab Republic and Yemen.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
           "checkedOn": "2026-11-04"
         }
@@ -1220,21 +1226,21 @@
       "facts": [
         {
           "label": "Starter plan",
-          "value": "$297 per year plus state fees. Includes LLC or C Corp formation, EIN and a US address.",
-          "source": "https://www.doola.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "value": "$297 per year plus state fees. Includes LLC or C Corp formation, EIN, operating agreement, registered agent service and a US business address.",
+          "source": "https://help.doola.com/what-is-doola-starter-plan-",
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "Other plans",
-          "value": "Tax and Compliance $1,999 per year. Business-in-a-Box $2,999 per year.",
+          "value": "Tax and Compliance $1,999 per year. Business-in-a-Box $2,999 per year or $329 per month. Pulse bookkeeping $300 per year after a 30-day trial.",
           "source": "https://www.doola.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "Non-US founders",
-          "value": "doola's pricing page says non-US citizens are accepted.",
+          "value": "doola says you do not need to be a US citizen and that it serves 175+ countries.",
           "source": "https://www.doola.com/pricing/",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         }
       ],
       "sellerCountries": {}
@@ -1255,15 +1261,27 @@
       "facts": [
         {
           "label": "Start plan",
-          "value": "$399 one-time list price. On 2026-10-22 the page also showed a discounted price of $99. Delaware or Wyoming, includes EIN. A registered agent is required separately.",
+          "value": "$399 one-time list price. On 2026-11-09 the pricing page showed an offer price of $99 plus the state fee. Delaware or Wyoming, includes EIN setup. A registered agent and a US address are required separately.",
           "source": "https://www.firstbase.io/pricing",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         },
         {
-          "label": "Firstbase One",
-          "value": "$2,388 per year, billed yearly",
+          "label": "Registered agent (Firstbase Agent)",
+          "value": "$299 per state per year. Firstbase says a registered agent is required for incorporation.",
+          "source": "https://www.firstbase.io/registered-agent-service",
+          "checkedOn": "2026-11-09"
+        },
+        {
+          "label": "US address (Mailroom)",
+          "value": "$35 a month or $315 a year. Firstbase says a US address is required for incorporation.",
           "source": "https://www.firstbase.io/pricing",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
+        },
+        {
+          "label": "Non-US founders",
+          "value": "The pricing page says Firstbase serves 190+ countries. Its restricted country list was not checked here.",
+          "source": "https://www.firstbase.io/pricing",
+          "checkedOn": "2026-11-09"
         }
       ],
       "sellerCountries": {}
@@ -1286,19 +1304,25 @@
           "label": "LLC formation",
           "value": "$39 plus state fees, first year of registered agent service included",
           "source": "https://www.northwestregisteredagent.com/llc",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "Registered agent renewal",
-          "value": "$125 per year",
-          "source": "https://www.northwestregisteredagent.com/llc",
-          "checkedOn": "2026-10-22"
+          "value": "$125 per year, or $100 per state per year for five or more states",
+          "source": "https://www.northwestregisteredagent.com/registered-agent",
+          "checkedOn": "2026-11-09"
         },
         {
           "label": "Non-US founders",
-          "value": "unknown",
-          "source": "https://www.northwestregisteredagent.com/llc",
-          "checkedOn": "2026-10-22"
+          "value": "Northwest says you do not need to be a US citizen or set foot in the US to form an LLC.",
+          "source": "https://www.northwestregisteredagent.com/llc/non-citizen",
+          "checkedOn": "2026-11-09"
+        },
+        {
+          "label": "EIN service",
+          "value": "$50 with an SSN. $200 without an SSN. Not included in the $39 formation.",
+          "source": "https://www.northwestregisteredagent.com/start-a-business/ein-tax-id",
+          "checkedOn": "2026-11-09"
         }
       ],
       "sellerCountries": {}
