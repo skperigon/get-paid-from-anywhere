@@ -1,7 +1,7 @@
 ---
 order: 24
 idea: 29
-status: ready
+status: published
 path: "guides/stripe-atlas-alternatives"
 title: "Stripe Atlas alternatives for non-US founders (checked 2026-11-09)"
 h1: "Stripe Atlas alternatives"
