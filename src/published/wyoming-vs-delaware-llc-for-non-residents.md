@@ -1,7 +1,7 @@
 ---
 order: 23
 idea: 28
-status: ready
+status: published
 path: "guides/wyoming-vs-delaware-llc-for-non-residents"
 title: "Wyoming vs Delaware LLC for non-residents (checked 2026-11-10)"
 h1: "Wyoming vs Delaware LLC for non-residents"
