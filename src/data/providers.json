@@ -122,7 +122,7 @@
           "label": "Setup fee",
           "value": "$500 one-time. Stripe says this includes government fees, next-day expedited processing and the first year of registered agent service.",
           "source": "https://stripe.com/atlas",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-10"
         },
         {
           "label": "Registered agent after year one",
@@ -134,7 +134,7 @@
           "label": "State",
           "value": "Delaware, as an LLC or a C corporation",
           "source": "https://stripe.com/atlas",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-10"
         },
         {
           "label": "Non-US founders",
@@ -1261,15 +1261,15 @@
       "facts": [
         {
           "label": "Start plan",
-          "value": "$399 one-time list price. On 2026-11-09 the pricing page showed an offer price of $99 plus the state fee. Delaware or Wyoming, includes EIN setup. A registered agent and a US address are required separately.",
+          "value": "$399 one-time list price. On 2026-11-10 the pricing page showed an offer price of $99. Delaware or Wyoming, includes EIN setup. A registered agent and a US address are required separately.",
           "source": "https://www.firstbase.io/pricing",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-10"
         },
         {
           "label": "Registered agent (Firstbase Agent)",
-          "value": "$299 per state per year. Firstbase says a registered agent is required for incorporation.",
+          "value": "$299 per state per year on the registered agent page. On 2026-11-10 the pricing page showed $50 monthly or $350 annually for the Agent plan, so confirm with Firstbase. Firstbase says a registered agent is required for incorporation.",
           "source": "https://www.firstbase.io/registered-agent-service",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-10"
         },
         {
           "label": "US address (Mailroom)",
@@ -1304,7 +1304,7 @@
           "label": "LLC formation",
           "value": "$39 plus state fees, first year of registered agent service included",
           "source": "https://www.northwestregisteredagent.com/llc",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-10"
         },
         {
           "label": "Registered agent renewal",
