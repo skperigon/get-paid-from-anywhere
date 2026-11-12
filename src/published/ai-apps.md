@@ -1,7 +1,7 @@
 ---
 order: 14
 idea: 17
-status: ready
+status: published
 path: "sell/ai-apps"
 title: "Merchant of record for AI apps: who accepts AI products (checked 2026-11-11)"
 h1: "Merchant of record for AI apps: who accepts AI products"
