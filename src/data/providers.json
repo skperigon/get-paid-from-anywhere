@@ -238,6 +238,12 @@
           "value": "Paddle says a $15 SWIFT fee may apply for certain countries but does not name them, so whether it applies to Pakistan is unknown.",
           "source": "https://www.paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid",
           "checkedOn": "2026-11-08"
+        },
+        {
+          "label": "AI products",
+          "value": "No general ban on AI software. Content generation prohibitions: face swaps, deepfake images or videos, voice impersonations, content using a person's likeness without explicit consent, automated decision-making or categorization of people. Human-like faces is a restricted category.",
+          "source": "https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle",
+          "checkedOn": "2026-11-11"
         }
       ],
       "sellerCountries": {
@@ -394,6 +400,12 @@
           "value": "Lemon Squeezy accepts purchases from all countries except: Central African Republic, Cuba, Democratic People’s Republic of Korea, Democratic Republic of the Congo, Eritrea, Guinea-Bissau, Iran, Iraq, Lebanon, Libya, Mali, North Korea, Russian Federation, Somalia, South Sudan, Sudan, Syrian Arab Republic and Yemen.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
           "checkedOn": "2026-11-04"
+        },
+        {
+          "label": "AI products",
+          "value": "Software and SaaS accepted; AI not named as a category. Sexually-oriented content including NSFW chatbots is prohibited.",
+          "source": "https://docs.lemonsqueezy.com/help/getting-started/prohibited-products",
+          "checkedOn": "2026-11-11"
         }
       ],
       "sellerCountries": {
@@ -544,6 +556,12 @@
           "value": "Payouts are manual withdrawals you start. Polar says it will trigger a payout itself if a balance is left unwithdrawn for several months.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
           "checkedOn": "2026-11-02"
+        },
+        {
+          "label": "AI products",
+          "value": "Software and SaaS accepted. AI content generation tools (text, image, video, voice) and audio, music and chatbot generators need closer review. Adult AI-generated content, AI relationship services, face swaps, deep fakes and infringing content generation are prohibited.",
+          "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
+          "checkedOn": "2026-11-11"
         }
       ],
       "sellerCountries": {
@@ -688,6 +706,12 @@
           "value": "Welcomes SaaS and AI products, digital goods, and templates, plugins and apps. E-books and written digital publications (guides, playbooks, reports or downloadable written content) often require extra review. Courses are not named as a welcomed or prohibited category. Prohibits manual digital services where most value is human labour (custom design, development, coaching, freelancing or consulting), physical goods, and many other categories on the merchant acceptance policy.",
           "source": "https://docs.dodopayments.com/miscellaneous/merchant-acceptance",
           "checkedOn": "2026-11-07"
+        },
+        {
+          "label": "AI products",
+          "value": "SaaS and AI products are listed as welcomed. AI content generation tools and audio, music and chatbot generators often require review. Prohibited: NSFW or AI-generated adult content, NSFW chatbots, AI relationship companions, low-value AI-generated PDFs, reselling AI APIs, datasets or tools without clear rights.",
+          "source": "https://docs.dodopayments.com/miscellaneous/merchant-acceptance",
+          "checkedOn": "2026-11-11"
         }
       ],
       "sellerCountries": {
