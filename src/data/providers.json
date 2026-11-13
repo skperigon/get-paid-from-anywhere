@@ -406,6 +406,12 @@
           "value": "Software and SaaS accepted; AI not named as a category. Sexually-oriented content including NSFW chatbots is prohibited.",
           "source": "https://docs.lemonsqueezy.com/help/getting-started/prohibited-products",
           "checkedOn": "2026-11-11"
+        },
+        {
+          "label": "License keys",
+          "value": "Can generate a unique license key per purchase, with license length and activation limit for one-time products; subscription keys follow the subscription lifecycle. A separate License API activates, validates and deactivates keys, rate limited to 60 requests per minute.",
+          "source": "https://docs.lemonsqueezy.com/help/licensing/generating-license-keys",
+          "checkedOn": "2026-11-12"
         }
       ],
       "sellerCountries": {
@@ -562,6 +568,12 @@
           "value": "Software and SaaS accepted. AI content generation tools (text, image, video, voice) and audio, music and chatbot generators need closer review. Adult AI-generated content, AI relationship services, face swaps, deep fakes and infringing content generation are prohibited.",
           "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
           "checkedOn": "2026-11-11"
+        },
+        {
+          "label": "License keys",
+          "value": "License key benefit with brandable prefixes, expiry for one-time purchases, automatic revocation when a subscription ends, activation limits, custom validation conditions and usage quotas. Validated through Polar's API.",
+          "source": "https://polar.sh/docs/features/benefits/license-keys",
+          "checkedOn": "2026-11-12"
         }
       ],
       "sellerCountries": {
@@ -712,6 +724,12 @@
           "value": "SaaS and AI products are listed as welcomed. AI content generation tools and audio, music and chatbot generators often require review. Prohibited: NSFW or AI-generated adult content, NSFW chatbots, AI relationship companions, low-value AI-generated PDFs, reselling AI APIs, datasets or tools without clear rights.",
           "source": "https://docs.dodopayments.com/miscellaneous/merchant-acceptance",
           "checkedOn": "2026-11-11"
+        },
+        {
+          "label": "License keys",
+          "value": "Issued through a License Key entitlement with activation limit and license length; subscription keys have no expiry and follow subscription status. Public activate, validate and deactivate endpoints. Listed as included on the pricing page.",
+          "source": "https://docs.dodopayments.com/features/license-keys",
+          "checkedOn": "2026-11-12"
         }
       ],
       "sellerCountries": {
