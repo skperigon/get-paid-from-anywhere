@@ -1,7 +1,7 @@
 ---
 order: 15
 idea: 18
-status: ready
+status: published
 path: "sell/chrome-extensions"
 title: "How to charge for a Chrome extension: payment options (checked 2026-11-12)"
 h1: "How to charge for a Chrome extension"
