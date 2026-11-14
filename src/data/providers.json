@@ -244,6 +244,12 @@
           "value": "No general ban on AI software. Content generation prohibitions: face swaps, deepfake images or videos, voice impersonations, content using a person's likeness without explicit consent, automated decision-making or categorization of people. Human-like faces is a restricted category.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle",
           "checkedOn": "2026-11-11"
+        },
+        {
+          "label": "License keys",
+          "value": "Paddle's migration guide says product delivery and license key generation are not handled by Paddle in Paddle Billing, and recommends building this yourself on transaction.completed webhooks. Paddle's Mac trial and licensing SDK help page says it applies only to Paddle Classic.",
+          "source": "https://developer.paddle.com/migrate/plan",
+          "checkedOn": "2026-11-13"
         }
       ],
       "sellerCountries": {
