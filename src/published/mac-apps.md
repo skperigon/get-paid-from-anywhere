@@ -1,7 +1,7 @@
 ---
 order: 16
 idea: 19
-status: ready
+status: published
 path: "sell/mac-apps"
 title: "Selling a Mac app outside the App Store: payment and licensing options (checked 2026-11-13)"
 h1: "Selling a Mac app outside the App Store"
