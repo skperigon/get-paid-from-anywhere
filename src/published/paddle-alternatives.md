@@ -96,7 +96,7 @@ Paddle accepts sellers from anywhere except its list of unsupported countries an
 | [Nigeria](/country/nigeria/) | Not on unsupported list | Listed | Listed | Existing merchants only |
 | [Bangladesh](/country/bangladesh/) | Not on unsupported list | Listed | Listed | Existing merchants only |
 | [Egypt](/country/egypt/) | Not on unsupported list | Listed | Listed | Existing merchants only |
-| [Morocco](/country/morocco/) | Not on unsupported list | Listed | Listed | Existing merchants only |
+| [Morocco](/country/morocco/) | Not on unsupported list | Listed | Not listed (rechecked 2026-11-14) | Existing merchants only |
 | [Kenya](/country/kenya/) | Not on unsupported list | Listed | Listed | Not listed |
 | [Brazil](/country/brazil/) | Not on unsupported list | Not on bank list. PayPal may be an option | Not listed | Listed |
 | [Nepal](/country/nepal/) | Not on unsupported list | Not on bank list. PayPal may be an option | Not listed | Listed |

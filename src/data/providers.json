@@ -626,10 +626,10 @@
           "checkedOn": "2026-11-02"
         },
         "morocco": {
-          "status": "listed",
-          "note": "Morocco is on Polar's payout country list.",
+          "status": "not-listed",
+          "note": "Morocco is not on Polar's supported payout list. It was listed when checked on 2026-11-02.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-14"
         },
         "kenya": {
           "status": "listed",

@@ -6,7 +6,7 @@ path: "country/morocco"
 country: "Morocco"
 title: "How to sell SaaS from Morocco: Stripe alternatives (checked 2026-10-31)"
 h1: "How to sell SaaS from Morocco"
-description: "Stripe is not available in Morocco, and Dodo Payments no longer takes new Moroccan merchants. Polar and Lemon Squeezy name Morocco on their payout lists, and Paddle does not exclude it. Sourced options for Moroccan founders."
+description: "Stripe is not available in Morocco, Dodo Payments no longer takes new Moroccan merchants, and Polar no longer lists Morocco for payouts. Lemon Squeezy names Morocco and Paddle does not exclude it. Sourced options for Moroccan founders."
 checkedOn: "2026-10-31"
 sources:
   - "https://stripe.com/global"
@@ -27,18 +27,18 @@ faqs:
   - q: "Can new Moroccan sellers join Dodo Payments?"
     a: "No. On 2026-10-31, Dodo listed Morocco as grandfathered under a policy dated March 23, 2026. Moroccan merchants who were already using Dodo are kept. New Moroccan merchants are not eligible."
   - q: "Which merchants of record pay out to Morocco?"
-    a: "On 2026-10-31, Morocco was on Polar's payout country list and Lemon Squeezy's bank payout list, and it was not on Paddle's unsupported countries list."
+    a: "On 2026-10-31, Morocco was on Lemon Squeezy's bank payout list and was not on Paddle's unsupported countries list. Morocco was on Polar's payout country list on 2026-10-31, but it was not on that list when we rechecked on 2026-11-14."
   - q: "Can a Moroccan company open an Airwallex account?"
     a: "No. Morocco was not on Airwallex's list of eligible business registration countries on 2026-10-31. A US company is eligible on that list."
 ---
 
-Stripe does not support businesses in Morocco, and Dodo Payments stopped taking new Moroccan merchants in March 2026. Three of the four merchants of record we track still accept sellers from Morocco. Facts below come from each provider's own pages, checked on 2026-10-31.
+Stripe does not support businesses in Morocco, and Dodo Payments stopped taking new Moroccan merchants in March 2026. Two of the four merchants of record we track still accept sellers from Morocco: Polar removed Morocco from its payout list between our checks on 2026-10-31 and 2026-11-14. Facts below come from each provider's own pages, checked on 2026-10-31, with Polar rechecked on 2026-11-14.
 
 ## Is Stripe available in Morocco?
 
 No. Morocco is not on Stripe's [global availability page](https://stripe.com/global), which lists the countries where a business can sign up for Stripe.
 
-That rules out a direct Stripe account for a Moroccan business. It does not rule out Polar, which uses Stripe only to send your payouts.
+That rules out a direct Stripe account for a Moroccan business. It does not rule out a merchant of record, which takes the payment and pays you out.
 
 ## Merchants of record for Moroccan sellers
 
@@ -46,16 +46,15 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 
 | Provider | Morocco status (2026-10-31) | What the provider says |
 | --- | --- | --- |
-| [Polar](/provider/polar/) | Listed | Morocco is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). Polar pays out through Stripe Connect Express and says Stripe Payments does not need to be available in your country. |
 | [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | Morocco is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). It also offers PayPal payouts. |
 | [Paddle](/provider/paddle/) | Not excluded | Morocco is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
 | [Dodo Payments](/provider/dodo-payments/) | Existing merchants only | Dodo lists Morocco as [grandfathered](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories): merchants from before March 23, 2026 are kept, new ones are not eligible. |
+| [Polar](/provider/polar/) | Not listed (rechecked 2026-11-14) | Morocco was not on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries) when we rechecked on 2026-11-14. It was on the list on 2026-10-31. Polar pays out only to countries on that list. |
 
 ## Fees
 
-All three open options charge the same base fee on their pricing pages. The extras differ.
+Both open options charge the same base fee on their pricing pages. The extras differ.
 
-- **Polar:** 5% + 50 cents per transaction on the free Starter plan, plus 1.5% for non-US cards. Paid plans lower the rate, from $20 a month. Payouts go through Stripe, which charges $2 per month of active payouts, 0.25% + 25 cents per payout, and 0.25% to 1% for currency conversion. Source: [Polar fees](https://polar.sh/docs/merchant-of-record/fees).
 - **Lemon Squeezy:** 5% + 50 cents per transaction. Lemon Squeezy says some payments may be subject to additional fees. It pays out twice a month by bank or PayPal. Source: [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing).
 - **Paddle:** 5% + 50 cents per checkout transaction, no monthly fee. Products under $10 can ask Paddle for different pricing. Source: [Paddle pricing](https://www.paddle.com/pricing).
 
@@ -78,7 +77,7 @@ Formation services we track: [doola](/provider/doola/), [Firstbase](/provider/fi
 
 ## Which option fits
 
-- Selling SaaS or digital products abroad: start with Polar or Lemon Squeezy, which both name Morocco, or Paddle, which does not exclude it.
+- Selling SaaS or digital products abroad: start with Lemon Squeezy, which names Morocco, or Paddle, which does not exclude it. Polar no longer lists Morocco (rechecked 2026-11-14).
 - Want PayPal payouts: Lemon Squeezy offers them alongside bank payouts.
 - Already on Dodo from before March 23, 2026: Dodo says you keep your account, under enhanced monitoring.
 - Need Stripe itself: that requires a business in a country Stripe supports, such as a US company. Weigh the extra filing work first.

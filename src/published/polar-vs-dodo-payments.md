@@ -18,7 +18,7 @@ faqs:
   - q: "Is Dodo Payments cheaper than Polar?"
     a: "On headline card rates, yes. On 2026-10-30, Dodo listed 4% + 40 cents for US domestic cards, against 5% + 50 cents on Polar's free Starter plan. Dodo adds 0.5% for subscriptions, and both add 1.5% for international cards. Polar's paid plans start at 3.8% + 40 cents for $20 a month."
   - q: "Which countries does Polar support that Dodo does not?"
-    a: "Among the countries we checked on 2026-10-30, Pakistan and Kenya were on Polar's payout list but not on Dodo's accepted list. Nigeria, Bangladesh, Egypt and Morocco were on Polar's list but closed to new Dodo merchants."
+    a: "Among the countries we checked on 2026-10-30, Pakistan and Kenya were on Polar's payout list but not on Dodo's accepted list. Nigeria, Bangladesh and Egypt were on Polar's list but closed to new Dodo merchants. Morocco was also on Polar's list on 2026-10-30, but not when we rechecked on 2026-11-14."
   - q: "Which countries does Dodo support that Polar does not?"
     a: "Among the countries we checked on 2026-10-30, Brazil, China and Nepal were on Dodo's accepted list but not on Polar's payout list."
   - q: "Do I need Stripe to use Polar?"
@@ -74,7 +74,7 @@ Polar also says it may refund an order at its discretion for up to 60 days after
 | [Nigeria](/country/nigeria/) | Listed | Existing merchants only |
 | [Bangladesh](/country/bangladesh/) | Listed | Existing merchants only |
 | [Egypt](/country/egypt/) | Listed | Existing merchants only |
-| Morocco | Listed | Existing merchants only |
+| Morocco | Not listed (rechecked 2026-11-14) | Existing merchants only |
 | Kenya | Listed | Not listed |
 | [Brazil](/country/brazil/) | Not listed | Listed |
 | China | Not listed | Listed |
@@ -93,7 +93,7 @@ If your product is in a closer review category, read the full policy before you 
 
 - Lower base card rate with no monthly fee: Dodo Payments, unless you sell subscriptions to mostly non-US buyers, where the gap narrows.
 - High volume: compare Dodo with Polar's paid plans using Polar's published breakeven points.
-- Seller in Pakistan, Kenya, Nigeria, Bangladesh, Egypt or Morocco: Polar, since Dodo does not take new merchants from these countries.
+- Seller in Pakistan, Kenya, Nigeria, Bangladesh or Egypt: Polar, since Dodo does not take new merchants from these countries.
 - Seller in Brazil, China or Nepal: Dodo Payments, since these countries are not on Polar's payout list.
 - Selling games or virtual goods: Dodo prohibits them. Check Polar's policy before applying.
 

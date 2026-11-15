@@ -100,7 +100,7 @@ Each provider decides who can sell differently. Lemon Squeezy uses a bank payout
 | [Nigeria](/country/nigeria/) | Listed | Not on unsupported list | Listed | Existing merchants only |
 | [Bangladesh](/country/bangladesh/) | Listed | Not on unsupported list | Listed | Existing merchants only |
 | [Egypt](/country/egypt/) | Listed | Not on unsupported list | Listed | Existing merchants only |
-| [Morocco](/country/morocco/) | Listed | Not on unsupported list | Listed | Existing merchants only |
+| [Morocco](/country/morocco/) | Listed | Not on unsupported list | Not listed (rechecked 2026-11-14) | Existing merchants only |
 | [Kenya](/country/kenya/) | Listed | Not on unsupported list | Listed | Not listed |
 | [Brazil](/country/brazil/) | Not on bank list. PayPal may be an option | Not on unsupported list | Not listed | Listed |
 | [Nepal](/country/nepal/) | Not on bank list. PayPal may be an option | Not on unsupported list | Not listed | Listed |
