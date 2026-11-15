@@ -1,7 +1,7 @@
 ---
 order: 25
 idea: 30
-status: ready
+status: published
 path: "guides/receive-international-payments-pakistan"
 title: "How to receive international payments in Pakistan (checked 2026-11-08)"
 h1: "How to receive international payments in Pakistan"
