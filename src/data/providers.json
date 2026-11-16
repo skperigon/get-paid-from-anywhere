@@ -21,40 +21,70 @@
       "summary": "Payment processor. You need a Stripe account in a country Stripe supports. Stripe is not the merchant of record by default.",
       "merchantOfRecord": {
         "value": "No (by default)",
-        "note": "Stripe's pricing page also lists a separate Managed Payments offering described as merchant of record services. Pricing for it was not shown.",
+        "note": "Stripe's pricing page lists Managed Payments, its merchant of record service, at 3.5% per successful transaction in addition to Payments fees.",
         "source": "https://stripe.com/pricing",
-        "checkedOn": "2026-11-07"
+        "checkedOn": "2026-11-15"
       },
       "facts": [
         {
           "label": "Countries",
           "value": "51 countries listed on Stripe's global availability page. Some carry labels: India and Indonesia are marked Preview. Cote d'Ivoire, Ghana, Kenya, Nigeria and South Africa are marked Extended network.",
           "source": "https://stripe.com/global",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-15"
         },
         {
           "label": "India",
           "value": "Stripe says new accounts in India are invite-only. Businesses request an invite through Stripe Sales.",
           "source": "https://support.stripe.com/questions/stripe-accounts-are-invite-only-in-india",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-15"
         },
         {
           "label": "Standard card fee (US pricing page)",
           "value": "2.9% + 30 cents per successful domestic card transaction",
           "source": "https://stripe.com/pricing",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-15"
         },
         {
           "label": "Dispute fee (US pricing page)",
           "value": "$15 per dispute",
           "source": "https://stripe.com/pricing",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-15"
         },
         {
           "label": "Managed Payments eligibility",
-          "value": "Stripe merchant of record product for digital goods including software, digital media (audiobooks, e-books, digital magazines and newspapers, audio and video, digital images or artwork), online courses and training, and SaaS tax codes. Products must be fully automated; live 1-1 coaching does not qualify. Business must be based in US, Canada, listed European countries, Australia, Hong Kong, Japan or Singapore. Direct integrations only; Connect platforms and Express accounts are not supported. Fee is charged in addition to Payments fees; public MoR percentage was not clearly shown on the pricing page content read on 2026-11-07.",
+          "value": "Stripe merchant of record product for digital goods: software, video games, digital media, online courses and training, and electronically supplied services. Products must be fully automated; live 1-1 coaching does not qualify. Physical goods, professional services and live events are not supported. Business must be based in US, Canada, listed European countries, Australia, Hong Kong, Japan or Singapore. Direct integrations only; Connect platforms and Express accounts are not supported. Customers in China, Cuba, Iran, Kosovo, North Korea, Russia, Syria, Ascension Island and Tristan da Cunha are restricted.",
           "source": "https://docs.stripe.com/payments/managed-payments/eligibility",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-15"
+        },
+        {
+          "label": "International cards (US pricing page)",
+          "value": "+1.5% for international cards, plus 1% if currency conversion is required",
+          "source": "https://stripe.com/pricing",
+          "checkedOn": "2026-11-15"
+        },
+        {
+          "label": "Managed Payments fee (US pricing page)",
+          "value": "3.5% per successful Managed Payments transaction, in addition to Payments fees",
+          "source": "https://stripe.com/pricing",
+          "checkedOn": "2026-11-15"
+        },
+        {
+          "label": "Billing fee (US pricing page)",
+          "value": "Pay as you go: 0.7% of Billing volume. Pay monthly plans start at $620 per month on a 1-year contract",
+          "source": "https://stripe.com/pricing",
+          "checkedOn": "2026-11-15"
+        },
+        {
+          "label": "Stripe Tax (US pricing page)",
+          "value": "Basic: 0.5% per transaction where you are registered (no-code integration) or $0.50 per transaction (API integration)",
+          "source": "https://stripe.com/pricing",
+          "checkedOn": "2026-11-15"
+        },
+        {
+          "label": "Payouts (US pricing page)",
+          "value": "Standard payouts on a rolling, weekly or monthly schedule are free. Instant Payouts cost 1.5% of volume, minimum 50 cents",
+          "source": "https://stripe.com/pricing",
+          "checkedOn": "2026-11-15"
         }
       ],
       "sellerCountries": {
