@@ -1,7 +1,7 @@
 ---
 order: 26
 idea: 31
-status: ready
+status: published
 path: "compare/polar-vs-paddle"
 title: "Polar vs Paddle: fees, payouts, countries and rules (checked 2026-11-14)"
 h1: "Polar vs Paddle"
