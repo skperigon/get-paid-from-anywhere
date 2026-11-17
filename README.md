@@ -2,7 +2,7 @@
 
 Static Astro site: which payment providers and merchants of record accept founders from each country, with a source URL and checked date for every fact.
 
-Live site: https://skperigon.github.io/get-paid-from-anywhere/
+Live site: https://founderpayouts.com/
 
 ## Publishing
 
@@ -34,7 +34,7 @@ Live site: https://skperigon.github.io/get-paid-from-anywhere/
     npm run check:style
     npm run promote:dry
 
-`SITE_URL` defaults to `https://skperigon.github.io/get-paid-from-anywhere`. Change it (env var, or repo variable in Actions) if the site moves to a custom domain. Internal links in pages and markdown are prefixed with the base path automatically. Moving to a custom domain: see `domain-switch.md` (kept outside the repo on the box) or just set `SITE_URL` to the new root URL and set the custom domain in Settings > Pages.
+`SITE_URL` defaults to `https://founderpayouts.com`. Change it (env var, or repo variable in Actions) if the site moves. Internal links in pages and markdown are prefixed with the base path automatically. Custom-domain notes: see `domain-switch.md` (kept outside the repo on the box).
 
 ## Writing a draft
 

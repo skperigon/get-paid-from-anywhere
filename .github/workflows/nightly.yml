@@ -36,7 +36,7 @@ jobs:
     outputs:
       promoted: ${{ steps.promote.outputs.promoted }}
     env:
-      SITE_URL: ${{ vars.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere' }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://founderpayouts.com' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -81,7 +81,7 @@ jobs:
     if: ${{ needs.build.outputs.promoted != '' }}
     runs-on: ubuntu-latest
     env:
-      SITE_URL: ${{ vars.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere' }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://founderpayouts.com' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

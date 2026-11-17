@@ -6,8 +6,8 @@ import path from 'node:path';
 
 const DIST = path.resolve(process.argv.find((a) => a.startsWith('--dist='))?.slice(7) || 'dist');
 const external = process.argv.includes('--external');
-// Base path the site is served under (from SITE_URL), e.g. "/get-paid-from-anywhere".
-const SITE_URL = process.env.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere';
+// Base path the site is served under (from SITE_URL). Empty when the site is at the domain root.
+const SITE_URL = process.env.SITE_URL || 'https://founderpayouts.com';
 const BASE = new URL(SITE_URL).pathname.replace(/\/+$/, '');
 
 function walk(dir) {

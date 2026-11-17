@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const DIST = path.resolve(process.argv.find((a) => a.startsWith('--dist='))?.slice(7) || 'dist');
-const SITE_URL = process.env.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere';
+const SITE_URL = process.env.SITE_URL || 'https://founderpayouts.com';
 const BASE = new URL(SITE_URL).pathname.replace(/\/+$/, '');
 
 function walk(dir) {

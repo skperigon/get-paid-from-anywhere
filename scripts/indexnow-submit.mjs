@@ -6,7 +6,7 @@
 // Exits 0 even on API errors so a failed ping never breaks a deploy; the status is printed.
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 
-const siteUrl = (process.env.SITE_URL || 'https://skperigon.github.io/get-paid-from-anywhere').replace(/\/+$/, '');
+const siteUrl = (process.env.SITE_URL || 'https://founderpayouts.com').replace(/\/+$/, '');
 const keyFile = readdirSync('public').find((f) => /^[0-9a-f]{32}\.txt$/.test(f));
 if (!keyFile) { console.log('IndexNow: no key file in public/, skipping.'); process.exit(0); }
 const key = keyFile.replace(/\.txt$/, '');
