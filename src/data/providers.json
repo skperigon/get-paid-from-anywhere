@@ -548,62 +548,62 @@
         "value": "Yes",
         "note": "",
         "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-        "checkedOn": "2026-11-07"
+        "checkedOn": "2026-11-16"
       },
       "facts": [
         {
           "label": "Seller countries",
           "value": "Countries where Polar can pay out through Stripe Connect Express, per Polar's list. Polar's FAQ says this works in places where Stripe itself is invite-only, such as India.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Fees",
           "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. International cards +1.5%.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Dispute fee",
           "value": "$15",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Payout fees",
           "value": "Stripe payout fees passed through: $2 per month with active payouts, 0.25% + 25 cents per payout, and cross-border FX from 0.25% (EU) to 1% elsewhere.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Early Member rate",
           "value": "Organizations created before May 27, 2026: 4% + 40 cents, plus 0.5% on subscriptions.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Subscription fee",
           "value": "No separate subscription fee on Starter, Pro, Growth or Scale. Early Member orgs created before May 27, 2026 pay +0.5% on subscriptions while they stay on Early Member.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Product rules",
           "value": "Accepts Software and SaaS; digital products including templates, eBooks, PDFs, code, icons, fonts, design assets, photos, videos, audio and similar assets; and premium content and access including Discord or GitHub access, courses and subscription content. eBooks also appear on the restricted list that needs closer review. Not designed for primary human services or physical goods. Long prohibited and restricted lists on the acceptable use policy (effective October 1, 2026 on that page).",
           "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "Withdrawals",
           "value": "Payouts are manual withdrawals you start. Polar says it will trigger a payout itself if a balance is left unwithdrawn for several months.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "AI products",
           "value": "Software and SaaS accepted. AI content generation tools (text, image, video, voice) and audio, music and chatbot generators need closer review. Adult AI-generated content, AI relationship services, face swaps, deep fakes and infringing content generation are prohibited.",
           "source": "https://polar.sh/docs/merchant-of-record/acceptable-use",
-          "checkedOn": "2026-11-11"
+          "checkedOn": "2026-11-16"
         },
         {
           "label": "License keys",
@@ -617,85 +617,85 @@
           "status": "listed",
           "note": "India is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "pakistan": {
           "status": "listed",
           "note": "Pakistan is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-08"
+          "checkedOn": "2026-11-16"
         },
         "nigeria": {
           "status": "listed",
           "note": "Nigeria is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "bangladesh": {
           "status": "listed",
           "note": "Bangladesh is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "brazil": {
           "status": "not-listed",
           "note": "Brazil is not on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "uae": {
           "status": "listed",
           "note": "The UAE is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "israel": {
           "status": "listed",
           "note": "Israel is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "morocco": {
           "status": "not-listed",
           "note": "Morocco is not on Polar's supported payout list. It was listed when checked on 2026-11-02.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-14"
+          "checkedOn": "2026-11-16"
         },
         "kenya": {
           "status": "listed",
           "note": "Kenya is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "egypt": {
           "status": "listed",
           "note": "Egypt is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "indonesia": {
           "status": "listed",
           "note": "Indonesia is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "philippines": {
           "status": "listed",
           "note": "The Philippines is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "south-africa": {
           "status": "listed",
           "note": "South Africa is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         },
         "nepal": {
           "status": "not-listed",
           "note": "Nepal is not on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-16"
         }
       }
     },
