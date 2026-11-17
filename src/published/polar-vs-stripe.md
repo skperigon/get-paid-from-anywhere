@@ -1,7 +1,7 @@
 ---
 order: 27
 idea: 32
-status: ready
+status: published
 path: "compare/polar-vs-stripe"
 title: "Polar vs Stripe: merchant of record or payment processor (checked 2026-11-15)"
 h1: "Polar vs Stripe"
