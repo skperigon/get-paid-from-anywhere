@@ -1,7 +1,7 @@
 ---
 order: 28
 idea: 33
-status: ready
+status: published
 path: "compare/polar-vs-gumroad"
 title: "Polar vs Gumroad: fees, payouts, countries and rules (checked 2026-11-16)"
 h1: "Polar vs Gumroad"
