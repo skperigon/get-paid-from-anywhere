@@ -1,7 +1,7 @@
 ---
 order: 29
 idea: 34
-status: ready
+status: published
 path: "compare/dodo-payments-vs-stripe"
 title: "Dodo Payments vs Stripe: merchant of record or payment processor (checked 2026-11-17)"
 h1: "Dodo Payments vs Stripe"
