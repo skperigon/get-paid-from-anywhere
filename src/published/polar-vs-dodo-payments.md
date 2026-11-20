@@ -97,4 +97,4 @@ If your product is in a closer review category, read the full policy before you 
 - Seller in Brazil, China or Nepal: Dodo Payments, since these countries are not on Polar's payout list.
 - Selling games or virtual goods: Dodo prohibits them. Check Polar's policy before applying.
 
-See also [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).
+See also [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).

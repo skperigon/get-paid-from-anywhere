@@ -402,7 +402,7 @@
           "label": "Shutting down",
           "value": "In a November 16, 2026 post, Lemon Squeezy said it has closed new store sign-ups and will stop processing payments on March 31, 2027. Existing sellers can keep taking payments until then. It points sellers to Stripe Managed Payments where that is available, and to export and migration help where it is not.",
           "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-20"
         },
         {
           "label": "Seller countries",
@@ -473,94 +473,94 @@
       ],
       "sellerCountries": {
         "india": {
-          "status": "conditional",
-          "note": "India is on the bank payout list with a caveat: because new Stripe accounts in India are invite-only, Indian merchants without a pre-approved Stripe account need to use PayPal payouts.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "pakistan": {
-          "status": "listed",
-          "note": "Pakistan is on the bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-08"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "nigeria": {
-          "status": "listed",
-          "note": "Nigeria is on the bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "bangladesh": {
-          "status": "listed",
-          "note": "Bangladesh is on the bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "brazil": {
-          "status": "conditional",
-          "note": "Brazil is not on the bank payout list. PayPal payouts may be an option. Confirm with Lemon Squeezy and PayPal.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "uae": {
-          "status": "listed",
-          "note": "The UAE is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "israel": {
-          "status": "listed",
-          "note": "Israel is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "morocco": {
-          "status": "listed",
-          "note": "Morocco is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "kenya": {
-          "status": "listed",
-          "note": "Kenya is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "egypt": {
-          "status": "listed",
-          "note": "Egypt is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "indonesia": {
-          "status": "listed",
-          "note": "Indonesia is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "philippines": {
-          "status": "listed",
-          "note": "The Philippines is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "south-africa": {
-          "status": "listed",
-          "note": "South Africa is on Lemon Squeezy's bank payout list.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "nepal": {
-          "status": "conditional",
-          "note": "Nepal is not on Lemon Squeezy's bank payout list. Lemon Squeezy says PayPal payouts work in 200+ countries, so confirm with Lemon Squeezy and PayPal whether you can be paid in Nepal.",
-          "source": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries",
-          "checkedOn": "2026-11-04"
+          "status": "grandfathered-only",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         },
         "jamaica": {
           "status": "grandfathered-only",
-          "note": "Jamaica is on Lemon Squeezy's bank payout list, but Lemon Squeezy closed new store sign-ups on November 16, 2026 and stops processing payments on March 31, 2027.",
+          "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
           "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-20"
         }
       }
     },

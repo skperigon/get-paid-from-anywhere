@@ -134,7 +134,6 @@ export const PICKS = [
   { slug: 'paddle', label: 'Fewest country restrictions', why: 'Merchant of record that accepts sellers from anywhere except a short published list of unsupported countries.' },
   { slug: 'polar', label: 'Most countries listed by name', why: 'Merchant of record that lists India, Pakistan, Nigeria and Bangladesh on its payout list, 4 of the 5 countries we track. Polar says it works where Stripe is invite-only.' },
   { slug: 'dodo-payments', label: 'Lowest base rate', why: '4% + 40 cents on US domestic cards, the lowest base rate among the merchants of record we track before paid plans. Extra fees apply to international cards and subscriptions. Polar\u2019s paid plans go lower.' },
-  { slug: 'lemon-squeezy', label: 'PayPal payouts', why: 'Merchant of record that pays out by bank or PayPal. It says PayPal payouts work in 200+ countries.' },
   { slug: 'doola', label: 'US company for non-US founders', why: 'The formation service in our data whose pricing page states that non-US citizens are accepted.' },
 ];
 export function pickFor(slug) { return PICKS.find((x) => x.slug === slug) || null; }

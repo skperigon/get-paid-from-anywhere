@@ -5,7 +5,7 @@ status: published
 path: "country/south-africa"
 title: "Stripe alternatives in South Africa (checked 2026-10-22)"
 h1: "Stripe alternatives in South Africa"
-description: "Stripe lists South Africa as Extended network. How Paystack, Paddle, Lemon Squeezy, Polar, Dodo Payments, Mercury and Wise treat South African founders, with a source and date for every fact."
+description: "Stripe lists South Africa as Extended network. How Paystack, Paddle, Polar, Dodo Payments, Mercury and Wise treat South African founders, with a source and date for every fact."
 checkedOn: "2026-10-22"
 sources:
   - "https://stripe.com/global"
@@ -30,6 +30,8 @@ faqs:
     a: "South Africa was not on Mercury's prohibited countries list on 2026-10-22. Mercury requires a US company and makes its own approval decision."
 ---
 
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
+
 South Africa is in a better spot than most countries on this site. Stripe lists it, Paystack serves it locally, and every merchant of record we track will pay out there. The main question is which one fits what you sell and who your buyers are. Everything below comes from each provider's own pages, checked on 2026-10-22.
 
 ## Is Stripe available in South Africa?
@@ -47,11 +49,11 @@ A merchant of record sells to your customer, handles sales tax and VAT around th
 | Provider | South Africa status (2026-10-22) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | South Africa is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | South Africa is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | South Africa is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). |
 | [Dodo Payments](/provider/dodo-payments/) | Listed | South Africa is on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). |
 
-Headline fees, from each provider's pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards; [Dodo](https://dodopayments.com/pricing) 4% + 40 cents for US cards, plus 1.5% for international cards.
+Headline fees, from each provider's pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards; [Dodo](https://dodopayments.com/pricing) 4% + 40 cents for US cards, plus 1.5% for international cards.
 
 ## The US LLC route
 

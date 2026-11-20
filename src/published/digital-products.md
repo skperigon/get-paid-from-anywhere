@@ -5,7 +5,7 @@ status: published
 path: "sell/digital-products"
 title: "Merchant of record for digital products: ebooks, templates and courses (checked 2026-11-07)"
 h1: "Merchant of record for digital products: ebooks, templates and courses"
-description: "Paddle, Lemon Squeezy, Polar and Dodo Payments all act as merchant of record. What their own pages say about selling ebooks, templates, courses and other digital downloads, plus published fees, checked on 2026-11-07."
+description: "Paddle, Lemon Squeezy, Polar and Dodo Payments all act as merchant of record. What their own pages say about selling ebooks, templates, courses and other digital downloads, plus published fees, checked on 2026-11-07. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-07"
 sources:
   - "https://www.paddle.com/pricing"
@@ -28,18 +28,20 @@ faqs:
   - q: "What does a merchant of record do for a digital product?"
     a: "The MoR is the legal seller to your customer. It collects and remits sales tax and VAT, processes the payment, and handles much of the billing support and chargeback exposure. You get paid out after fees and tax. That is the same model used for SaaS, applied here to downloads and similar digital goods. Checked on 2026-11-07."
   - q: "Which MoRs accept ebooks and templates?"
-    a: "Lemon Squeezy lists eBooks, PDFs and design assets as acceptable examples. Polar lists templates, eBooks, PDFs and similar digital assets as acceptable, and also puts eBooks on a restricted list that needs closer review. Dodo Payments welcomes digital goods and templates, and says e-books and written digital publications often need extra review. Paddle's digital products page and developer docs mention e-books and downloadable files; templates are not named on those pages. Stripe Managed Payments supports digital media such as e-books and digital images or artwork for eligible businesses. All checked on 2026-11-07."
+    a: "Polar lists templates, eBooks, PDFs and similar digital assets as acceptable, and also puts eBooks on a restricted list that needs closer review. Dodo Payments welcomes digital goods and templates, and says e-books and written digital publications often need extra review. Paddle's digital products page and developer docs mention e-books and downloadable files; templates are not named on those pages. Stripe Managed Payments supports digital media such as e-books and digital images or artwork for eligible businesses. All checked on 2026-11-07."
   - q: "Does Paddle accept ebooks, templates and courses?"
     a: "Paddle's acceptable use page says it is built for software companies and prohibits physical products and human services unrelated to software. It does not list ebooks, templates or courses as acceptable examples. Separate official pages do discuss those product types: the digital products page and developer docs describe selling e-books, courses and downloadable files, and a taxable-categories help article includes eBooks and Digital Goods (examples include online video tutorials and digital artwork). Templates are not named on those pages. Confirm with Paddle before you apply. Checked on 2026-11-07."
   - q: "Which MoRs accept pre-recorded courses?"
     a: "Polar lists courses under premium content and access. Lemon Squeezy's pricing FAQ mentions courses, and its activate-your-store docs say premium courses and membership sites that use subscriptions or license keys are typically allowed. Paddle's digital products page and developer docs mention courses. Stripe Managed Payments lists online courses and training. Dodo Payments does not name courses as a welcomed or prohibited category on its merchant acceptance page. Live coaching and other human-delivered services are restricted or prohibited across these providers. Checked on 2026-11-07."
   - q: "Can I sell live coaching or other human services through these MoRs?"
-    a: "Usually no. Paddle, Lemon Squeezy, Polar and Dodo all restrict or prohibit human services where the main value is labour rather than a finished digital file. Stripe Managed Payments says products must be fully automated digital goods, and that live 1-1 coaching does not qualify. If coaching is the main product, these MoRs are a poor fit. Confirm each provider's acceptable-use page before you apply. Checked on 2026-11-07."
+    a: "Usually no. Paddle, Polar and Dodo all restrict or prohibit human services where the main value is labour rather than a finished digital file. Stripe Managed Payments says products must be fully automated digital goods, and that live 1-1 coaching does not qualify. If coaching is the main product, these MoRs are a poor fit. Confirm each provider's acceptable-use page before you apply. Checked on 2026-11-07."
   - q: "Is Stripe a merchant of record for digital products by default?"
     a: "No. Standard Stripe Payments leaves you as the merchant. Stripe's Managed Payments product is a separate merchant of record offering for digital products, including e-books, digital images or artwork, online courses and training, and SaaS. Access needs an eligibility review, and your business must be based in a supported location (US, Canada, many European countries, Australia, Hong Kong, Japan or Singapore). The Managed Payments fee is charged in addition to Payments fees; the exact percentage was not shown as a clear public rate on the pricing page content we could read on 2026-11-07."
   - q: "Do one-time downloads avoid the subscription surcharge?"
     a: "On the published fee pages, yes for the add-ons that are billed only on subscriptions. Lemon Squeezy adds 0.5% for subscription payments. Dodo Payments adds 0.5% for subscriptions, addons and usage-based billing. Polar charges no separate subscription fee on Starter, Pro, Growth or Scale; the +0.5% subscription fee applies only to Early Member orgs created before May 27, 2026. Paddle's pricing page lists no subscription surcharge. A one-time ebook or template sale would not pick up those subscription add-ons. Checked on 2026-11-07."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
 
 A merchant of record (MoR) sells your digital product to the customer on your behalf. It collects the payment, handles sales tax and VAT in the markets it covers, and pays you the remainder after its fees. That is different from a payment processor such as standard Stripe, where you stay the merchant and own tax registration and remittance yourself.
 
@@ -60,7 +62,7 @@ Trade-offs that show up on the providers' own pages:
 | Provider (checked 2026-11-07) | MoR? | What their own pages say about digital products | Published base fee |
 | --- | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Yes | Digital products page and developer docs mention e-books, courses and downloadable files. The acceptable use page says Paddle is built for software companies. Templates are not named. | 5% + 50 cents per checkout transaction |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Yes | Acceptable examples include eBooks, PDFs and design assets, plus software and SaaS, photos, audio and video. The pricing FAQ and activate-your-store docs mention courses. | 5% + 50 cents per transaction, plus listed add-ons |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Yes | Acceptable examples include eBooks, PDFs and design assets, plus software and SaaS, photos, audio and video. The pricing FAQ and activate-your-store docs mention courses. | 5% + 50 cents per transaction, plus listed add-ons |
 | [Polar](/provider/polar/) | Yes | Accepts templates, eBooks, PDFs and similar digital assets, and lists courses under premium content and access. eBooks also need closer review. | Starter: 5% + 50 cents. Paid plans lower the rate for a monthly fee |
 | [Dodo Payments](/provider/dodo-payments/) | Yes | Welcomes digital goods and templates, plugins and apps. Extra review for e-books and written digital publications. Courses are not named. | 4% + 40 cents for US domestic cards and wallets |
 | [Stripe](/provider/stripe/) Managed Payments | Yes (separate product) | Supports digital media (including e-books and digital images or artwork) and online courses and training, for eligible businesses | MoR fee is added on top of Payments fees; public percentage not clearly shown on the pricing page content we read |
@@ -71,7 +73,7 @@ Sources: [Paddle pricing](https://www.paddle.com/pricing), [Paddle acceptable us
 
 Most ebooks, templates and pre-recorded courses are one-time checkout, not a monthly renewal. That matters because some MoRs add a subscription surcharge only when the payment is a subscription. Here is what each provider's fee page said on 2026-11-07.
 
-| Fee | Paddle | Lemon Squeezy | Polar | Dodo Payments |
+| Fee | Paddle | Lemon Squeezy (closed to new sellers) | Polar | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | Base rate | 5% + 50 cents | 5% + 50 cents | Starter 5% + 50 cents; Pro 3.8% + 40 cents ($20/mo); Growth 3.6% + 35 cents ($100/mo); Scale 3.4% + 30 cents ($400/mo) | 4% + 40 cents (US domestic cards and wallets) |
 | Subscription surcharge | None listed | +0.5% | None on Starter or paid plans. Early Member (orgs created before May 27, 2026): +0.5% | +0.5% for subscriptions, addons and usage-based billing |
@@ -85,7 +87,7 @@ Sources: [Paddle pricing](https://www.paddle.com/pricing), [Lemon Squeezy fees](
 
 Our own arithmetic on the published rates, before tax and payout costs. This is the same price point used on the [SaaS page](/sell/saas/), shown here as a one-time file sale so the subscription add-ons drop off.
 
-| $29 one-time download | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $29 one-time download | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $1.95 | $1.95 | $1.95 | $1.56 | $1.56 |
 | Non-US card | $1.95 | $2.39 | $2.39 | $2.00 | $2.00 |
@@ -118,9 +120,11 @@ That page does not list ebooks, templates or courses as acceptable examples. Oth
 
 Templates are not named on those pages. The acceptable use page also prohibits certifications or courses for which you are not the owner or creator, or do not have authority to resell.
 
-Paddle can be a fit for a software-adjacent download or a course it is willing to treat as a digital product. It is not a clear, list-style yes for a templates-only store the way Lemon Squeezy, Polar and Dodo are. Ask Paddle if your catalog is mostly ebooks or templates and not software.
+Paddle can be a fit for a software-adjacent download or a course it is willing to treat as a digital product. It is not a clear, list-style yes for a templates-only store the way Polar and Dodo are. Lemon Squeezy was too, but it is closed to new sellers. Ask Paddle if your catalog is mostly ebooks or templates and not software.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026. The notes below are kept for existing sellers, as checked on the dates shown above.
 
 Lemon Squeezy's [prohibited products page](https://docs.lemonsqueezy.com/help/getting-started/prohibited-products) says it allows digital goods that can be fulfilled through its website. Acceptable examples listed there are Software and SaaS, eBooks, PDFs, design assets, photos, audio and video. Courses are not named on that acceptable list.
 
@@ -164,9 +168,9 @@ The business must be based in a supported location (US, Canada, a listed set of 
 
 | Situation | Start with (still verify) |
 | --- | --- |
-| Ebook or PDF download | Lemon Squeezy (named on the acceptable list), Polar (named, with extra review for eBooks) or Dodo Payments (extra review for e-books) |
-| Templates or design assets | Lemon Squeezy (design assets), Polar (templates and design assets named) or Dodo Payments (templates named) |
-| Pre-recorded course or course membership | Polar (courses named), Lemon Squeezy (courses mentioned on the pricing FAQ and activate-your-store docs) or Paddle (courses mentioned on digital-product pages). Stripe Managed Payments lists online courses and training. Dodo does not name courses. |
+| Ebook or PDF download | Polar (named, with extra review for eBooks) or Dodo Payments (extra review for e-books) |
+| Templates or design assets | Polar (templates and design assets named) or Dodo Payments (templates named) |
+| Pre-recorded course or course membership | Polar (courses named) or Paddle (courses mentioned on digital-product pages). Stripe Managed Payments lists online courses and training. Dodo does not name courses. |
 | Many non-US buyers and you want one flat published rate | Paddle, after you confirm your catalog is a fit |
 | US-card-heavy one-time downloads and you want the lowest published US card rate among these four | Dodo Payments (no subscription add-on on a one-time sale) |
 | Already on Polar before May 27, 2026 and still on Early Member | Polar Early Member rate, until you leave it |
@@ -174,23 +178,23 @@ The business must be based in a supported location (US, Canada, a listed set of 
 | Live coaching, custom design, consulting or other human-delivered services as the main product | None of these MoRs are a fit per their own policies |
 | Physical books, merch or other goods that need shipping | None of these MoRs are a fit per their own policies |
 
-Country eligibility is a separate gate from product fit. Seller-country detail for these providers is covered in [Paddle alternatives](/guides/paddle-alternatives/), [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/).
+Country eligibility is a separate gate from product fit. Seller-country detail for these providers is covered in [Paddle alternatives](/guides/paddle-alternatives/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/).
 
 ## What this page does not cover
 
 - Your home-country income tax on MoR payouts. Ask a local tax professional.
 - Exact payout timing and payout fees beyond what each fee page states. See the comparison guides linked above for payout tables checked on earlier dates.
 - Approval odds. Meeting the published product and country rules does not guarantee an account.
-- Platforms that are not in this directory's provider set. This page sticks to Paddle, Lemon Squeezy, Polar, Dodo Payments and Stripe Managed Payments.
+- Platforms that are not in this directory's provider set. This page sticks to Paddle, Polar, Dodo Payments and Stripe Managed Payments, and keeps Lemon Squeezy only as a closed reference.
 
 ## See also
 
 - [Merchant of record for SaaS](/sell/saas/)
 - [Paddle alternatives](/guides/paddle-alternatives/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
-- [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)
+- [Lemon Squeezy supported countries (closed to new sellers)](/guides/lemon-squeezy-supported-countries/)
 - [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/)
 - [All providers](/providers/)

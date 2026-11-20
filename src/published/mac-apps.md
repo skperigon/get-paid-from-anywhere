@@ -5,7 +5,7 @@ status: published
 path: "sell/mac-apps"
 title: "Selling a Mac app outside the App Store: payment and licensing options (checked 2026-11-13)"
 h1: "Selling a Mac app outside the App Store"
-description: "What Apple requires for direct Mac distribution, and what Paddle, Lemon Squeezy, Polar and Dodo Payments offer for license keys and fees, with a source for every fact, checked on 2026-11-13."
+description: "What Apple requires for direct Mac distribution, and what Paddle, Lemon Squeezy, Polar and Dodo Payments offer for license keys and fees, with a source for every fact, checked on 2026-11-13. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-13"
 sources:
   - "https://developer.apple.com/developer-id/"
@@ -32,10 +32,12 @@ faqs:
   - q: "Does Paddle still generate license keys for Mac apps?"
     a: "Not on Paddle Billing, its current platform. Paddle's migration guide says product delivery and license key generation are not handled by Paddle in Paddle Billing and recommends you build it yourself using webhooks. Paddle's help page on Mac trials and licensing says it applies only to Paddle Classic. Checked on 2026-11-13."
   - q: "Which merchants of record generate license keys for a desktop app?"
-    a: "Lemon Squeezy, Polar and Dodo Payments each generate a license key at purchase, with activation limits and an API to activate and validate keys. Dodo's license key page names desktop apps as a use. Checked on 2026-11-13."
+    a: "Polar and Dodo Payments each generate a license key at purchase, with activation limits and an API to activate and validate keys. Dodo's license key page names desktop apps as a use. Checked on 2026-11-13."
   - q: "What does a $29 one-time Mac app license cost in MoR fees?"
     a: "Our own arithmetic on each provider's published rates, on a $29 price with no tax added. US card: Paddle $1.95, Lemon Squeezy $1.95, Polar Starter $1.95, Polar Early Member $1.56, Dodo Payments $1.56. Non-US card: Paddle $1.95, Lemon Squeezy $2.39, Polar Starter $2.39, Polar Early Member $2.00, Dodo Payments $2.00. Rates checked on 2026-11-13. Verify with the provider before you rely on these figures."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
 
 A Mac app does not have to be sold through the Mac App Store. Many developers sell from their own site, take payment through a checkout provider, and unlock the app with a license key.
 
@@ -58,7 +60,7 @@ Apple's [membership details page](https://developer.apple.com/programs/whats-inc
 | Provider (checked 2026-11-13) | Accepts software | License keys | Published base fee |
 | --- | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Yes. Built for software companies, including consumer software | Not handled in Paddle Billing. Build your own on webhooks | 5% + 50 cents per checkout transaction |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Yes. Lists software and SaaS as acceptable | Yes, with license length, activation limits and a License API | 5% + 50 cents, plus listed add-ons |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Yes. Lists software and SaaS as acceptable | Yes, with license length, activation limits and a License API | 5% + 50 cents, plus listed add-ons |
 | [Polar](/provider/polar/) | Yes. Lists software and SaaS, with license keys as a fulfilment method | Yes, with activation limits, expiry, usage quotas and a validation API | Starter 5% + 50 cents. Paid plans lower the rate for a monthly fee |
 | [Dodo Payments](/provider/dodo-payments/) | Yes. Welcomes templates, plugins and apps | Yes, as a License Key entitlement. Names desktop apps as a use | 4% + 40 cents for US domestic cards and wallets |
 
@@ -72,7 +74,9 @@ License keys: Paddle's [migration guide](https://developer.paddle.com/migrate/pl
 
 Fee: 5% + 50 cents per checkout transaction, with no monthly fee, per [Paddle pricing](https://www.paddle.com/pricing). The same page says sellers with products under $10 can contact Paddle for bespoke pricing.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026. The notes below are kept for existing sellers, as checked on the dates shown above.
 
 Lemon Squeezy's [prohibited products page](https://docs.lemonsqueezy.com/help/getting-started/prohibited-products) lists software and SaaS as acceptable. Its prohibited list includes spyware or parental control apps and any products restricted by its payment processing partners. If you are unsure, the page says to contact support with a description of the product before you start selling.
 
@@ -102,14 +106,14 @@ Our own arithmetic on the published rates, with no tax added. Lemon Squeezy calc
 
 ### $29 one-time license
 
-| $29 one-time charge | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $29 one-time charge | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $1.95 | $1.95 | $1.95 | $1.56 | $1.56 |
 | Non-US card | $1.95 | $2.39 | $2.39 | $2.00 | $2.00 |
 
 ### $5 per month subscription
 
-| $5 monthly charge | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $5 monthly charge | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $0.75 | $0.78 | $0.75 | $0.63 | $0.63 |
 | Non-US card | $0.75 | $0.85 | $0.83 | $0.70 | $0.70 |
@@ -130,7 +134,7 @@ These fees do not include the Apple Developer Program membership, which you need
 - Describe on your site what the app does and what data it accesses. Utilities that clean, protect or speed up a Mac, VPNs and tools that capture other people's data are where provider rules are strictest.
 - Plan the license check. Decide how many Macs one key can activate, how often the app validates the key, and what happens when the Mac is offline.
 - If you use Paddle Billing, budget time to build key generation and delivery yourself, or pick a provider that issues keys.
-- Check country support. Acceptance of the product does not mean your country is supported. See [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
+- Check country support. Acceptance of the product does not mean your country is supported. See [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
 
 We do not give legal or tax advice. This page reports what Apple and each provider publish. Verify with the provider before you rely on any rule or figure.
 
@@ -140,7 +144,7 @@ We do not give legal or tax advice. This page reports what Apple and each provid
 - [Merchant of record for SaaS](/sell/saas/)
 - [Merchant of record for digital products](/sell/digital-products/)
 - [Merchant of record for AI apps](/sell/ai-apps/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
 - [Paddle alternatives](/guides/paddle-alternatives/)

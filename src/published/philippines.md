@@ -25,10 +25,12 @@ faqs:
   - q: "Is Stripe available in the Philippines?"
     a: "No. The Philippines was not on Stripe's global availability page when we checked on 2026-10-22, so you cannot open a Stripe account as a Philippine business."
   - q: "Which merchants of record accept sellers from the Philippines?"
-    a: "On 2026-10-22, the Philippines was on the payout lists of Lemon Squeezy (bank payouts) and Polar, on Dodo Payments' accepted countries list, and not on Paddle's unsupported list. Approval is still up to each provider."
+    a: "On 2026-10-22, the Philippines was on the payout list of Polar, on Dodo Payments' accepted countries list, and not on Paddle's unsupported list. Lemon Squeezy closed to new sellers on 2026-11-16. Approval is still up to each provider."
   - q: "Can I open a Mercury account for a US LLC if I live in the Philippines?"
     a: "Not while you live there. Mercury lists the Philippines on its prohibited countries page, and Mercury says the list is based on where you live, not your citizenship."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 If you are a Filipino developer or founder selling software, templates or online courses to buyers abroad, Stripe is not an option at home. The good news is that most of the main merchants of record will pay out to the Philippines. Here is what each provider's own pages said on 2026-10-22.
 
@@ -43,11 +45,11 @@ A merchant of record sells to your customer on your behalf, handles sales tax an
 | Provider | Philippines status (2026-10-22) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | The Philippines is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | The Philippines is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | The Philippines is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). Polar pays out through Stripe Connect Express. |
 | [Dodo Payments](/provider/dodo-payments/) | Listed | The Philippines is on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). Dodo checks the country of your government ID. |
 
-Headline fees, from each provider's pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards; [Dodo](https://dodopayments.com/pricing) 4% + 40 cents for US cards, plus 1.5% for international cards. See [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) for a closer look at two of them.
+Headline fees, from each provider's pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards; [Dodo](https://dodopayments.com/pricing) 4% + 40 cents for US cards, plus 1.5% for international cards.
 
 ## Local payment gateways
 
@@ -70,7 +72,7 @@ Formation services we track include [doola](/provider/doola/), [Firstbase](/prov
 
 ## Which option fits
 
-- Selling software or SaaS to buyers abroad: start with a merchant of record. Paddle, Lemon Squeezy, Polar and Dodo all list the Philippines or do not exclude it.
+- Selling software or SaaS to buyers abroad: start with a merchant of record. Paddle, Polar and Dodo all list the Philippines or do not exclude it.
 - Selling mostly to Filipino customers: a local gateway such as Xendit for GCash and QR payments.
 - Planning to raise money from US investors: the US company route, without Mercury while you live in the Philippines.
 

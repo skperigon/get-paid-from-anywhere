@@ -5,7 +5,7 @@ status: published
 path: "guides/paddle-alternatives"
 title: "Paddle alternatives: fees, payouts and countries (checked 2026-11-03)"
 h1: "Paddle alternatives"
-description: "Lemon Squeezy, Polar and Dodo Payments are the main merchant of record alternatives to Paddle. How their fees, payout schedules, seller countries and product rules compare, with a source and date for every fact."
+description: "Polar and Dodo Payments are the main merchant of record alternatives to Paddle now that Lemon Squeezy has closed to new sellers. How their fees, payout schedules, seller countries and product rules compare, with a source and date for every fact. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-03"
 sources:
   - "https://www.paddle.com/pricing"
@@ -30,12 +30,14 @@ faqs:
   - q: "Is any Paddle alternative cheaper?"
     a: "On US card sales, Dodo Payments charges 4% + 40 cents against Paddle's 5% + 50 cents. Once international cards or subscriptions are involved, Paddle's flat rate is usually cheaper, because Lemon Squeezy, Polar and Dodo add surcharges. See the worked examples on this page."
   - q: "Which Paddle alternative accepts the most seller countries?"
-    a: "Paddle itself accepts sellers from everywhere except a short list of unsupported countries and regions. Of the 14 countries in our table, Paddle accepts all 14, Lemon Squeezy lists 11 for bank payouts plus India with conditions, Polar lists 12 and Dodo Payments accepts 8 for new sellers. Checked on 2026-11-03."
+    a: "Paddle itself accepts sellers from everywhere except a short list of unsupported countries and regions. Of the 14 countries in our table, Paddle accepts all 14, Lemon Squeezy lists 11 for bank payouts plus India with conditions (but it is closed to new sellers), Polar lists 12 and Dodo Payments accepts 8 for new sellers. Checked on 2026-11-03."
   - q: "Can I sell eBooks with a Paddle alternative?"
-    a: "Lemon Squeezy lists eBooks as acceptable. Polar and Dodo Payments both allow them but say eBooks get closer review before approval."
+    a: "Polar and Dodo Payments both allow them but say eBooks get closer review before approval."
 ---
 
-Paddle is a merchant of record: it sells to your customer, handles sales tax and VAT, and pays you out. The main alternatives that work the same way are [Lemon Squeezy](/provider/lemon-squeezy/), [Polar](/provider/polar/) and [Dodo Payments](/provider/dodo-payments/). This page compares them on fees, payouts, seller countries and product rules. Facts come from each provider's own pages, checked on 2026-11-03.
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
+
+Paddle is a merchant of record: it sells to your customer, handles sales tax and VAT, and pays you out. The main alternatives that work the same way are [Polar](/provider/polar/) and [Dodo Payments](/provider/dodo-payments/). [Lemon Squeezy](/provider/lemon-squeezy/) did too, but it closed to new sellers on Nov 16, 2026. This page compares them on fees, payouts, seller countries and product rules. Facts come from each provider's own pages, checked on 2026-11-03.
 
 ## Why people look for an alternative
 
@@ -45,7 +47,7 @@ Paddle is a merchant of record: it sells to your customer, handles sales tax and
 
 ## Fees compared
 
-| Fee (checked 2026-11-03) | [Paddle](/provider/paddle/) | [Lemon Squeezy](/provider/lemon-squeezy/) | [Polar](/provider/polar/) (free Starter plan) | [Dodo Payments](/provider/dodo-payments/) |
+| Fee (checked 2026-11-03) | [Paddle](/provider/paddle/) | [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | [Polar](/provider/polar/) (free Starter plan) | [Dodo Payments](/provider/dodo-payments/) |
 | --- | --- | --- | --- | --- |
 | Base rate | 5% + 50 cents per checkout transaction | 5% + 50 cents | 5% + 50 cents | 4% + 40 cents for US domestic cards |
 | International | No surcharge listed | +1.5% outside the US | +1.5% for non-US cards | +1.5% for international cards |
@@ -67,7 +69,7 @@ Other fee notes from the same pages:
 
 Our own arithmetic on the published rates, for a $30 sale, before tax and payout costs:
 
-| $30 sale | Paddle | Lemon Squeezy | Polar Starter | Dodo Payments |
+| $30 sale | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | One-time, US card | $2.00 | $2.00 | $2.00 | $1.60 |
 | One-time, non-US card | $2.00 | $2.45 | $2.45 | $2.05 |
@@ -77,7 +79,7 @@ Only Dodo is cheaper than Paddle in these examples, and only on US card sales. W
 
 ## How you get paid
 
-| Payouts (checked 2026-11-03) | Paddle | Lemon Squeezy | Polar | Dodo Payments |
+| Payouts (checked 2026-11-03) | Paddle | Lemon Squeezy (closed to new sellers) | Polar | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | Schedule | Monthly. Balances over your threshold (minimum $100) convert on the 1st and are sent by the 15th | Twice a month | Manual withdrawals that you start | unknown. Not stated on the pricing page |
 | Method | Wire transfer or Payoneer | Bank payout or PayPal | Stripe Connect Express | unknown. The pricing page lists standard payouts and USD SWIFT payouts |
@@ -89,7 +91,7 @@ Sources: [Paddle payouts](https://www.paddle.com/help/manage/get-paid/when-and-h
 
 Paddle accepts sellers from anywhere except its list of unsupported countries and regions. Lemon Squeezy uses a bank payout list plus PayPal. Polar uses a Stripe Connect Express payout list. Dodo goes by the country on your government ID, and for companies also the ID country of every director and beneficial owner.
 
-| Country (checked 2026-11-03) | Paddle | Lemon Squeezy | Polar | Dodo Payments |
+| Country (checked 2026-11-03) | Paddle | Lemon Squeezy (closed to new sellers) | Polar | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | [India](/country/india/) | Not on unsupported list | Conditional. PayPal payouts unless you have a pre-approved Stripe account | Listed | Listed |
 | [Pakistan](/country/pakistan/) | Not on unsupported list | Listed | Listed | Not listed |
@@ -115,7 +117,7 @@ If you are in one of these 14 countries, Paddle accepts you. Switching away from
 | Product rules (checked 2026-11-03) | Allowed | Not allowed (examples) |
 | --- | --- | --- |
 | Paddle | Software businesses, including B2B SaaS, consumer software and games | Physical products, human services not tied to software, marketplaces, advertising and marketing services |
-| Lemon Squeezy | Software, SaaS, eBooks, PDFs, design assets, photos, audio and video | Services of any kind, physical goods, PLR and MRR products, among others |
+| Lemon Squeezy (closed to new sellers) | Software, SaaS, eBooks, PDFs, design assets, photos, audio and video | Services of any kind, physical goods, PLR and MRR products, among others |
 | Polar | Software and SaaS, digital products such as templates, eBooks, PDFs, code, icons, fonts and design assets | Physical products, human services, marketplaces. Directories, eBooks, AI content generation, marketing tools and VPNs get closer review |
 | Dodo Payments | SaaS and AI products, digital goods, templates, plugins and apps | Manual services, physical goods and other prohibited categories. AI content generation, e-books and productised services get extra review |
 
@@ -123,8 +125,8 @@ Sources: [Paddle acceptable use](https://www.paddle.com/help/start/intro-to-padd
 
 ## Which to pick
 
-- You sell eBooks, PDFs or design assets: Lemon Squeezy lists them as acceptable. Polar also allows them, with closer review for eBooks.
-- You want your money sooner: Polar lets you withdraw when you choose, and Lemon Squeezy pays twice a month.
+- You sell eBooks, PDFs or design assets: Polar allows them, with closer review for eBooks. Lemon Squeezy listed them, but it is closed to new sellers.
+- You want your money sooner: Polar lets you withdraw when you choose.
 - Most of your sales are US card payments: Dodo Payments has the lowest base rate. It does not accept new sellers from Pakistan, Kenya, Nigeria, Bangladesh, Egypt or Morocco.
 - You sell software to buyers around the world: staying on Paddle may cost less, since its rate has no international or subscription surcharge listed.
 
@@ -132,7 +134,7 @@ Approval is up to each provider. Confirm your country and product with them befo
 
 ## See also
 
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [All providers compared](/providers/)

@@ -101,4 +101,4 @@ Sources: [Polar acceptable use](https://polar.sh/docs/merchant-of-record/accepta
 - Seller in Morocco: Gumroad, since Morocco is not on Polar's payout list.
 - Seller in Brazil: neither payout list includes Brazil. Gumroad allows new Stripe connections for Brazilian creators.
 
-See also [Polar vs Paddle](/compare/polar-vs-paddle/), [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/), [selling digital products](/sell/digital-products/) and [all providers](/providers/).
+See also [Polar vs Paddle](/compare/polar-vs-paddle/), [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/), [selling digital products](/sell/digital-products/) and [all providers](/providers/).

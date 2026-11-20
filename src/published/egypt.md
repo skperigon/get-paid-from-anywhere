@@ -5,7 +5,7 @@ status: published
 path: "country/egypt"
 title: "How to sell SaaS from Egypt: Stripe alternatives (checked 2026-10-22)"
 h1: "How to sell SaaS from Egypt"
-description: "Stripe is not available in Egypt and Dodo Payments no longer takes new Egyptian merchants. Paddle, Lemon Squeezy and Polar still pay out to Egypt. Sourced options for Egyptian founders."
+description: "Stripe is not available in Egypt and Dodo Payments no longer takes new Egyptian merchants. Paddle and Polar still serve Egypt, and Lemon Squeezy is closed to new sellers. Sourced options for Egyptian founders."
 checkedOn: "2026-10-22"
 sources:
   - "https://stripe.com/global"
@@ -25,10 +25,12 @@ faqs:
   - q: "Can new Egyptian sellers join Dodo Payments?"
     a: "No. Dodo lists Egypt as grandfathered under a policy dated March 23, 2026. Merchants who joined before then are kept, and new Egyptian merchants are not eligible."
   - q: "Which merchants of record pay out to Egypt?"
-    a: "On 2026-10-22, Egypt was on Lemon Squeezy's bank payout list and Polar's payout list, and it was not on Paddle's unsupported list."
+    a: "On 2026-10-22, Egypt was on Polar's payout list, and it was not on Paddle's unsupported list. Lemon Squeezy closed to new sellers on 2026-11-16."
   - q: "Can I use Mercury from Egypt?"
     a: "Egypt was not on Mercury's prohibited countries list on 2026-10-22. Mercury requires a US company and decides on each application."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 Stripe is not available in Egypt, and Dodo Payments stopped taking new Egyptian merchants in March 2026. Three of the four merchants of record we track still pay out to Egypt. Facts below come from each provider's own pages, checked on 2026-10-22.
 
@@ -43,11 +45,11 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 | Provider | Egypt status (2026-10-22) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | Egypt is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | Egypt is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | Egypt is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). |
 | [Dodo Payments](/provider/dodo-payments/) | Existing merchants only | Dodo lists Egypt as [grandfathered](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories): merchants from before March 23, 2026 are kept, new ones are not eligible. |
 
-Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards. See [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) for the differences, and the [Dodo Payments guide](/guides/dodo-payments-supported-countries/) for how Dodo's grandfathering works.
+Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards. See the [Dodo Payments guide](/guides/dodo-payments-supported-countries/) for how Dodo's grandfathering works.
 
 ## The US LLC route
 
@@ -64,7 +66,7 @@ Formation services we track: [doola](/provider/doola/), [Firstbase](/provider/fi
 
 ## Which option fits
 
-- Selling SaaS abroad from an Egyptian base: Paddle, Lemon Squeezy or Polar. Check each provider's product rules too, since approval depends on what you sell as well as where you are.
+- Selling SaaS abroad from an Egyptian base: Paddle or Polar. Check each provider's product rules too, since approval depends on what you sell as well as where you are.
 - Already on Dodo from before March 23, 2026: Dodo says you keep your account, under enhanced monitoring.
 - Planning a US company: Mercury does not rule out Egyptian residents on its list.
 

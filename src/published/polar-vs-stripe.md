@@ -96,4 +96,4 @@ Source: [Stripe Managed Payments eligibility](https://docs.stripe.com/payments/m
 - Want a merchant of record and based in the US, Canada, Europe, Australia, Hong Kong, Japan or Singapore: compare Polar with Stripe Managed Payments using the worked example above.
 - Want a merchant of record from anywhere else: Stripe Managed Payments is not open to you, so look at Polar or the options in [Paddle alternatives](/guides/paddle-alternatives/).
 
-See also [Polar vs Paddle](/compare/polar-vs-paddle/), [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/), [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).
+See also [Polar vs Paddle](/compare/polar-vs-paddle/), [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/), [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).

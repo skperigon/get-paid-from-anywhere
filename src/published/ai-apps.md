@@ -5,7 +5,7 @@ status: published
 path: "sell/ai-apps"
 title: "Merchant of record for AI apps: who accepts AI products (checked 2026-11-11)"
 h1: "Merchant of record for AI apps: who accepts AI products"
-description: "What Paddle, Lemon Squeezy, Polar, Dodo Payments and Stripe Managed Payments say about AI tools, AI content generators and chatbots, with published fees and a source for every fact, checked on 2026-11-11."
+description: "What Paddle, Lemon Squeezy, Polar, Dodo Payments and Stripe Managed Payments say about AI tools, AI content generators and chatbots, with published fees and a source for every fact, checked on 2026-11-11. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-11"
 sources:
   - "https://www.paddle.com/help/start/intro-to-paddle/what-am-i-not-allowed-to-sell-on-paddle"
@@ -31,6 +31,8 @@ faqs:
     a: "Our own arithmetic on each provider's published rates, on a $20 price with no tax added. US card: Paddle $1.50, Lemon Squeezy $1.60, Polar Starter $1.50, Polar Early Member $1.30, Dodo Payments $1.30. Non-US card: Paddle $1.50, Lemon Squeezy $1.90, Polar Starter $1.80, Polar Early Member $1.60, Dodo Payments $1.60. Rates checked on 2026-11-11. Verify with the provider before you rely on these figures."
 ---
 
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
+
 A merchant of record (MoR) sells your product to the customer on your behalf. It processes the payment, handles sales tax and VAT where it covers them, and pays you after its fees. For an AI app the main question is not fees. It is whether the MoR will approve the product at all.
 
 This page covers AI software, AI content generators, chatbots and AI features sold as SaaS. For general subscription software, see [Merchant of record for SaaS](/sell/saas/). For files and templates, see [Merchant of record for digital products](/sell/digital-products/). Facts were checked on 2026-11-11 on each provider's own pages. Policies change often, so verify with the provider before you apply.
@@ -40,7 +42,7 @@ This page covers AI software, AI content generators, chatbots and AI features so
 | Provider (checked 2026-11-11) | AI software in general | AI content generators | Clearly prohibited AI uses | Published base fee |
 | --- | --- | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Accepts software and SaaS. AI is not named as a general category | Not on a review list. Human-like faces is a restricted category | Face swaps, deepfakes, voice impersonation, likeness without consent, automated decision-making or categorization of people | 5% + 50 cents per checkout transaction |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Accepts software and SaaS. AI is not named as a general category | Not named | Sexually oriented content, including NSFW chatbots | 5% + 50 cents, plus listed add-ons |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Accepts software and SaaS. AI is not named as a general category | Not named | Sexually oriented content, including NSFW chatbots | 5% + 50 cents, plus listed add-ons |
 | [Polar](/provider/polar/) | Accepts software and SaaS | Needs closer review (text, image, video, voice) | Adult AI content, AI relationship services, face swaps, deep fakes, infringing content generation | Starter 5% + 50 cents. Paid plans lower the rate for a monthly fee |
 | [Dodo Payments](/provider/dodo-payments/) | Welcomes SaaS and AI products | Often requires review (text, image, video, voice) | Explicit AI content, NSFW chatbots, AI companions, low-value AI PDFs, unauthorized resale of AI APIs | 4% + 40 cents for US domestic cards and wallets |
 | [Stripe](/provider/stripe/) Managed Payments | Supports software and electronically supplied services for eligible businesses | Not named on the eligibility page | Not named on the eligibility page. Professional services and human-delivered work do not qualify | Not shown as a clear public rate in the page content we read |
@@ -65,7 +67,9 @@ Its prohibited list has a content generation section. It names:
 
 Restricted categories get enhanced due diligence, and Paddle says its team will reach out for more information if needed. Other prohibited items that often touch AI products include automated social media marketing that claims to increase engagement, captcha solving, and medical advice such as weight loss or muscle building guidance.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026. The notes below are kept for existing sellers, as checked on the dates shown above.
 
 Lemon Squeezy's [prohibited products page](https://docs.lemonsqueezy.com/help/getting-started/prohibited-products) lists software and SaaS as acceptable and does not mention AI as a category. The only AI-specific item is in the first prohibited line: sexually oriented or pornographic content of any kind, including NSFW chatbots.
 
@@ -115,7 +119,7 @@ Access needs an eligibility review, and your business must be based in a listed 
 
 Most AI apps bill monthly, so subscription surcharges matter. Here is what each fee page said on 2026-11-11.
 
-| Fee | Paddle | Lemon Squeezy | Polar | Dodo Payments |
+| Fee | Paddle | Lemon Squeezy (closed to new sellers) | Polar | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | Base rate | 5% + 50 cents | 5% + 50 cents | Starter 5% + 50 cents; Pro 3.8% + 40 cents ($20/mo); Growth 3.6% + 35 cents ($100/mo); Scale 3.4% + 30 cents ($400/mo) | 4% + 40 cents (US domestic cards and wallets) |
 | Subscription surcharge | None listed | +0.5% | None on Starter or paid plans. Early Member (orgs created before May 27, 2026): +0.5% | +0.5% for subscriptions, addons and usage-based billing |
@@ -131,7 +135,7 @@ Dodo's pricing page also says usage-based billing for models like token usage an
 
 Our own arithmetic on the published rates, on a $20 price with no tax added. Lemon Squeezy and Polar calculate fees on the total order value, so tax added at checkout raises the fee.
 
-| $20 monthly charge | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $20 monthly charge | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $1.50 | $1.60 | $1.50 | $1.30 | $1.30 |
 | Non-US card | $1.50 | $1.90 | $1.80 | $1.60 | $1.60 |
@@ -152,7 +156,7 @@ Model API costs are not included. For many AI apps those costs are larger than t
 - Check the restricted lists for face, voice and likeness features. Paddle, Polar and Dodo all prohibit deepfakes or impersonation.
 - Avoid adult features if you want broad MoR options. Paddle, Lemon Squeezy, Polar and Dodo all prohibit adult content, and Polar and Dodo also name AI relationship companions.
 - Make sure you have the rights to the model or data you build on. Unauthorized resale is prohibited on Paddle, Polar and Dodo.
-- Check country support. Acceptance of the product does not mean your country is supported. See [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
+- Check country support. Acceptance of the product does not mean your country is supported. See [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
 
 We do not give legal or tax advice. This page reports what each provider publishes. Verify with the provider before you rely on any rule or figure.
 
@@ -161,8 +165,8 @@ We do not give legal or tax advice. This page reports what each provider publish
 - [Merchant of record for SaaS](/sell/saas/)
 - [Merchant of record for digital products](/sell/digital-products/)
 - [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
 - [Paddle alternatives](/guides/paddle-alternatives/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)
 - [All providers](/providers/)

@@ -6,7 +6,7 @@ path: "country/morocco"
 country: "Morocco"
 title: "How to sell SaaS from Morocco: Stripe alternatives (checked 2026-10-31)"
 h1: "How to sell SaaS from Morocco"
-description: "Stripe is not available in Morocco, Dodo Payments no longer takes new Moroccan merchants, and Polar no longer lists Morocco for payouts. Lemon Squeezy names Morocco and Paddle does not exclude it. Sourced options for Moroccan founders."
+description: "Stripe is not available in Morocco, Dodo Payments no longer takes new Moroccan merchants, and Polar no longer lists Morocco for payouts. Lemon Squeezy is closed to new sellers, and Paddle does not exclude Morocco. Sourced options for Moroccan founders."
 checkedOn: "2026-10-31"
 sources:
   - "https://stripe.com/global"
@@ -27,10 +27,12 @@ faqs:
   - q: "Can new Moroccan sellers join Dodo Payments?"
     a: "No. On 2026-10-31, Dodo listed Morocco as grandfathered under a policy dated March 23, 2026. Moroccan merchants who were already using Dodo are kept. New Moroccan merchants are not eligible."
   - q: "Which merchants of record pay out to Morocco?"
-    a: "On 2026-10-31, Morocco was on Lemon Squeezy's bank payout list and was not on Paddle's unsupported countries list. Morocco was on Polar's payout country list on 2026-10-31, but it was not on that list when we rechecked on 2026-11-14."
+    a: "On 2026-10-31, Morocco was not on Paddle's unsupported countries list. Lemon Squeezy had listed Morocco, but it closed to new sellers on 2026-11-16. Morocco was on Polar's payout country list on 2026-10-31, but it was not on that list when we rechecked on 2026-11-14."
   - q: "Can a Moroccan company open an Airwallex account?"
     a: "No. Morocco was not on Airwallex's list of eligible business registration countries on 2026-10-31. A US company is eligible on that list."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 Stripe does not support businesses in Morocco, and Dodo Payments stopped taking new Moroccan merchants in March 2026. Two of the four merchants of record we track still accept sellers from Morocco: Polar removed Morocco from its payout list between our checks on 2026-10-31 and 2026-11-14. Facts below come from each provider's own pages, checked on 2026-10-31, with Polar rechecked on 2026-11-14.
 
@@ -46,7 +48,7 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 
 | Provider | Morocco status (2026-10-31) | What the provider says |
 | --- | --- | --- |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | Morocco is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). It also offers PayPal payouts. |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Paddle](/provider/paddle/) | Not excluded | Morocco is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
 | [Dodo Payments](/provider/dodo-payments/) | Existing merchants only | Dodo lists Morocco as [grandfathered](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories): merchants from before March 23, 2026 are kept, new ones are not eligible. |
 | [Polar](/provider/polar/) | Not listed (rechecked 2026-11-14) | Morocco was not on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries) when we rechecked on 2026-11-14. It was on the list on 2026-10-31. Polar pays out only to countries on that list. |
@@ -55,10 +57,10 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 
 Both open options charge the same base fee on their pricing pages. The extras differ.
 
-- **Lemon Squeezy:** 5% + 50 cents per transaction. Lemon Squeezy says some payments may be subject to additional fees. It pays out twice a month by bank or PayPal. Source: [Lemon Squeezy pricing](https://www.lemonsqueezy.com/pricing).
+- **Lemon Squeezy:** closed to new sign-ups since Nov 16, 2026, so we no longer list its fees as an option.
 - **Paddle:** 5% + 50 cents per checkout transaction, no monthly fee. Products under $10 can ask Paddle for different pricing. Source: [Paddle pricing](https://www.paddle.com/pricing).
 
-See [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) for a closer look at two of them, and the [Dodo Payments guide](/guides/dodo-payments-supported-countries/) for how Dodo's grandfathering works.
+See the [Dodo Payments guide](/guides/dodo-payments-supported-countries/) for how Dodo's grandfathering works.
 
 Approval also depends on what you sell. Each provider publishes product rules, so read them before you build your checkout.
 
@@ -77,8 +79,8 @@ Formation services we track: [doola](/provider/doola/), [Firstbase](/provider/fi
 
 ## Which option fits
 
-- Selling SaaS or digital products abroad: start with Lemon Squeezy, which names Morocco, or Paddle, which does not exclude it. Polar no longer lists Morocco (rechecked 2026-11-14).
-- Want PayPal payouts: Lemon Squeezy offers them alongside bank payouts.
+- Selling SaaS or digital products abroad: start with Paddle, which does not exclude Morocco. Lemon Squeezy is closed to new sellers. Polar no longer lists Morocco (rechecked 2026-11-14).
+- Want PayPal payouts: Lemon Squeezy offered them but is closed to new sellers. Ask Paddle which payout methods it supports for Morocco.
 - Already on Dodo from before March 23, 2026: Dodo says you keep your account, under enhanced monitoring.
 - Need Stripe itself: that requires a business in a country Stripe supports, such as a US company. Weigh the extra filing work first.
 

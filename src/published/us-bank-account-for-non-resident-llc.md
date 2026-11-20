@@ -180,4 +180,4 @@ Formation services tracked elsewhere on this site include [doola](/provider/dool
 - [Airwallex](/provider/airwallex/)
 - [Relay](/provider/relay/)
 - [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)

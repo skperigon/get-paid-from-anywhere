@@ -5,7 +5,7 @@ status: published
 path: "sell/saas"
 title: "Merchant of record for SaaS: how it works and who offers it (checked 2026-11-06)"
 h1: "Merchant of record for SaaS: how it works and who offers it"
-description: "Paddle, Lemon Squeezy, Polar and Dodo Payments all act as merchant of record for SaaS subscriptions. What that means for tax, fees (including subscription surcharges) and product fit, with sources checked on 2026-11-06."
+description: "Paddle, Lemon Squeezy, Polar and Dodo Payments all act as merchant of record for SaaS subscriptions. What that means for tax, fees (including subscription surcharges) and product fit, with sources checked on 2026-11-06. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-06"
 sources:
   - "https://www.paddle.com/pricing"
@@ -24,14 +24,16 @@ faqs:
   - q: "What does a merchant of record do for a SaaS product?"
     a: "The MoR is the legal seller to your customer. It collects and remits sales tax and VAT, processes the payment, and handles much of the billing support and chargeback exposure. You get paid out after fees and tax. Checked on 2026-11-06."
   - q: "Which MoRs accept SaaS?"
-    a: "Paddle says it is built for software companies, including B2B SaaS. Lemon Squeezy lists Software and SaaS as acceptable. Polar lists Software and SaaS as acceptable. Dodo Payments says it welcomes SaaS and AI products. Stripe Managed Payments supports SaaS tax codes for eligible businesses in listed locations. All checked on 2026-11-06."
+    a: "Paddle says it is built for software companies, including B2B SaaS. Polar lists Software and SaaS as acceptable. Dodo Payments says it welcomes SaaS and AI products. Stripe Managed Payments supports SaaS tax codes for eligible businesses in listed locations. All checked on 2026-11-06."
   - q: "Do subscription renewals cost extra?"
     a: "Depends on the provider. Lemon Squeezy adds 0.5% for subscription payments. Dodo Payments adds 0.5% for subscriptions, addons and usage-based billing. Paddle's pricing page lists no subscription surcharge. Polar charges no separate subscription fee on Starter, Pro, Growth or Scale; the +0.5% subscription fee applies only to Early Member orgs created before May 27, 2026. Checked on 2026-11-06."
   - q: "Is Stripe a merchant of record for SaaS by default?"
     a: "No. Standard Stripe Payments leaves you as the merchant. Stripe's Managed Payments product is a separate merchant of record offering for digital products, including SaaS. Access needs an eligibility review, and your business must be based in a supported location (US, Canada, many European countries, Australia, Hong Kong, Japan or Singapore). The Managed Payments fee is charged in addition to Payments fees; the exact percentage was not shown as a clear public rate on the pricing page content we could read on 2026-11-06."
   - q: "Can I sell consulting next to my SaaS on these MoRs?"
-    a: "Usually no as a primary offering. Paddle, Lemon Squeezy, Polar and Dodo all restrict or prohibit human services that are not software. If consulting is the main product, these MoRs are a poor fit. Confirm each provider's acceptable-use page before you apply."
+    a: "Usually no as a primary offering. Paddle, Polar and Dodo all restrict or prohibit human services that are not software. If consulting is the main product, these MoRs are a poor fit. Confirm each provider's acceptable-use page before you apply."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
 
 A merchant of record (MoR) sells your SaaS to the customer on your behalf. It collects the payment, handles sales tax and VAT in the markets it covers, and pays you the remainder after its fees. That is different from a payment processor such as standard Stripe, where you stay the merchant and own tax registration and remittance yourself.
 
@@ -52,7 +54,7 @@ Trade-offs that show up on the providers' own pages:
 | Provider (checked 2026-11-06) | MoR? | SaaS on the product page? | Published base fee |
 | --- | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Yes | Built for software companies, including B2B SaaS | 5% + 50 cents per checkout transaction |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Yes | Lists Software and SaaS as acceptable | 5% + 50 cents per transaction, plus listed add-ons |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Yes | Lists Software and SaaS as acceptable | 5% + 50 cents per transaction, plus listed add-ons |
 | [Polar](/provider/polar/) | Yes | Lists Software and SaaS as acceptable | Starter: 5% + 50 cents. Paid plans lower the rate for a monthly fee |
 | [Dodo Payments](/provider/dodo-payments/) | Yes | Welcomes SaaS and AI products | 4% + 40 cents for US domestic cards and wallets |
 | [Stripe](/provider/stripe/) Managed Payments | Yes (separate product) | SaaS tax codes are supported for eligible digital products | MoR fee is added on top of Payments fees; public percentage not clearly shown on the pricing page content we read |
@@ -63,7 +65,7 @@ Sources: [Paddle pricing](https://www.paddle.com/pricing), [Paddle acceptable us
 
 SaaS is mostly renewals. A subscription surcharge compounds every month. Here is what each provider's fee page said on 2026-11-06.
 
-| Fee | Paddle | Lemon Squeezy | Polar | Dodo Payments |
+| Fee | Paddle | Lemon Squeezy (closed to new sellers) | Polar | Dodo Payments |
 | --- | --- | --- | --- | --- |
 | Base rate | 5% + 50 cents | 5% + 50 cents | Starter 5% + 50 cents; Pro 3.8% + 40 cents ($20/mo); Growth 3.6% + 35 cents ($100/mo); Scale 3.4% + 30 cents ($400/mo) | 4% + 40 cents (US domestic cards and wallets) |
 | Subscription surcharge | None listed | +0.5% | None on Starter or paid plans. Early Member (orgs created before May 27, 2026): +0.5% | +0.5% for subscriptions, addons and usage-based billing |
@@ -77,7 +79,7 @@ Sources: [Paddle pricing](https://www.paddle.com/pricing), [Lemon Squeezy fees](
 
 Our own arithmetic on the published rates, before tax and payout costs:
 
-| $29 renewal | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $29 renewal | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $1.95 | $2.10 | $1.95 | $1.71 | $1.71 |
 | Non-US card | $1.95 | $2.53 | $2.39 | $2.14 | $2.14 |
@@ -102,7 +104,9 @@ Paddle's [acceptable use page](https://www.paddle.com/help/start/intro-to-paddle
 
 Prohibited categories that often trip SaaS-adjacent products include pure consulting, donations with no software sold, marketplaces that let other sellers take payments, adult content, gambling, many financial products and advice categories, medical advice, and several AI content-generation patterns (face swaps, deepfakes, voice impersonation). Restricted categories need extra review. Confirm the live list.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026. The notes below are kept for existing sellers, as checked on the dates shown above.
 
 Lemon Squeezy's [prohibited products page](https://docs.lemonsqueezy.com/help/getting-started/prohibited-products) lists Software and SaaS among acceptable examples, along with eBooks, PDFs and design assets. It prohibits services of any kind, physical goods, marketplaces that sell others' products, NFT and crypto products, and a long list of regulated categories. Lemon Squeezy's [MoR docs](https://docs.lemonsqueezy.com/help/payments/merchant-of-record) say it acts as merchant of record and takes on tax, refunds, chargebacks and PCI scope for sales through the platform.
 
@@ -123,13 +127,13 @@ Stripe's [Managed Payments eligibility docs](https://docs.stripe.com/payments/ma
 | Situation | Start with (still verify) |
 | --- | --- |
 | Software-only SaaS, many non-US buyers, want one flat published rate | Paddle |
-| SaaS plus downloads or digital goods in one store | Lemon Squeezy or Polar |
+| SaaS plus downloads or digital goods in one store | Polar (Lemon Squeezy was a fit, but it is closed to new sellers) |
 | US-card-heavy volume and you want the lowest published US card rate among these four | Dodo Payments (watch the +0.5% on subscriptions) |
 | Already on Polar before May 27, 2026 and still on Early Member | Polar Early Member rate, until you leave it |
 | Business based in a Managed Payments location and you already use Stripe | Stripe Managed Payments, after eligibility review |
 | Consulting, agencies or human-delivered services as the main product | None of these MoRs are a fit per their own policies |
 
-Country eligibility is a separate gate from product fit. Seller-country detail for these providers is covered in [Paddle alternatives](/guides/paddle-alternatives/), [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/).
+Country eligibility is a separate gate from product fit. Seller-country detail for these providers is covered in [Paddle alternatives](/guides/paddle-alternatives/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/).
 
 ## What this page does not cover
 
@@ -140,10 +144,10 @@ Country eligibility is a separate gate from product fit. Seller-country detail f
 ## See also
 
 - [Paddle alternatives](/guides/paddle-alternatives/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
-- [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)
+- [Lemon Squeezy supported countries (closed to new sellers)](/guides/lemon-squeezy-supported-countries/)
 - [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/)
 - [All providers](/providers/)

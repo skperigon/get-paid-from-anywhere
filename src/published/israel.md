@@ -6,7 +6,7 @@ path: "country/israel"
 country: "Israel"
 title: "Stripe alternatives in Israel (checked 2026-10-30)"
 h1: "Stripe alternatives in Israel"
-description: "Stripe is not on its own availability list for Israel. Paddle, Lemon Squeezy, Polar and Dodo Payments all accept Israeli sellers, and Airwallex onboards Israeli companies. Sourced options with a date for every fact."
+description: "Stripe is not on its own availability list for Israel. Paddle, Polar and Dodo Payments accept Israeli sellers, Lemon Squeezy has closed to new sellers, and Airwallex onboards Israeli companies. Sourced options with a date for every fact."
 checkedOn: "2026-10-30"
 sources:
   - "https://stripe.com/global"
@@ -26,12 +26,14 @@ faqs:
   - q: "Is Stripe available in Israel?"
     a: "Israel was not on Stripe's global availability page when we checked on 2026-10-30. That page lists the countries where a business can open a Stripe account."
   - q: "Which merchants of record accept Israeli sellers?"
-    a: "On 2026-10-30, Israel was on Lemon Squeezy's bank payout list, Polar's payout country list and Dodo Payments' accepted countries list, and it was not on Paddle's unsupported countries list."
+    a: "On 2026-10-30, Israel was on Polar's payout country list and Dodo Payments' accepted countries list, and it was not on Paddle's unsupported countries list. Lemon Squeezy closed to new sellers on 2026-11-16."
   - q: "Can an Israeli company open an Airwallex account?"
     a: "Israel was on Airwallex's list of eligible business registration countries on 2026-10-30, with Israeli businesses onboarded by Airwallex's Israel entity. Airwallex says being on the list does not guarantee approval."
   - q: "Do I need a US company to sell software from Israel?"
-    a: "Not to use a merchant of record. Paddle, Lemon Squeezy, Polar and Dodo Payments all list or do not exclude Israel for sellers. A US company is one more route, mainly if you want Stripe itself, and it brings US filing duties."
+    a: "Not to use a merchant of record. Paddle, Polar and Dodo Payments all list or do not exclude Israel for sellers. A US company is one more route, mainly if you want Stripe itself, and it brings US filing duties."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 Israel is not on Stripe's list of supported countries, so an Israeli founder cannot open a Stripe account for an Israeli business. The four merchants of record we track all accept sellers from Israel, which covers most SaaS and digital product sales. Facts below come from each provider's own pages, checked on 2026-10-30.
 
@@ -48,11 +50,11 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 | Provider | Israel status (2026-10-30) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | Israel is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | Israel is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | Israel is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). Polar pays out through Stripe Connect Express, so Stripe Payments does not need to be available in Israel. |
 | [Dodo Payments](/provider/dodo-payments/) | Listed | Israel is on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). Dodo checks the ID country of every director and beneficial owner, not only where the company is registered. |
 
-Headline fees on each provider's own pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per checkout transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free Starter plan, plus 1.5% for non-US cards; [Dodo Payments](https://dodopayments.com/pricing) 4% + 40 cents for US domestic cards, plus 1.5% for international cards and 0.5% for subscriptions. See [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) for a closer look at two of them.
+Headline fees on each provider's own pricing page: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per checkout transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free Starter plan, plus 1.5% for non-US cards; [Dodo Payments](https://dodopayments.com/pricing) 4% + 40 cents for US domestic cards, plus 1.5% for international cards and 0.5% for subscriptions.
 
 Approval also depends on what you sell. Each provider publishes product rules, and Paddle describes itself as working with software businesses.
 

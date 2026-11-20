@@ -5,7 +5,7 @@ status: published
 path: "country/uae"
 title: "Stripe alternatives in the UAE (checked 2026-10-29)"
 h1: "Stripe alternatives in the UAE"
-description: "Stripe is available in the UAE. When a merchant of record like Paddle, Lemon Squeezy, Polar or Dodo Payments still makes sense, and how Mercury, Airwallex and Wise treat UAE founders, with a source and date for every fact."
+description: "Stripe is available in the UAE. When a merchant of record like Paddle, Polar or Dodo Payments still makes sense, and how Mercury, Airwallex and Wise treat UAE founders, with a source and date for every fact."
 checkedOn: "2026-10-29"
 sources:
   - "https://stripe.com/global"
@@ -24,12 +24,14 @@ faqs:
   - q: "Is Stripe available in the UAE?"
     a: "Yes. The United Arab Emirates is on Stripe's global availability page with no extra label (checked 2026-10-29). Stripe's UAE pricing page lists 2.9% + AED 1.00 per successful domestic card transaction."
   - q: "Why use a merchant of record if Stripe works in the UAE?"
-    a: "Stripe processes payments, but it is not the merchant of record by default, so sales tax and VAT in your buyers' countries stay your job. A merchant of record such as Paddle, Lemon Squeezy, Polar or Dodo Payments sells to the buyer and handles that tax for you."
+    a: "Stripe processes payments, but it is not the merchant of record by default, so sales tax and VAT in your buyers' countries stay your job. A merchant of record such as Paddle, Polar or Dodo Payments sells to the buyer and handles that tax for you."
   - q: "Which merchants of record accept UAE sellers?"
-    a: "On 2026-10-29, the UAE was on Lemon Squeezy's bank payout list, Polar's payout list and Dodo Payments' accepted countries list, and it was not on Paddle's unsupported list."
+    a: "On 2026-10-29, the UAE was on Polar's payout list and Dodo Payments' accepted countries list, and it was not on Paddle's unsupported list. Lemon Squeezy closed to new sellers on 2026-11-16."
   - q: "Can a UAE company open an Airwallex account?"
     a: "The UAE was not on Airwallex's list of eligible business registration countries on 2026-10-29. Airwallex says it cannot process applications from locations not on that list."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 Stripe works in the UAE, so most UAE founders can take card payments directly. The real choice is whether to handle global sales tax yourself through Stripe or hand it to a merchant of record. Facts below come from each provider's own pages, checked on 2026-10-29.
 
@@ -46,11 +48,11 @@ A merchant of record sells to your customer, handles sales tax and VAT in their 
 | Provider | UAE status (2026-10-29) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | The UAE is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | The UAE is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | The UAE is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). |
 | [Dodo Payments](/provider/dodo-payments/) | Listed | The UAE is on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). Dodo checks the ID country of every director and beneficial owner, not only where the company is registered. |
 
-Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per checkout transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free Starter plan, plus 1.5% for non-US cards. See [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) for the differences.
+Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per checkout transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free Starter plan, plus 1.5% for non-US cards.
 
 ## The US company route
 
@@ -68,7 +70,7 @@ Formation services we track: [doola](/provider/doola/), [Firstbase](/provider/fi
 ## Which option fits
 
 - Selling mostly to UAE buyers, or happy to manage tax yourself: Stripe directly.
-- Selling SaaS or digital products worldwide and want tax handled: Paddle, Lemon Squeezy, Polar or Dodo Payments. Check each provider's product rules too, since approval depends on what you sell as well as where you are.
+- Selling SaaS or digital products worldwide and want tax handled: Paddle, Polar or Dodo Payments. Check each provider's product rules too, since approval depends on what you sell as well as where you are.
 - Want a US entity for other reasons: Mercury does not rule out UAE residents on its list.
 
 Compare with [Egypt](/country/egypt/) and [South Africa](/country/south-africa/), or browse [all providers](/providers/).

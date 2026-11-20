@@ -103,4 +103,4 @@ If your product is near any of these lines, read the full policy before you appl
 - Selling games: Paddle names games as a fit, while Dodo prohibits gaming and virtual-goods environments.
 - Need cash more than once a month: Dodo, since Paddle pays out monthly.
 
-See also [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/), [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).
+See also [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/), [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/) and [all providers](/providers/).

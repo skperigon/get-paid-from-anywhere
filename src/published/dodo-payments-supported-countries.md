@@ -61,4 +61,4 @@ From Dodo's [pricing page](https://dodopayments.com/pricing):
 
 ## If Dodo does not accept you
 
-See the [provider index](/providers/) for other merchants of record. Paddle, Lemon Squeezy and Polar each publish their own country rules, and the country pages compare them side by side.
+See the [provider index](/providers/) for other merchants of record. Paddle and Polar each publish their own country rules, and the country pages compare them side by side. Lemon Squeezy has closed to new sellers.

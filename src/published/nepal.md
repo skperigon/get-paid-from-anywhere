@@ -22,10 +22,12 @@ faqs:
   - q: "Is Stripe available in Nepal?"
     a: "No. Nepal was not on Stripe's global availability page when we checked on 2026-10-22."
   - q: "Which merchants of record work for sellers in Nepal?"
-    a: "On 2026-10-22, Dodo Payments listed Nepal as an accepted country and Paddle did not have Nepal on its unsupported list. Polar's payout list and Lemon Squeezy's bank payout list did not include Nepal."
+    a: "On 2026-10-22, Dodo Payments listed Nepal as an accepted country and Paddle did not have Nepal on its unsupported list. Polar's payout list did not include Nepal. Lemon Squeezy closed to new sellers on 2026-11-16."
   - q: "Can I open a Mercury account if I live in Nepal?"
     a: "No. Mercury lists Nepal on its prohibited countries page, which is based on residence."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
 
 Nepal is one of the harder countries on this site. Stripe is not available, two of the four merchants of record we track do not pay out there, and Mercury rules out Nepal residents. There are still workable options. Facts below come from each provider's own pages, checked on 2026-10-22.
 
@@ -39,7 +41,7 @@ No. Nepal is not on Stripe's [global availability page](https://stripe.com/globa
 | --- | --- | --- |
 | [Dodo Payments](/provider/dodo-payments/) | Listed | Nepal is on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). Dodo checks the country of your government ID and says payouts are only available in listed countries. |
 | [Paddle](/provider/paddle/) | Not excluded | Nepal is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Unknown | Nepal is not on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). Lemon Squeezy also offers PayPal payouts in countries PayPal supports. We did not confirm on PayPal's site whether Nepal accounts can receive payments, so check with PayPal and Lemon Squeezy. |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Not listed | Nepal is not on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). |
 
 Fees: [Dodo](https://dodopayments.com/pricing) charges 4% + 40 cents for US cards, plus 1.5% for international cards and 0.5% for subscriptions, and $25 for USD SWIFT payouts. [Paddle](https://www.paddle.com/pricing) charges 5% + 50 cents per checkout transaction. Read our [Dodo Payments supported countries guide](/guides/dodo-payments-supported-countries/) for how Dodo checks eligibility.
@@ -59,6 +61,6 @@ Formation services we track: [doola](/provider/doola/), [Firstbase](/provider/fi
 ## Which option fits
 
 - Selling SaaS or software abroad: start with Dodo Payments or Paddle, the two merchants of record that list Nepal or do not exclude it.
-- Already selling through PayPal: ask Lemon Squeezy whether PayPal payouts work for your Nepal account before you integrate.
+- Already selling through PayPal: Lemon Squeezy is closed to new sellers, so ask Paddle or Dodo Payments which payout methods work for a Nepal account before you integrate.
 
 Compare with [India](/country/india/), [Bangladesh](/country/bangladesh/) and [Pakistan](/country/pakistan/), or browse [all providers](/providers/).

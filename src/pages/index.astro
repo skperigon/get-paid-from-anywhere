@@ -7,7 +7,7 @@ const countryList = allCountries();
 const guides = publishedPages().filter((g) => !/^country\//.test(g.path)).sort((a, b) => a.title.localeCompare(b.title));
 const hasAffiliate = affiliateProviders().length > 0;
 const kinds = [
-  { t: 'Merchant of record', d: 'Sells your product to the customer for you, collects sales tax and VAT, then pays you. You do not need a US company. This is usually the easiest start when Stripe is closed to you.', ex: [['Paddle', 'paddle'], ['Polar', 'polar'], ['Dodo Payments', 'dodo-payments'], ['Lemon Squeezy', 'lemon-squeezy']] },
+  { t: 'Merchant of record', d: 'Sells your product to the customer for you, collects sales tax and VAT, then pays you. You do not need a US company. This is usually the easiest start when Stripe is closed to you.', ex: [['Paddle', 'paddle'], ['Polar', 'polar'], ['Dodo Payments', 'dodo-payments']] },
   { t: 'Payment processor', d: 'Takes card payments for your own business. Lower fees, but you register for and pay sales tax and VAT yourself.', ex: [['Stripe', 'stripe'], ['Paystack', 'paystack']] },
   { t: 'Payout account', d: 'Receives money from platforms and clients abroad and sends it to your local bank.', ex: [['Wise', 'wise-business'], ['Payoneer', 'payoneer'], ['Airwallex', 'airwallex']] },
   { t: 'US company', d: 'You form a US LLC so you can apply to Stripe and US banks as a US business. It costs money every year and adds paperwork.', ex: [['Stripe Atlas', 'stripe-atlas'], ['doola', 'doola']] },

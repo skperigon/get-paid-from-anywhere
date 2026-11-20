@@ -5,7 +5,7 @@ status: published
 path: "guides/receive-international-payments-pakistan"
 title: "How to receive international payments in Pakistan (checked 2026-11-08)"
 h1: "How to receive international payments in Pakistan"
-description: "What Stripe, Paddle, Lemon Squeezy, Polar, Dodo Payments, Payoneer, Wise and Mercury say about sellers and freelancers in Pakistan, with a source and a checked date for every fact."
+description: "What Stripe, Paddle, Polar, Dodo Payments, Payoneer, Wise and Mercury say about sellers and freelancers in Pakistan, with a source and a checked date for every fact. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-08"
 sources:
   - "https://stripe.com/global"
@@ -31,7 +31,7 @@ faqs:
   - q: "Is Stripe available in Pakistan?"
     a: "No. Pakistan is not on Stripe's global availability page, which lists the countries where Stripe is supported. Checked on 2026-11-08."
   - q: "Which merchants of record accept sellers from Pakistan?"
-    a: "On each provider's own pages checked on 2026-11-08: Paddle (Pakistan is not on its unsupported list), Lemon Squeezy (Pakistan is on its bank payout list) and Polar (Pakistan is on its payout country list). Dodo Payments does not list Pakistan. All of them still review each seller and each product, so approval is not guaranteed."
+    a: "On each provider's own pages checked on 2026-11-08: Paddle (Pakistan is not on its unsupported list) and Polar (Pakistan is on its payout country list). Lemon Squeezy had listed Pakistan, but it closed to new sellers on 2026-11-16. Dodo Payments does not list Pakistan. All of them still review each seller and each product, so approval is not guaranteed."
   - q: "Can a freelancer in Pakistan use Payoneer?"
     a: "Payoneer publishes registration guides for Individual, Sole Proprietor and Company accounts in Pakistan, and says Pakistani freelancers can receive marketplace and client payments and withdraw to a local bank account. Whether a specific application is approved is up to Payoneer. Payoneer's withdrawal fee for Pakistani banks is unknown, because its pricing page gives only a range."
   - q: "Can I get USD account details from Wise with an address in Pakistan?"
@@ -39,6 +39,8 @@ faqs:
   - q: "Can I open a Mercury account if I live in Pakistan?"
     a: "Mercury lists Pakistan on its prohibited countries page. The rule is based on where you live, not your citizenship."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. For a new store in Pakistan, check Paddle and Polar.
 
 Stripe does not support Pakistan, so most Pakistani founders and freelancers get paid through a merchant of record, a payments account such as Payoneer, or a mix. This page lists what each provider's own pages say about Pakistan, checked on 2026-11-08. Policies change, and applying does not guarantee approval, so verify with the provider before you rely on any option.
 
@@ -48,8 +50,8 @@ This page is not tax, legal or banking advice. It does not cover State Bank of P
 
 | You sell or do | Routes to look at first | Why |
 | --- | --- | --- |
-| Software, SaaS or apps to buyers worldwide | A merchant of record that lists Pakistan: Paddle, Lemon Squeezy or Polar | They charge customers and handle sales tax and VAT, then pay you out. You do not need Stripe in Pakistan |
-| eBooks, PDFs, design assets | Lemon Squeezy or Polar, if they accept your product | Both name these as acceptable. Paddle is for software |
+| Software, SaaS or apps to buyers worldwide | A merchant of record that lists Pakistan: Paddle or Polar | They charge customers and handle sales tax and VAT, then pay you out. You do not need Stripe in Pakistan |
+| eBooks, PDFs, design assets | Polar, if it accepts your product | Polar names these as acceptable. Paddle is for software. Lemon Squeezy listed them but is closed to new sellers |
 | Freelance or agency services paid by clients or marketplaces | Payoneer, or Wise Business where Wise supports your business | Lemon Squeezy, Paddle and Polar all exclude or discourage services |
 | A US LLC with a US bank account | Check each bank's residence rules first | Mercury lists Pakistan as prohibited by residence |
 
@@ -59,7 +61,7 @@ This page is not tax, legal or banking advice. It does not cover State Bank of P
 | --- | --- | --- | --- |
 | Stripe | Pakistan is not on Stripe's global availability page | Not applicable | Not applicable |
 | [Paddle](/provider/paddle/) | Not on Paddle's unsupported country list, which covers 28 countries and regions | 5% + 50 cents per checkout transaction | Monthly. By wire or Payoneer. Minimum threshold $100 |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Pakistan is on the bank payout list. Lemon Squeezy also says PayPal payouts work in 200+ countries | 5% + 50 cents, plus 1.5% for international transactions, 1.5% for PayPal and 0.5% for subscriptions | By bank (via Stripe) or PayPal. 1% per bank payout outside the US. PayPal: 3%, capped at $30 per payout outside the US |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Pakistan was on the bank payout list. Lemon Squeezy also says PayPal payouts work in 200+ countries | 5% + 50 cents, plus 1.5% for international transactions, 1.5% for PayPal and 0.5% for subscriptions | By bank (via Stripe) or PayPal. 1% per bank payout outside the US. PayPal: 3%, capped at $30 per payout outside the US |
 | [Polar](/provider/polar/) | Pakistan is on the payout country list (Stripe Connect Express) | Starter: 5% + 50 cents, plus 1.5% for international cards. Paid plans from $20 a month lower the rate | Manual withdrawals. Stripe payout fees are passed through: $2 a month with active payouts, 0.25% + 25 cents per payout, cross-border conversion from 0.25% to 1% |
 | [Dodo Payments](/provider/dodo-payments/) | Pakistan is not on the accepted countries list | Not applicable for Pakistan | Not applicable for Pakistan |
 
@@ -71,7 +73,9 @@ Paddle says it works with software businesses anywhere except the countries on i
 
 Paddle pays out once a month, by the 15th, and there are no on-demand withdrawals. You can be paid by wire or Payoneer. For most countries Paddle charges no payout fee, but it says a $15 SWIFT fee may apply in certain countries. Whether that fee applies to Pakistan is unknown, because the page does not name the countries.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026, so Pakistani sellers can no longer join. The notes below are for existing sellers.
 
 Lemon Squeezy lists Pakistan among the countries where bank payouts are supported. Its page also says PayPal payouts are supported in 200+ countries and regions. Whether Pakistan is among them is unknown here, because Lemon Squeezy refers to PayPal's own list. If your country is on neither list, Lemon Squeezy says you cannot use it.
 
@@ -132,4 +136,4 @@ Mercury's [prohibited countries page](https://support.mercury.com/hc/en-us/artic
 - [All providers compared](/providers/)
 - [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/)
 - [Paddle alternatives](/guides/paddle-alternatives/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)

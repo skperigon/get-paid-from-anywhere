@@ -5,7 +5,7 @@ status: published
 path: "country/kenya"
 title: "Can I use Stripe in Kenya? Alternatives that work (checked 2026-10-22)"
 h1: "Can I use Stripe in Kenya?"
-description: "Stripe lists Kenya as Extended network, Paystack covers M-PESA, and Paddle, Lemon Squeezy and Polar pay out to Kenya. Dodo Payments does not list Kenya. Sourced Q and A for Kenyan founders."
+description: "Stripe lists Kenya as Extended network, Paystack covers M-PESA, and Paddle and Polar serve Kenya. Lemon Squeezy is closed to new sellers. Dodo Payments does not list Kenya. Sourced Q and A for Kenyan founders."
 checkedOn: "2026-10-22"
 sources:
   - "https://stripe.com/global"
@@ -32,13 +32,15 @@ faqs:
     a: "Kenya was not on Mercury's prohibited countries list on 2026-10-22. Mercury requires a US company and decides on each application."
 ---
 
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers, so this page lists it as closed.
+
 Short answers first, then the detail. Every fact links to the provider's own page and was checked on 2026-10-22.
 
 ## Quick answers
 
 - **Is Stripe in Kenya?** Listed, with an Extended network label.
 - **Can I take M-PESA?** Yes, through Paystack, which needs its own account.
-- **Which merchants of record pay out to Kenya?** Lemon Squeezy and Polar list Kenya, and Paddle does not exclude it. Dodo Payments does not list Kenya.
+- **Which merchants of record pay out to Kenya?** Polar lists Kenya, and Paddle does not exclude it. Lemon Squeezy is closed to new sellers. Dodo Payments does not list Kenya.
 - **Is Mercury an option for a US LLC?** Kenya is not on Mercury's prohibited list.
 
 ## Is Stripe available in Kenya?
@@ -61,11 +63,11 @@ We could not confirm Paystack's Kenyan fees on its site, so they are unknown her
 | Provider | Kenya status (2026-10-22) | What the provider says |
 | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not excluded | Kenya is not on Paddle's [unsupported countries list](https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle). Paddle says it works with software businesses. |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Listed | Kenya is on Lemon Squeezy's [bank payout list](https://docs.lemonsqueezy.com/help/getting-started/supported-countries). |
+| [Lemon Squeezy](/provider/lemon-squeezy/) | Closed to new sign-ups | Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and stops processing payments on Mar 31, 2027. [Source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy). |
 | [Polar](/provider/polar/) | Listed | Kenya is on Polar's [payout country list](https://polar.sh/docs/merchant-of-record/supported-countries). |
 | [Dodo Payments](/provider/dodo-payments/) | Not listed | Kenya is not on Dodo's [accepted countries list](https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories). |
 
-Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Lemon Squeezy](https://www.lemonsqueezy.com/pricing) 5% + 50 cents; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards. A merchant of record handles sales tax and VAT in your buyers' countries, which Paystack does not.
+Headline fees: [Paddle](https://www.paddle.com/pricing) 5% + 50 cents per transaction; [Polar](https://polar.sh/docs/merchant-of-record/fees) 5% + 50 cents on its free plan, plus 1.5% for non-US cards. A merchant of record handles sales tax and VAT in your buyers' countries, which Paystack does not.
 
 ## The US LLC route
 

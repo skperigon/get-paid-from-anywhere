@@ -5,7 +5,7 @@ status: published
 path: "sell/chrome-extensions"
 title: "How to charge for a Chrome extension: payment options (checked 2026-11-12)"
 h1: "How to charge for a Chrome extension"
-description: "Chrome Web Store payments are gone. What Paddle, Lemon Squeezy, Polar and Dodo Payments say about extension-type products, license keys and fees, with a source for every fact, checked on 2026-11-12."
+description: "Chrome Web Store payments are gone. What Paddle, Lemon Squeezy, Polar and Dodo Payments say about extension-type products, license keys and fees, with a source for every fact, checked on 2026-11-12. Lemon Squeezy has closed to new sellers."
 checkedOn: "2026-11-12"
 sources:
   - "https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/webstore/cws-payments-deprecation/index.md"
@@ -28,12 +28,14 @@ faqs:
   - q: "Does the Chrome Web Store allow paid extensions that use another payment provider?"
     a: "Yes. The Chrome Web Store program policies have a section on accepting payment from users. You must handle card data securely, describe what you sell honestly, post your terms of sale including refunds, say in the listing if basic functionality requires payment, and make clear that you, not Google, are the seller. Checked on 2026-11-12."
   - q: "Which merchants of record accept Chrome extensions?"
-    a: "None of the four checked names browser extensions as a category, either allowed or banned. Paddle, Lemon Squeezy and Polar all accept software, and Dodo Payments lists templates, plugins and apps among the businesses it welcomes. What matters is what the extension does. Downloaders, scrapers, proxy and VPN tools, captcha solvers and tools that bypass other sites' rules are prohibited or restricted on one or more of these providers. Checked on 2026-11-12."
+    a: "None of the four checked names browser extensions as a category, either allowed or banned. Paddle and Polar all accept software, and Dodo Payments lists templates, plugins and apps among the businesses it welcomes. What matters is what the extension does. Downloaders, scrapers, proxy and VPN tools, captcha solvers and tools that bypass other sites' rules are prohibited or restricted on one or more of these providers. Checked on 2026-11-12."
   - q: "How do I lock paid features in an extension?"
-    a: "Lemon Squeezy, Polar and Dodo Payments each generate license keys at purchase and offer an API to activate and validate them, with activation limits and subscription-linked expiry. Your extension asks the user for the key and validates it against the provider's API. We did not find a license key feature on the Paddle pages we checked, so check with Paddle directly. Checked on 2026-11-12."
+    a: "Polar and Dodo Payments each generate license keys at purchase and offer an API to activate and validate them, with activation limits and subscription-linked expiry. Your extension asks the user for the key and validates it against the provider's API. We did not find a license key feature on the Paddle pages we checked, so check with Paddle directly. Checked on 2026-11-12."
   - q: "What does a $5 per month extension cost in MoR fees?"
     a: "Our own arithmetic on each provider's published rates, on a $5 price with no tax added. US card: Paddle $0.75, Lemon Squeezy $0.78, Polar Starter $0.75, Polar Early Member $0.63, Dodo Payments $0.63. Non-US card: Paddle $0.75, Lemon Squeezy $0.85, Polar Starter $0.83, Polar Early Member $0.70, Dodo Payments $0.70. Paddle and Lemon Squeezy say to contact them about custom pricing for products under $10. Rates checked on 2026-11-12. Verify with the provider before you rely on these figures."
 ---
+
+> **Update 2026-11-20:** Lemon Squeezy closed new store sign-ups on Nov 16, 2026 and will stop processing payments on Mar 31, 2027 ([source](https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy), checked 2026-11-20). It is no longer an option for new sellers. We keep its rows and numbers below, marked closed, only so existing Lemon Squeezy sellers can compare. For a new store, use Paddle, Polar or Dodo Payments, and check each one's country and product rules.
 
 Google no longer processes payments for Chrome extensions. If you want to charge for an extension, you need your own payment provider, and you need a way inside the extension to check who has paid.
 
@@ -68,7 +70,7 @@ An MoR checkout on your own site handles the card data part, since the customer 
 | Provider (checked 2026-11-12) | Extensions as a category | Extension types that are prohibited or restricted | License keys | Published base fee |
 | --- | --- | --- | --- | --- |
 | [Paddle](/provider/paddle/) | Not named. Accepts consumer software | Streaming downloaders, content copying, spyware, captcha solving, automated social media marketing. VPN and proxies are restricted | Not found on the pages we checked | 5% + 50 cents per checkout transaction |
-| [Lemon Squeezy](/provider/lemon-squeezy/) | Not named. Accepts software and SaaS | Spyware and parental control apps, anything restricted by its payment partners | Yes, with activation limits and a License API | 5% + 50 cents, plus listed add-ons |
+| [Lemon Squeezy](/provider/lemon-squeezy/) (closed to new sellers) | Not named. Accepts software and SaaS | Spyware and parental control apps, anything restricted by its payment partners | Yes, with activation limits and a License API | 5% + 50 cents, plus listed add-ons |
 | [Polar](/provider/polar/) | Not named. Accepts software and SaaS | Third-party content downloaders, tools that circumvent other services' rules or paywalls, macros and cheats, API and IP cloaking, spyware. VPN and marketing and outreach tools need closer review | Yes, with activation limits, usage quotas and a validation API | Starter 5% + 50 cents. Paid plans lower the rate for a monthly fee |
 | [Dodo Payments](/provider/dodo-payments/) | Welcomes templates, plugins and apps | Scraping and mass outreach tools, proxy and anti-terms tools, bots and engagement manipulation, VPN | Yes, as a License Key entitlement with activate, validate and deactivate endpoints | 4% + 40 cents for US domestic cards and wallets |
 
@@ -93,7 +95,9 @@ Fee: 5% + 50 cents per checkout transaction, with no monthly fee, per [Paddle pr
 
 License keys: we did not find a license key feature on the Paddle pages we checked. Ask Paddle how it suggests gating paid features.
 
-### Lemon Squeezy
+### Lemon Squeezy (closed to new sellers)
+
+Lemon Squeezy closed new store sign-ups on Nov 16, 2026. The notes below are kept for existing sellers, as checked on the dates shown above.
 
 Lemon Squeezy's [prohibited products page](https://docs.lemonsqueezy.com/help/getting-started/prohibited-products) lists software and SaaS as acceptable and does not mention extensions. Its prohibited list includes spyware or parental control apps and any products restricted by its payment processing partners. The page says to contact support with a description of the product before you start selling if you are unsure.
 
@@ -142,14 +146,14 @@ Our own arithmetic on the published rates, with no tax added. Lemon Squeezy calc
 
 ### $5 per month subscription
 
-| $5 monthly charge | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $5 monthly charge | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $0.75 | $0.78 | $0.75 | $0.63 | $0.63 |
 | Non-US card | $0.75 | $0.85 | $0.83 | $0.70 | $0.70 |
 
 ### $20 one-time license
 
-| $20 one-time charge | Paddle | Lemon Squeezy | Polar Starter | Polar Early Member | Dodo Payments |
+| $20 one-time charge | Paddle | Lemon Squeezy (closed to new sellers) | Polar Starter | Polar Early Member | Dodo Payments |
 | --- | --- | --- | --- | --- | --- |
 | US card | $1.50 | $1.50 | $1.50 | $1.20 | $1.20 |
 | Non-US card | $1.50 | $1.80 | $1.80 | $1.50 | $1.50 |
@@ -170,7 +174,7 @@ The fixed per-transaction fee is a large share of a low price. Paddle and Lemon 
 - Check the prohibited lists against your feature set. Downloaders, scrapers, proxies, captcha solvers and tools that work around another site's terms are the common problems.
 - Put your terms of sale and refund policy on your site, and say in the Chrome Web Store listing if basic features need payment. Google's policies require both.
 - Plan license checks. Decide how often the extension validates a key and what happens when it is offline.
-- Check country support. Acceptance of the product does not mean your country is supported. See [Lemon Squeezy supported countries](/guides/lemon-squeezy-supported-countries/) and [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
+- Check country support. Acceptance of the product does not mean your country is supported. See [Dodo Payments supported countries](/guides/dodo-payments-supported-countries/), or [browse by country](/countries/).
 
 We do not give legal or tax advice. This page reports what each provider publishes. Verify with the provider before you rely on any rule or figure.
 
@@ -179,9 +183,9 @@ We do not give legal or tax advice. This page reports what each provider publish
 - [Merchant of record for SaaS](/sell/saas/)
 - [Merchant of record for digital products](/sell/digital-products/)
 - [Merchant of record for AI apps](/sell/ai-apps/)
-- [Polar vs Lemon Squeezy](/compare/polar-vs-lemon-squeezy/)
+- [Polar vs Lemon Squeezy (closed to new sellers)](/compare/polar-vs-lemon-squeezy/)
 - [Polar vs Dodo Payments](/compare/polar-vs-dodo-payments/)
 - [Dodo Payments vs Paddle](/compare/dodo-payments-vs-paddle/)
 - [Paddle alternatives](/guides/paddle-alternatives/)
-- [Lemon Squeezy alternatives](/guides/lemon-squeezy-alternatives/)
+- [Moving off Lemon Squeezy: alternatives](/guides/lemon-squeezy-alternatives/)
 - [All providers](/providers/)
