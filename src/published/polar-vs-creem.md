@@ -1,7 +1,7 @@
 ---
 order: 30
 idea: 35
-status: ready
+status: published
 path: "compare/polar-vs-creem"
 title: "Polar vs Creem: fees, payouts, countries and rules (checked 2026-11-18)"
 h1: "Polar vs Creem"
