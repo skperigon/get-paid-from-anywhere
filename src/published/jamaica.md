@@ -1,7 +1,7 @@
 ---
 order: 31
 idea: 36
-status: ready
+status: published
 path: "country/jamaica"
 country: "Jamaica"
 title: "Is Stripe available in Jamaica? Alternatives for Jamaican founders (checked 2026-11-19)"
