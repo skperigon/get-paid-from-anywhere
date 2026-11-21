@@ -140,6 +140,12 @@
           "note": "Jamaica is not on Stripe's global availability list. It is also not a supported business location for Stripe Managed Payments.",
           "source": "https://stripe.com/global",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "not-listed",
+          "note": "Serbia is not on Stripe's global availability list. It is also not a supported business location for Stripe Managed Payments.",
+          "source": "https://stripe.com/global",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -381,6 +387,12 @@
           "note": "Jamaica is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "not-excluded",
+          "note": "Serbia is not on Paddle's unsupported countries list.",
+          "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -561,6 +573,12 @@
           "note": "Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers from this country cannot join. Existing stores can keep taking payments until March 31, 2027.",
           "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
           "checkedOn": "2026-11-20"
+        },
+        "serbia": {
+          "status": "grandfathered-only",
+          "note": "Serbia is on Lemon Squeezy's bank payout list, but Lemon Squeezy closed new store sign-ups on November 16, 2026, so new sellers cannot join. Existing stores can keep taking payments until March 31, 2027.",
+          "source": "https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -729,6 +747,12 @@
           "note": "Jamaica is on Polar's payout country list (Stripe Connect Express).",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "listed",
+          "note": "Serbia is on Polar's payout country list (Stripe Connect Express).",
+          "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -897,6 +921,12 @@
           "note": "Jamaica is on Dodo Payments' accepted countries list. Eligibility follows the country of your government ID.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "listed",
+          "note": "Serbia is on Dodo Payments' accepted countries list. Eligibility follows the country of your government ID.",
+          "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -1040,6 +1070,12 @@
           "note": "Jamaica is not on Wise's list of places it does not serve. Wise confirms business support for your country during sign-up.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "not-excluded",
+          "note": "Serbia is not on Wise's list of places it does not serve. Wise confirms business support for your country during sign-up.",
+          "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -1210,6 +1246,12 @@
           "note": "Jamaica is not on Airwallex's eligible business registration list. A US company can apply, since the United States is listed.",
           "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "not-listed",
+          "note": "Serbia is not on Airwallex's eligible business registration list. A US company can apply, since the United States is listed.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+          "checkedOn": "2026-11-20"
         }
       }
     },
@@ -1348,6 +1390,12 @@
           "note": "Jamaica is not on Mercury's prohibited countries list (by residence). Mercury needs a US company and reviews each application.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
           "checkedOn": "2026-11-19"
+        },
+        "serbia": {
+          "status": "not-excluded",
+          "note": "Serbia is not on Mercury's prohibited countries list (by residence). Mercury needs a US company and reviews each application.",
+          "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
+          "checkedOn": "2026-11-20"
         }
       }
     },
