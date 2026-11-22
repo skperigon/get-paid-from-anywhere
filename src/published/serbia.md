@@ -1,7 +1,7 @@
 ---
 order: 32
 idea: 37
-status: ready
+status: published
 path: "country/serbia"
 country: "Serbia"
 title: "Is Stripe available in Serbia? Payment options for Serbian founders (checked 2026-11-20)"
