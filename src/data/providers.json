@@ -90,8 +90,9 @@
       "sellerCountries": {
         "india": {
           "status": "invite-only",
-          "note": "Listed as Preview on the global page. Stripe's support article says new Indian accounts are invite-only.",
-          "source": "https://support.stripe.com/questions/stripe-accounts-are-invite-only-in-india"
+          "note": "Listed as Preview on the global page. Stripe's support article says new Indian accounts are invite-only. India is not a supported business location for Stripe Managed Payments.",
+          "source": "https://support.stripe.com/questions/stripe-accounts-are-invite-only-in-india",
+          "checkedOn": "2026-11-21"
         },
         "pakistan": {
           "status": "not-listed",
@@ -302,7 +303,7 @@
           "status": "not-excluded",
           "note": "India is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-21"
         },
         "pakistan": {
           "status": "not-excluded",
@@ -662,7 +663,7 @@
           "status": "listed",
           "note": "India is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-21"
         },
         "pakistan": {
           "status": "listed",
@@ -829,6 +830,12 @@
           "value": "Abandoned cart recovery, subscription dunning and payment retries are free to enable, with 5% charged on recovered revenue. Visa RDR $18 per dispute, Ethoca alerts $27 per alert, dispute deflections $15 each when a dispute is deflected.",
           "source": "https://dodopayments.com/pricing",
           "checkedOn": "2026-11-17"
+        },
+        {
+          "label": "India domestic rate",
+          "value": "4% + 15 cents for Indian debit and credit cards and UPI payments in INR, plus international payment fees. Dodo accepts UPI, Indian cards (Visa, Mastercard, RuPay) and Apple Pay from buyers in India.",
+          "source": "https://dodopayments.com/pricing",
+          "checkedOn": "2026-11-21"
         }
       ],
       "sellerCountries": {
@@ -836,7 +843,7 @@
           "status": "listed",
           "note": "India is on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-21"
         },
         "pakistan": {
           "status": "not-listed",
