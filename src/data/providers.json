@@ -96,9 +96,9 @@
         },
         "pakistan": {
           "status": "not-listed",
-          "note": "Pakistan is not on Stripe's global availability list.",
+          "note": "Pakistan is not on Stripe's global availability list. Pakistan is not a supported business location for Stripe Managed Payments.",
           "source": "https://stripe.com/global",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "label-only",
@@ -281,9 +281,9 @@
         },
         {
           "label": "Payout fee by country",
-          "value": "Paddle says a $15 SWIFT fee may apply for certain countries but does not name them, so whether it applies to Pakistan is unknown.",
-          "source": "https://www.paddle.com/help/manage/get-paid/when-and-how-do-i-get-paid",
-          "checkedOn": "2026-11-08"
+          "value": "Paddle says a $15 SWIFT fee may apply for certain countries, and its payout fee page says a wire in a currency that differs from your bank country's currency goes by SWIFT for $15. Its pages do not say whether it pays out in PKR, so whether the fee applies to a Pakistani bank is unknown.",
+          "source": "https://www.paddle.com/help/manage/get-paid/is-there-a-fee-taken-for-payouts",
+          "checkedOn": "2026-11-22"
         },
         {
           "label": "AI products",
@@ -309,7 +309,7 @@
           "status": "not-excluded",
           "note": "Pakistan is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-08"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "not-excluded",
@@ -669,7 +669,7 @@
           "status": "listed",
           "note": "Pakistan is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "listed",
@@ -847,9 +847,9 @@
         },
         "pakistan": {
           "status": "not-listed",
-          "note": "Pakistan is not on Dodo's accepted countries list.",
+          "note": "Pakistan is not on Dodo's accepted countries list. Dodo says payouts are only available in listed countries.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "grandfathered-only",
@@ -1034,7 +1034,7 @@
           "status": "not-excluded",
           "note": "Pakistan is not on Wise's unsupported list. Wise confirms business support during sign-up.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
-          "checkedOn": "2026-11-08"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "not-excluded",
@@ -1147,7 +1147,7 @@
           "status": "listed",
           "note": "Payoneer publishes registration guides for Pakistan (Individual, Sole Proprietor, Company), last modified 31 Aug and 1 Sep 2026. Approval is up to Payoneer.",
           "source": "https://www.payoneer.com/resources/country-guides/payoneer-individual-account-in-pakistan/",
-          "checkedOn": "2026-11-08"
+          "checkedOn": "2026-11-22"
         },
         "nigeria": {
           "status": "unknown",
