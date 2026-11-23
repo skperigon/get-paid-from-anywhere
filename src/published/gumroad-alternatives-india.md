@@ -1,7 +1,7 @@
 ---
 order: 33
 idea: 38
-status: ready
+status: published
 path: "guides/gumroad-alternatives-india"
 title: "Gumroad alternatives for Indian sellers: fees, payouts and rules (checked 2026-11-21)"
 h1: "Gumroad alternatives for sellers in India"
