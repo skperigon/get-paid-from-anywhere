@@ -241,13 +241,13 @@
           "label": "Fee",
           "value": "5% + 50 cents per checkout transaction, no monthly fees, migration fees or hidden extras. Custom pricing for high-volume or low-value transactions and for products under $10.",
           "source": "https://www.paddle.com/pricing",
-          "checkedOn": "2026-11-07"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Product type",
           "value": "Paddle says it works with software businesses.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Payouts",
@@ -303,97 +303,97 @@
           "status": "not-excluded",
           "note": "India is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-21"
+          "checkedOn": "2026-11-23"
         },
         "pakistan": {
           "status": "not-excluded",
           "note": "Pakistan is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-22"
+          "checkedOn": "2026-11-23"
         },
         "nigeria": {
           "status": "not-excluded",
           "note": "Nigeria is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "bangladesh": {
           "status": "not-excluded",
           "note": "Bangladesh is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "brazil": {
           "status": "not-excluded",
           "note": "Brazil is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "uae": {
           "status": "not-excluded",
           "note": "The UAE is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "israel": {
           "status": "not-excluded",
           "note": "Israel is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "morocco": {
           "status": "not-excluded",
           "note": "Morocco is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "kenya": {
           "status": "not-excluded",
           "note": "Kenya is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "egypt": {
           "status": "not-excluded",
           "note": "Egypt is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "nepal": {
           "status": "not-excluded",
           "note": "Nepal is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "indonesia": {
           "status": "not-excluded",
           "note": "Indonesia is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "philippines": {
           "status": "not-excluded",
           "note": "The Philippines is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "south-africa": {
           "status": "not-excluded",
           "note": "South Africa is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-02"
+          "checkedOn": "2026-11-23"
         },
         "jamaica": {
           "status": "not-excluded",
           "note": "Jamaica is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         "serbia": {
           "status": "not-excluded",
           "note": "Serbia is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-20"
+          "checkedOn": "2026-11-23"
         }
       }
     },
@@ -601,37 +601,37 @@
           "label": "Seller countries",
           "value": "Countries where Polar can pay out through Stripe Connect Express, per Polar's list. Polar's FAQ says this works in places where Stripe itself is invite-only, such as India.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Fees",
           "value": "Starter (free): 5% + 50 cents. Pro ($20/month): 3.8% + 40 cents. Growth ($100/month): 3.6% + 35 cents. Scale ($400/month): 3.4% + 30 cents. International cards +1.5%.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Dispute fee",
           "value": "$15",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Payout fees",
           "value": "Stripe payout fees passed through: $2 per month with active payouts, 0.25% + 25 cents per payout, and cross-border FX from 0.25% (EU) to 1% elsewhere.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Early Member rate",
           "value": "Organizations created before May 27, 2026: 4% + 40 cents, plus 0.5% on subscriptions.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Subscription fee",
           "value": "No separate subscription fee on Starter, Pro, Growth or Scale. Early Member orgs created before May 27, 2026 pay +0.5% on subscriptions while they stay on Early Member.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Product rules",
@@ -643,7 +643,7 @@
           "label": "Withdrawals",
           "value": "Payouts are manual withdrawals you start. Polar says it will trigger a payout itself if a balance is left unwithdrawn for several months.",
           "source": "https://polar.sh/docs/merchant-of-record/fees",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "AI products",
@@ -663,97 +663,97 @@
           "status": "listed",
           "note": "India is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-21"
+          "checkedOn": "2026-11-23"
         },
         "pakistan": {
           "status": "listed",
           "note": "Pakistan is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-22"
+          "checkedOn": "2026-11-23"
         },
         "nigeria": {
           "status": "listed",
           "note": "Nigeria is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "bangladesh": {
           "status": "listed",
           "note": "Bangladesh is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "brazil": {
           "status": "not-listed",
           "note": "Brazil is not on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "uae": {
           "status": "listed",
           "note": "The UAE is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "israel": {
           "status": "listed",
           "note": "Israel is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "morocco": {
           "status": "not-listed",
           "note": "Morocco is not on Polar's supported payout list. It was listed when checked on 2026-11-02.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "kenya": {
           "status": "listed",
           "note": "Kenya is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "egypt": {
           "status": "listed",
           "note": "Egypt is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "indonesia": {
           "status": "listed",
           "note": "Indonesia is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "philippines": {
           "status": "listed",
           "note": "The Philippines is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "south-africa": {
           "status": "listed",
           "note": "South Africa is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "nepal": {
           "status": "not-listed",
           "note": "Nepal is not on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-18"
+          "checkedOn": "2026-11-23"
         },
         "jamaica": {
           "status": "listed",
           "note": "Jamaica is on Polar's payout country list (Stripe Connect Express).",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         "serbia": {
           "status": "listed",
           "note": "Serbia is on Polar's payout country list (Stripe Connect Express).",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-20"
+          "checkedOn": "2026-11-23"
         }
       }
     },
@@ -787,19 +787,19 @@
           "label": "Fees",
           "value": "4% + 40 cents for US domestic cards and wallets, plus 1.5% for international cards and APMs and 0.5% for subscriptions, addons and usage-based billing. India domestic INR: 4% + 15 cents. PayPal and BNPL add 3%.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Other fees",
           "value": "Disputes $30. Refunds $1. USD SWIFT payouts $25.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Payout fees",
           "value": "Standard payouts free, with a $5 fee if the payout is under $1,000. Standard FX on non-USD settlements. USD SWIFT payouts $25.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         {
           "label": "Bank debits",
@@ -835,7 +835,7 @@
           "label": "India domestic rate",
           "value": "4% + 15 cents for Indian debit and credit cards and UPI payments in INR, plus international payment fees. Dodo accepts UPI, Indian cards (Visa, Mastercard, RuPay) and Apple Pay from buyers in India.",
           "source": "https://dodopayments.com/pricing",
-          "checkedOn": "2026-11-21"
+          "checkedOn": "2026-11-23"
         }
       ],
       "sellerCountries": {
@@ -843,97 +843,97 @@
           "status": "listed",
           "note": "India is on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-21"
+          "checkedOn": "2026-11-23"
         },
         "pakistan": {
           "status": "not-listed",
           "note": "Pakistan is not on Dodo's accepted countries list. Dodo says payouts are only available in listed countries.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-22"
+          "checkedOn": "2026-11-23"
         },
         "nigeria": {
           "status": "grandfathered-only",
           "note": "Existing merchants from before March 23, 2026 are kept. New Nigerian merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "bangladesh": {
           "status": "grandfathered-only",
           "note": "Existing merchants from before March 23, 2026 are kept. New Bangladeshi merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "brazil": {
           "status": "listed",
           "note": "Brazil is on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "uae": {
           "status": "listed",
           "note": "The UAE is on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "israel": {
           "status": "listed",
           "note": "Israel is on Dodo's accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "morocco": {
           "status": "grandfathered-only",
           "note": "Morocco is on Dodo's grandfathered list: merchants from before March 23, 2026 are kept, new Moroccan merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "kenya": {
           "status": "not-listed",
           "note": "Kenya is not on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "egypt": {
           "status": "grandfathered-only",
           "note": "Egypt is grandfathered: existing merchants stay, new merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "nepal": {
           "status": "listed",
           "note": "Nepal is on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "indonesia": {
           "status": "listed",
           "note": "Indonesia is on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "philippines": {
           "status": "listed",
           "note": "The Philippines is on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "south-africa": {
           "status": "listed",
           "note": "South Africa is on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-23"
         },
         "jamaica": {
           "status": "listed",
           "note": "Jamaica is on Dodo Payments' accepted countries list. Eligibility follows the country of your government ID.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-23"
         },
         "serbia": {
           "status": "listed",
           "note": "Serbia is on Dodo Payments' accepted countries list. Eligibility follows the country of your government ID.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-20"
+          "checkedOn": "2026-11-23"
         }
       }
     },
