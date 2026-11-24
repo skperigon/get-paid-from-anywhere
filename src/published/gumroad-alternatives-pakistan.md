@@ -1,7 +1,7 @@
 ---
 order: 34
 idea: 39
-status: ready
+status: published
 path: "guides/gumroad-alternatives-pakistan"
 title: "Gumroad alternatives for Pakistani sellers: fees, payouts and rules (checked 2026-11-22)"
 h1: "Gumroad alternatives for sellers in Pakistan"
