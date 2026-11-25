@@ -1,7 +1,7 @@
 ---
 order: 35
 idea: 40
-status: ready
+status: published
 path: "guides/polar-alternatives"
 title: "Polar alternatives: fees, payouts and countries (checked 2026-11-23)"
 h1: "Polar alternatives"
