@@ -30,7 +30,7 @@
           "label": "Countries",
           "value": "51 countries listed on Stripe's global availability page. Some carry labels: India and Indonesia are marked Preview. Cote d'Ivoire, Ghana, Kenya, Nigeria and South Africa are marked Extended network.",
           "source": "https://stripe.com/global",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-24"
         },
         {
           "label": "India",
@@ -104,7 +104,7 @@
           "status": "label-only",
           "note": "Listed as Extended network. Paystack, a Stripe company, serves businesses based in Africa.",
           "source": "https://stripe.com/global",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "not-listed",
@@ -134,7 +134,7 @@
           "status": "not-listed",
           "note": "Morocco is not on Stripe's global availability list.",
           "source": "https://stripe.com/global",
-          "checkedOn": "2026-11-17"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "not-listed",
@@ -147,6 +147,24 @@
           "note": "Serbia is not on Stripe's global availability list. It is also not a supported business location for Stripe Managed Payments.",
           "source": "https://stripe.com/global",
           "checkedOn": "2026-11-20"
+        },
+        "kenya": {
+          "status": "label-only",
+          "note": "Listed as Extended network on Stripe's global availability page. The page does not explain the label.",
+          "source": "https://stripe.com/global",
+          "checkedOn": "2026-11-24"
+        },
+        "south-africa": {
+          "status": "label-only",
+          "note": "Listed as Extended network on Stripe's global availability page. The page does not explain the label.",
+          "source": "https://stripe.com/global",
+          "checkedOn": "2026-11-24"
+        },
+        "egypt": {
+          "status": "not-listed",
+          "note": "Egypt is not on Stripe's global availability list.",
+          "source": "https://stripe.com/global",
+          "checkedOn": "2026-11-24"
         }
       }
     },
@@ -315,7 +333,7 @@
           "status": "not-excluded",
           "note": "Nigeria is not on Paddle's unsupported list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "not-excluded",
@@ -345,19 +363,19 @@
           "status": "not-excluded",
           "note": "Morocco is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "kenya": {
           "status": "not-excluded",
           "note": "Kenya is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "egypt": {
           "status": "not-excluded",
           "note": "Egypt is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "nepal": {
           "status": "not-excluded",
@@ -381,7 +399,7 @@
           "status": "not-excluded",
           "note": "South Africa is not on Paddle's unsupported countries list.",
           "source": "https://www.paddle.com/help/start/intro-to-paddle/which-countries-are-supported-by-paddle",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "not-excluded",
@@ -675,7 +693,7 @@
           "status": "listed",
           "note": "Nigeria is on Polar's supported payout list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "listed",
@@ -705,19 +723,19 @@
           "status": "not-listed",
           "note": "Morocco is not on Polar's supported payout list. It was listed when checked on 2026-11-02.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "kenya": {
           "status": "listed",
           "note": "Kenya is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "egypt": {
           "status": "listed",
           "note": "Egypt is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "indonesia": {
           "status": "listed",
@@ -735,7 +753,7 @@
           "status": "listed",
           "note": "South Africa is on Polar's payout country list.",
           "source": "https://polar.sh/docs/merchant-of-record/supported-countries",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "nepal": {
           "status": "not-listed",
@@ -855,7 +873,7 @@
           "status": "grandfathered-only",
           "note": "Existing merchants from before March 23, 2026 are kept. New Nigerian merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "grandfathered-only",
@@ -885,19 +903,19 @@
           "status": "grandfathered-only",
           "note": "Morocco is on Dodo's grandfathered list: merchants from before March 23, 2026 are kept, new Moroccan merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "kenya": {
           "status": "not-listed",
           "note": "Kenya is not on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "egypt": {
           "status": "grandfathered-only",
           "note": "Egypt is grandfathered: existing merchants stay, new merchants are not eligible.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "nepal": {
           "status": "listed",
@@ -921,7 +939,7 @@
           "status": "listed",
           "note": "South Africa is on Dodo Payments' accepted countries list.",
           "source": "https://docs.dodopayments.com/miscellaneous/accepted-countries-and-territories",
-          "checkedOn": "2026-11-23"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "listed",
@@ -948,33 +966,64 @@
         "value": "No",
         "note": "Paystack is a payment processor.",
         "source": "https://paystack.com/stripe/nigeria",
-        "checkedOn": "2026-10-22"
+        "checkedOn": "2026-11-24"
       },
       "facts": [
         {
           "label": "Ownership",
           "value": "Acquired by Stripe in 2020.",
           "source": "https://paystack.com/stripe/nigeria",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-24"
         },
         {
           "label": "International payments",
           "value": "Paystack says businesses based in Africa can accept local and international payments and get paid out in USD.",
           "source": "https://paystack.com/stripe/nigeria",
-          "checkedOn": "2026-10-22"
+          "checkedOn": "2026-11-24"
         },
         {
           "label": "Fees",
-          "value": "unknown",
-          "source": "https://paystack.com/",
-          "checkedOn": "2026-10-22"
+          "value": "Nigeria: 1.5% + NGN 100 on local cards (capped at NGN 2,000, NGN 100 waived under NGN 2,500), 3.9% + NGN 100 on international cards, next working day settlement. Kenya: 2.9% local cards, 3.8% international cards, settled in two working days. South Africa: 2.9% + ZAR 1 local, 3.1% + ZAR 1 international, excluding VAT, settled in two working days.",
+          "source": "https://paystack.com/pricing",
+          "checkedOn": "2026-11-24"
+        },
+        {
+          "label": "USD settlement",
+          "value": "Nigeria: USD settlement is a public pilot into Zenith Bank domiciliary accounts. Kenya: USD settlement into a Kenya-based USD-domiciled bank account. South Africa: international payments are settled in rand by default.",
+          "source": "https://paystack.com/ke/pricing",
+          "checkedOn": "2026-11-24"
         }
       ],
       "sellerCountries": {
         "nigeria": {
           "status": "listed",
           "note": "Paystack serves businesses in Nigeria. A Stripe account does not give access to Paystack payment methods; a separate Paystack account is needed.",
-          "source": "https://paystack.com/stripe/nigeria"
+          "source": "https://paystack.com/stripe/nigeria",
+          "checkedOn": "2026-11-24"
+        },
+        "kenya": {
+          "status": "listed",
+          "note": "Paystack publishes Kenya pricing in KES, with settlement to a bank account or M-PESA wallet.",
+          "source": "https://paystack.com/ke/pricing",
+          "checkedOn": "2026-11-24"
+        },
+        "south-africa": {
+          "status": "listed",
+          "note": "Paystack publishes South Africa pricing in ZAR.",
+          "source": "https://paystack.com/za/pricing",
+          "checkedOn": "2026-11-24"
+        },
+        "egypt": {
+          "status": "unknown",
+          "note": "We did not find a Paystack pricing page for Egypt.",
+          "source": "https://paystack.com/",
+          "checkedOn": "2026-11-24"
+        },
+        "morocco": {
+          "status": "unknown",
+          "note": "We did not find a Paystack pricing page for Morocco.",
+          "source": "https://paystack.com/",
+          "checkedOn": "2026-11-24"
         }
       }
     },
@@ -1040,7 +1089,7 @@
           "status": "not-excluded",
           "note": "Nigeria is not on Wise's unsupported list. Wise confirms business support during sign-up.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "not-excluded",
@@ -1070,7 +1119,7 @@
           "status": "not-excluded",
           "note": "Morocco is not on Wise's list of places it does not serve.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "not-excluded",
@@ -1083,6 +1132,24 @@
           "note": "Serbia is not on Wise's list of places it does not serve. Wise confirms business support for your country during sign-up.",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
           "checkedOn": "2026-11-20"
+        },
+        "kenya": {
+          "status": "not-excluded",
+          "note": "Kenya is not on Wise's list of places it does not serve. Wise confirms business support during sign-up.",
+          "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
+          "checkedOn": "2026-11-24"
+        },
+        "south-africa": {
+          "status": "not-excluded",
+          "note": "South Africa is not on Wise's list of places it does not serve. Wise confirms business support during sign-up.",
+          "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
+          "checkedOn": "2026-11-24"
+        },
+        "egypt": {
+          "status": "not-excluded",
+          "note": "Egypt is not on Wise's list of places it does not serve. Wise confirms business support during sign-up.",
+          "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
+          "checkedOn": "2026-11-24"
         }
       }
     },
@@ -1216,7 +1283,7 @@
           "status": "not-listed",
           "note": "Nigeria is not on Airwallex's eligible list. A US-registered company is eligible.",
           "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "not-listed",
@@ -1246,7 +1313,7 @@
           "status": "not-listed",
           "note": "Morocco is not on Airwallex's eligible business registration list.",
           "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "not-listed",
@@ -1259,6 +1326,24 @@
           "note": "Serbia is not on Airwallex's eligible business registration list. A US company can apply, since the United States is listed.",
           "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
           "checkedOn": "2026-11-20"
+        },
+        "kenya": {
+          "status": "not-listed",
+          "note": "Kenya is not on Airwallex's eligible business registration list. A US-registered company is eligible.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+          "checkedOn": "2026-11-24"
+        },
+        "south-africa": {
+          "status": "not-listed",
+          "note": "South Africa is not on Airwallex's eligible business registration list. A US-registered company is eligible.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+          "checkedOn": "2026-11-24"
+        },
+        "egypt": {
+          "status": "not-listed",
+          "note": "Egypt is not on Airwallex's eligible business registration list. A US-registered company is eligible.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4408591334937-Eligible-Countries-and-Territories",
+          "checkedOn": "2026-11-24"
         }
       }
     },
@@ -1324,7 +1409,7 @@
           "status": "prohibited",
           "note": "Nigeria is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "bangladesh": {
           "status": "prohibited",
@@ -1354,7 +1439,7 @@
           "status": "not-excluded",
           "note": "Morocco is not on Mercury's prohibited countries list (based on residence). Mercury requires a US company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "nepal": {
           "status": "prohibited",
@@ -1366,13 +1451,13 @@
           "status": "not-excluded",
           "note": "Kenya is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "egypt": {
           "status": "not-excluded",
           "note": "Egypt is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "indonesia": {
           "status": "prohibited",
@@ -1390,7 +1475,7 @@
           "status": "not-excluded",
           "note": "South Africa is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-24"
         },
         "jamaica": {
           "status": "not-excluded",
