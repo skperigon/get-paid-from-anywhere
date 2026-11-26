@@ -1363,33 +1363,57 @@
       "facts": [
         {
           "label": "Prohibited countries",
-          "value": "Based on residence, not citizenship. Sanctioned entries include Cuba, Iran, North Korea and Russian-occupied regions of Ukraine. The prohibited list includes Bangladesh, Indonesia, Nepal, Nigeria, Pakistan and the Philippines, among others. Citizens of a listed country who reside elsewhere may still be eligible after review.",
+          "value": "Based on residence, not citizenship. Sanctioned: Cuba, Iran, North Korea and Russian-occupied regions of Ukraine. 48 more prohibited countries, including Bangladesh, Croatia, Indonesia, Latvia, Nepal, Nigeria, Pakistan, the Philippines, Ukraine and Vietnam. Also applies to businesses that operate or do business in those countries. Citizens of a listed country who reside elsewhere may still be eligible after review.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-25"
         },
         {
           "label": "International founders",
           "value": "Supports US-registered companies with founders living outside the US. Requires existing or planned US operations. Principal place of business may be US or international; registered agent, P.O. box and UPS Store addresses are not accepted.",
           "source": "https://support.mercury.com/hc/en-us/articles/28770467511060-Eligibility-and-requirements-for-opening-a-Mercury-account",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         {
           "label": "Monthly fee",
-          "value": "$0 base plan. Mercury Plus is $29.90 per month. Mercury Pro is $299 per month.",
+          "value": "$0 base plan. Mercury Plus is $35 per month, or $29.90 per month with annual pricing. Mercury Pro is $350 per month, or $299 per month with annual pricing.",
           "source": "https://mercury.com/pricing",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         {
           "label": "International wires",
           "value": "USD international wires free on the published plans. Non-USD wires carry a 1% currency exchange fee.",
           "source": "https://mercury.com/pricing",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         {
           "label": "Banking partners",
           "value": "Choice Financial Group and Column N.A., Members FDIC. Mercury is a fintech company, not an FDIC-insured bank.",
           "source": "https://mercury.com/pricing",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "label": "Documents",
+          "value": "State-filed formation document; IRS EIN document (CP575, 147c or returned SS-4, or an IRS EIN confirmation screenshot temporarily); ID for each 25%+ owner and one person with operating control. International applicants may provide a passport. You can apply with a completed SS-4 and provide the official EIN within 90 days of approval.",
+          "source": "https://support.mercury.com/hc/en-us/articles/28770957425172-Gathering-your-documents",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "label": "Address rules",
+          "value": "Legal address must be a physical US address, not a P.O. box. Physical address can be a verifiable residential or international address; P.O. boxes, virtual addresses, mail centers and registered agent addresses are not accepted. Each beneficial owner gives the physical address where they live.",
+          "source": "https://support.mercury.com/hc/en-us/articles/28769699533588-Company-address-requirements",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "label": "Prohibited industries",
+          "value": "Money services businesses and crypto exchanges, adult entertainment, cannabis, internet gambling, and trusts. Accounts hold fiat currency only.",
+          "source": "https://support.mercury.com/hc/en-us/articles/28770467511060-Eligibility-and-requirements-for-opening-a-Mercury-account",
+          "checkedOn": "2026-11-25"
+        },
+        {
+          "label": "Receiving non-USD wires",
+          "value": "USD accounts only. Receives international wires in 139 non-USD currencies, converted to USD on arrival. Column N.A. converts at the mid-market rate; Choice Financial Group uses intermediary banks that typically add a 2% to 3% markup. Mercury fee for receiving international wires: unknown (not listed on the pricing page).",
+          "source": "https://support.mercury.com/hc/en-us/articles/34750478414740-Receiving-non-USD-payments",
+          "checkedOn": "2026-11-25"
         }
       ],
       "sellerCountries": {
@@ -1397,97 +1421,97 @@
           "status": "not-excluded",
           "note": "India is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "pakistan": {
           "status": "prohibited",
           "note": "Pakistan is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-08"
+          "checkedOn": "2026-11-25"
         },
         "nigeria": {
           "status": "prohibited",
           "note": "Nigeria is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-24"
+          "checkedOn": "2026-11-25"
         },
         "bangladesh": {
           "status": "prohibited",
           "note": "Bangladesh is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "brazil": {
           "status": "not-excluded",
           "note": "Brazil is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "uae": {
           "status": "not-excluded",
           "note": "The UAE is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "israel": {
           "status": "not-excluded",
           "note": "Israel is not on Mercury's prohibited countries list (based on residence). Mercury requires a US company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "morocco": {
           "status": "not-excluded",
           "note": "Morocco is not on Mercury's prohibited countries list (based on residence). Mercury requires a US company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-24"
+          "checkedOn": "2026-11-25"
         },
         "nepal": {
           "status": "prohibited",
           "note": "Nepal is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "kenya": {
           "status": "not-excluded",
           "note": "Kenya is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-24"
+          "checkedOn": "2026-11-25"
         },
         "egypt": {
           "status": "not-excluded",
           "note": "Egypt is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-24"
+          "checkedOn": "2026-11-25"
         },
         "indonesia": {
           "status": "prohibited",
           "note": "Indonesia is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "philippines": {
           "status": "prohibited",
           "note": "The Philippines is on Mercury's prohibited list (by residence).",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-25"
         },
         "south-africa": {
           "status": "not-excluded",
           "note": "South Africa is not on Mercury's prohibited list. You still need a US-formed company.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-24"
+          "checkedOn": "2026-11-25"
         },
         "jamaica": {
           "status": "not-excluded",
           "note": "Jamaica is not on Mercury's prohibited countries list (by residence). Mercury needs a US company and reviews each application.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-19"
+          "checkedOn": "2026-11-25"
         },
         "serbia": {
           "status": "not-excluded",
           "note": "Serbia is not on Mercury's prohibited countries list (by residence). Mercury needs a US company and reviews each application.",
           "source": "https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries",
-          "checkedOn": "2026-11-20"
+          "checkedOn": "2026-11-25"
         }
       }
     },

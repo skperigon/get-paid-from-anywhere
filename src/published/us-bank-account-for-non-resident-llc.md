@@ -97,7 +97,7 @@ Prohibited countries on that page (checked 2026-11-05): Afghanistan, Albania, An
 
 Source: [Mercury prohibited countries](https://support.mercury.com/hc/en-us/articles/28771710754580-Prohibited-countries). Passing the country check still requires a US company, a valid principal address, and application approval.
 
-Mercury's [pricing page](https://mercury.com/pricing) lists a $0 base plan, Mercury Plus at $29.90 per month, free USD ACH, domestic wires and USD international wires on the plans shown, and a 1% currency exchange fee on non-USD international wires.
+Mercury's [pricing page](https://mercury.com/pricing) lists a $0 base plan, Mercury Plus at $35 per month or $29.90 a month with annual pricing (rechecked 2026-11-25), free USD ACH, domestic wires and USD international wires on the plans shown, and a 1% currency exchange fee on non-USD international wires.
 
 ## Wise Business
 
