@@ -1,7 +1,7 @@
 ---
 order: 36
 idea: 41
-status: ready
+status: published
 path: "guides/stripe-alternatives-africa"
 title: "Stripe alternatives for African founders (checked 2026-11-24)"
 h1: "Stripe alternatives for African founders"
