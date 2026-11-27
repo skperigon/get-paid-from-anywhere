@@ -1055,9 +1055,9 @@
         },
         {
           "label": "USD account details",
-          "value": "Available when your address is in an eligible country. Unavailable for addresses in a published list that includes Bangladesh, Nigeria, Pakistan and the UAE, among others. Extra Wise Business restrictions apply if a US business address or personal profile is in Bangladesh, Cameroon, China, Nigeria or Pakistan (and Ukraine for personal profiles). USD details receive ACH and domestic wires from the US and Swift from outside the US. Wise says this is not a bank account. Receiving fees on Wise's help page: ACH free, 6.11 USD for domestic wires and Swift.",
+          "value": "Available when your address is in an eligible country. Unavailable for addresses in a published list that includes Bangladesh, Nigeria, Pakistan, Serbia, Sri Lanka, Türkiye, the UAE, Ukraine and Nevada, among others. Wise Business cannot get USD details if the US business has an address in Bangladesh, Cameroon, China, Nigeria or Pakistan, or the personal profile has an address in those countries or Ukraine.",
           "source": "https://wise.com/help/articles/2810318/can-i-get-usd-account-details",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Setup fee",
@@ -1070,6 +1070,18 @@
           "value": "Pakistan is listed among countries where USD account details are unavailable for an address there. A US business with an address in Pakistan also cannot get USD details.",
           "source": "https://wise.com/help/articles/2810318/can-i-get-usd-account-details",
           "checkedOn": "2026-11-08"
+        },
+        {
+          "label": "US company owner documents",
+          "value": "US businesses provide an EIN. An SSN is required for beneficial owners who live in the US or hold a US passport; non-US beneficial owners provide a copy of a photo ID. Sole proprietors provide an SSN or TIN. Wise cannot onboard businesses located in Nevada or US territories.",
+          "source": "https://wise.com/us/blog/wise-business-account-requirements-us",
+          "checkedOn": "2026-11-26"
+        },
+        {
+          "label": "USD receiving fees",
+          "value": "With USD account details: no fee for ACH, 6.11 USD for domestic wires and 6.11 USD for Swift payments in USD. Wise says USD details are not a bank account.",
+          "source": "https://wise.com/help/articles/2827506/how-do-i-receive-money-with-my-usd-account-details",
+          "checkedOn": "2026-11-26"
         }
       ],
       "sellerCountries": {
@@ -1129,7 +1141,7 @@
         },
         "serbia": {
           "status": "not-excluded",
-          "note": "Serbia is not on Wise's list of places it does not serve. Wise confirms business support for your country during sign-up.",
+          "note": "Serbia is not on Wise's list of places it does not serve. Wise confirms business support for your country during sign-up. Serbia is on Wise's list of addresses that cannot get USD account details (checked 2026-11-26).",
           "source": "https://wise.com/help/articles/2978049/where-can-i-use-wise",
           "checkedOn": "2026-11-20"
         },
@@ -1257,13 +1269,25 @@
           "label": "US principal place of business",
           "value": "US companies need a genuine US principal place of business. Registered agent addresses are usually not accepted, with exceptions for e-commerce businesses and businesses incorporated within the last year. PO boxes and virtual mailboxes are not accepted. SSN or ITIN is not required for company entities; non-US persons verify with government photo ID and use the business EIN.",
           "source": "https://help.airwallex.com/hc/en-gb/articles/4419267227417-Documents-required-for-companies-in-the-US",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Fees",
           "value": "unknown",
           "source": "https://www.airwallex.com/",
           "checkedOn": "2026-11-05"
+        },
+        {
+          "label": "SSN or ITIN",
+          "value": "Companies, partnerships and other entity types do not need an SSN or ITIN. Non-US persons verify with a passport or other government photo ID and enter the business EIN as its Tax ID. A sole proprietorship needs the owner's SSN or ITIN.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4419267227417-Documents-required-for-companies-in-the-US",
+          "checkedOn": "2026-11-26"
+        },
+        {
+          "label": "Foreign-owned US companies",
+          "value": "May be asked during review for more proof of US activity, such as a recent statement from a brick-and-mortar US bank (US neobank statements such as Mercury are not accepted for this), contracts with US businesses, invoices from US customers, US employees or a coworking lease.",
+          "source": "https://help.airwallex.com/hc/en-gb/articles/4419267227417-Documents-required-for-companies-in-the-US",
+          "checkedOn": "2026-11-26"
         }
       ],
       "sellerCountries": {
@@ -1371,7 +1395,7 @@
           "label": "International founders",
           "value": "Supports US-registered companies with founders living outside the US. Requires existing or planned US operations. Principal place of business may be US or international; registered agent, P.O. box and UPS Store addresses are not accepted.",
           "source": "https://support.mercury.com/hc/en-us/articles/28770467511060-Eligibility-and-requirements-for-opening-a-Mercury-account",
-          "checkedOn": "2026-11-25"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Monthly fee",
@@ -1395,7 +1419,7 @@
           "label": "Documents",
           "value": "State-filed formation document; IRS EIN document (CP575, 147c or returned SS-4, or an IRS EIN confirmation screenshot temporarily); ID for each 25%+ owner and one person with operating control. International applicants may provide a passport. You can apply with a completed SS-4 and provide the official EIN within 90 days of approval.",
           "source": "https://support.mercury.com/hc/en-us/articles/28770957425172-Gathering-your-documents",
-          "checkedOn": "2026-11-25"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Address rules",
@@ -1533,7 +1557,7 @@
           "label": "Starter plan",
           "value": "$297 per year plus state fees. Includes LLC or C Corp formation, EIN, operating agreement, registered agent service and a US business address.",
           "source": "https://help.doola.com/what-is-doola-starter-plan-",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Other plans",
@@ -1627,7 +1651,7 @@
           "label": "EIN service",
           "value": "$50 with an SSN. $200 without an SSN. Not included in the $39 formation.",
           "source": "https://www.northwestregisteredagent.com/start-a-business/ein-tax-id",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-26"
         }
       ],
       "sellerCountries": {}
@@ -1656,19 +1680,25 @@
           "label": "Prohibited countries",
           "value": "Blocks business owners who hold citizenship or residency in a published list that includes Nigeria, Pakistan, Russia, Ukraine and others. Applies to beneficial owners regardless of where the business is registered.",
           "source": "https://relayfi.com/hc/en-us/articles/10239600121748-Prohibited-Countries/",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Non-US owners",
-          "value": "Accepts US-registered businesses owned by non-US citizens or residents when the business has a US operating presence. Required-documents page asks every beneficial owner for a physical US address. Relay help pages conflict on whether every owner needs an SSN versus allowing a passport number.",
+          "value": "Accepts US-registered businesses owned by non-US citizens or residents when the business has a US operating presence. Required-documents page asks every beneficial owner for a physical US address and an SSN or passport number (passport only as ID for non-US citizens). Relay's How to Open page says every beneficial owner must have a valid SSN. Both pages were marked updated November 12, 2026, so the SSN rule for non-US owners is unknown.",
           "source": "https://relayfi.com/hc/en-us/articles/38049251551636-Required-Documents-and-Organization-Details-to-Open-a-Relay-Account-by-Entity-Type/",
-          "checkedOn": "2026-11-05"
+          "checkedOn": "2026-11-26"
         },
         {
           "label": "Banking partner",
           "value": "Thread Bank, Member FDIC. Pass-through FDIC coverage is subject to conditions stated by Relay.",
           "source": "https://relayfi.com/faqs/",
           "checkedOn": "2026-11-05"
+        },
+        {
+          "label": "Sole proprietors",
+          "value": "Sole proprietors provide an SSN instead of an EIN. Relay says it cannot support sole proprietors without a valid SSN or a physical US address.",
+          "source": "https://relayfi.com/hc/en-us/articles/38049251551636-Required-Documents-and-Organization-Details-to-Open-a-Relay-Account-by-Entity-Type/",
+          "checkedOn": "2026-11-26"
         }
       ],
       "sellerCountries": {
