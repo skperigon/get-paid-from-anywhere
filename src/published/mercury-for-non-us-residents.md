@@ -1,7 +1,7 @@
 ---
 order: 37
 idea: 42
-status: ready
+status: published
 path: "guides/mercury-for-non-us-residents"
 title: "Mercury for non-US residents: who can open an account (checked 2026-11-25)"
 h1: "Mercury for non-US residents"
