@@ -1,7 +1,7 @@
 ---
 order: 38
 idea: 43
-status: ready
+status: published
 path: "guides/us-bank-account-without-ssn"
 title: "US business bank account without an SSN (checked 2026-11-26)"
 h1: "US business bank account without an SSN"
