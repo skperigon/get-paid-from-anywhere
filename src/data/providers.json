@@ -1082,6 +1082,12 @@
           "value": "With USD account details: no fee for ACH, 6.11 USD for domestic wires and 6.11 USD for Swift payments in USD. Wise says USD details are not a bank account.",
           "source": "https://wise.com/help/articles/2827506/how-do-i-receive-money-with-my-usd-account-details",
           "checkedOn": "2026-11-26"
+        },
+        {
+          "label": "US business addresses",
+          "value": "The registered address can be a registration agency or attorney. The trading address must be a physical place of business, such as an office or coworking space; PO boxes, registration agencies, mail forwarding services and similar virtual addresses are not accepted. Whether the trading address can be outside the US is not stated on that page (unknown).",
+          "source": "https://wise.com/us/blog/wise-business-account-requirements-us",
+          "checkedOn": "2026-11-27"
         }
       ],
       "sellerCountries": {
@@ -1602,9 +1608,9 @@
         },
         {
           "label": "US address (Mailroom)",
-          "value": "$35 a month or $315 a year. Firstbase says a US address is required for incorporation.",
+          "value": "Basic: one physical business address in a state of your choice, $35 a month or $315 a year. Premium: an address in NYC, San Francisco or Florida, $50 a month or $350 a year. Firstbase says a US address is required for incorporation.",
           "source": "https://www.firstbase.io/pricing",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-27"
         },
         {
           "label": "Non-US founders",
@@ -1639,7 +1645,7 @@
           "label": "Registered agent renewal",
           "value": "$125 per year, or $100 per state per year for five or more states",
           "source": "https://www.northwestregisteredagent.com/registered-agent",
-          "checkedOn": "2026-11-09"
+          "checkedOn": "2026-11-27"
         },
         {
           "label": "Non-US founders",
@@ -1652,6 +1658,12 @@
           "value": "$50 with an SSN. $200 without an SSN. Not included in the $39 formation.",
           "source": "https://www.northwestregisteredagent.com/start-a-business/ein-tax-id",
           "checkedOn": "2026-11-26"
+        },
+        {
+          "label": "Mail forwarding",
+          "value": "Commercial business address with a unique suite number. $49 per year with 15 scans, or $99 per year with 20 scans and an office lease. Registered agent service includes 10 free scans a year of non-state mail.",
+          "source": "https://www.northwestregisteredagent.com/mail-forwarding",
+          "checkedOn": "2026-11-27"
         }
       ],
       "sellerCountries": {}
@@ -1699,6 +1711,12 @@
           "value": "Sole proprietors provide an SSN instead of an EIN. Relay says it cannot support sole proprietors without a valid SSN or a physical US address.",
           "source": "https://relayfi.com/hc/en-us/articles/38049251551636-Required-Documents-and-Organization-Details-to-Open-a-Relay-Account-by-Entity-Type/",
           "checkedOn": "2026-11-26"
+        },
+        {
+          "label": "Address rules",
+          "value": "A registered agent address can be the legal address, including for non-US residents, but not the operating address or a personal address. The operating address can be a home address (domestic or international) or a physical office; registered agent addresses, PO boxes, virtual mailboxes and mailbox rental services are not accepted. Every owner gives a verifiable personal residential address. The required-documents page separately lists a physical US address for every beneficial owner, so whether a non-US home address is enough is unknown.",
+          "source": "https://relayfi.com/hc/en-us/articles/23792837830676-Using-a-Registered-Agent-Address-and-Operating-Address-for-Your-Business/",
+          "checkedOn": "2026-11-27"
         }
       ],
       "sellerCountries": {
